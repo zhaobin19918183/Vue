@@ -1,0 +1,92 @@
+// =============================================================================================================================
+// 强制覆盖vant-ui样式
+// =============================================================================================================================================================
+
+// 我的
+.aboutme .myOrder .van-grid-item__icon {
+    font-size: 0.44rem;
+}
+
+// 首页
+.home .content .prodDrid .bigGrid .van-grid-item__content{
+    padding: 0;
+    background-color: unset;
+}
+.home .content .searchBar .van-dropdown-menu__title{
+    font-size: 0.3rem;
+}
+.home .content .prodDrid .mainGrid{
+    /*适配，5*/
+    @media only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+        .van-grid-item__content{
+            padding: 16px 5px;
+        }
+    }
+}
+
+// 导航栏
+.navBar .van-overlay{
+    background-color: rgba(0,0,0,0);
+}
+
+// 登录
+.login .phoneInput .van-field__control{
+    font-size: 0.3rem;
+    text-indent: 0.2rem;
+    padding: 0.1rem 0;
+}
+
+// 发布评论
+.postComment .refundCard .uploadImg .van-uploader .van-uploader__wrapper .van-uploader__preview{
+    margin: 0 0.16rem 0.16rem 0;
+}
+.postComment .refundCard .uploadImg .van-uploader .van-uploader__wrapper .van-uploader__preview .van-uploader__preview-delete{
+    font-size: 0.3rem;
+}
+.postComment .refundCard .uploadImg .van-uploader .van-uploader__wrapper .van-uploader__preview:nth-of-type(4), .postComment .refundCard .uploadImg .van-uploader .van-uploader__wrapper .van-uploader__preview:nth-of-type(8), .postComment .refundCard .uploadImg .van-uploader .van-uploader__wrapper .van-uploader__upload{
+    margin-right: 0;
+}
+.postComment .refundCard .addStars .van-radio-group .van-radio .van-radio__icon{
+    width: 100%;
+    height: 1.82rem;
+    margin-top: 0.5rem;
+}
+.postComment .refundCard .addStars .van-radio-group .van-radio .van-radio__label{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+}
+@media screen and (min-width:600px) and (max-width:960px){
+    .postComment .refundCard .addStars .van-radio-group .van-radio .van-radio__icon{
+        height: 3.5rem;
+    }
+}
+
+// 评论
+.comment .card .van-skeleton__content .van-grid .van-grid-item__content{
+    padding: 0 0.1rem 0.1rem 0;
+}
+
+// 评论卡片组件
+.commentcard .card .van-skeleton__content .van-grid .van-grid-item__content{
+    padding: 0 0.1rem 0.1rem 0;
+}
+
+//商户详情
+// （待定使用）
+.shopDetail .van-index-bar__sidebar {
+    position: absolute;
+    top: 30px;
+    right: 25%;
+    flex-direction: row;
+    text-align: center;
+    span{
+        font-size: 0.25rem;
+    }
+}
+.shopDetail .card_otherLike .content .van-grid .van-grid-item__content{
+    padding: 0;
+}
