@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: 'Message',
+  name: 'WsCarousel',
   data () {
     return {
-      msg: 'Message'
+      msg: '你大爷的'
     }
   }
 }
