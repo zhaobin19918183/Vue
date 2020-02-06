@@ -3,7 +3,7 @@ import axios from 'axios';
 // create an axios instance
 // VUE_APP_BASE_API = 'http://47.103.84.220:20000'
 const service = axios.create({
-  baseURL: process.env.VUE_APP_BASE_API, // api 的 base_url
+  baseURL: 'http://47.103.84.220:20000', // api 的 base_url
   withCredentials: true, // 跨域请求时发送 cookies
   timeout: 50000 // request timeout
 });
@@ -33,6 +33,7 @@ service.interceptors.response.use(
   error => {
     if (error.response) {
       if (error.response.status === 403 || error.response.status === 401) {
+        
         // store.dispatch('user/logout').then(() => {
         //   router.push(`/login?redirect=${router.currentRoute.fullPath}`);
         // });
