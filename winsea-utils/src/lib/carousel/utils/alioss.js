@@ -13,7 +13,7 @@ var OSS = require('ali-oss')
         "bucket": "winsea-saas-test",
         "endpoint": "oss-cn-shanghai.aliyuncs.com"
    * */
-export function client(ossInter, ossAccessConfig) {
+function client(ossInter, ossAccessConfig) {
   try {
     var client = new OSS({
       region: 'oss-cn-hangzhou',
@@ -25,4 +25,7 @@ export function client(ossInter, ossAccessConfig) {
     }) // 后端提供数据
     return client
   } catch (error) {}
+}
+export default{
+  client
 }
