@@ -1,8 +1,8 @@
 // 修船模块-厂修预算单Api接口
 
-import request from '../../../../utils/request'
+import request from '../../../../request'
 // 预算单一览->预算单一览查询
-function  getPageByCondition(data) {
+function getPageByCondition(data) {
   return request({
     url: '/repairYardBudgetInfo/query/getPageByCondition',
     method: 'get',
@@ -10,7 +10,7 @@ function  getPageByCondition(data) {
   })
 }
 // 预算单一览->预算单状态查询
-function  getStatusList(data) {
+function getStatusList(data) {
   return request({
     url: '/repairYardBudgetInfo/query/getStatusList',
     method: 'get',
@@ -18,7 +18,7 @@ function  getStatusList(data) {
   })
 }
 // 预算单一览->预算单状态查询
-function  getShipyardList(data) {
+function getShipyardList(data) {
   return request({
     url: '/repairYardBudgetInfo/query/getShipyardList',
     method: 'get',
@@ -26,7 +26,7 @@ function  getShipyardList(data) {
   })
 }
 // 预算单->详情查询
-function  getBudgetInfo(data) {
+function getBudgetInfo(data) {
   return request({
     url: '/repairYardBudgetInfo/query/getBudgetInfo',
     method: 'get',
@@ -34,7 +34,7 @@ function  getBudgetInfo(data) {
   })
 }
 // 预算单->修船厂查询
-function  getListByCondition(data) {
+function getListByCondition(data) {
   return request({
     url: '/servicerMerchantInfo/query/getPageByCondition',
     method: 'get',
@@ -42,7 +42,7 @@ function  getListByCondition(data) {
   });
 }
 // 预算单->保存
-function  updateBudgetInfo(data) {
+function updateBudgetInfo(data) {
   return request({
     url: '/repairYardBudgetInfo/api/updateBudgetInfo',
     method: 'post',
@@ -50,7 +50,7 @@ function  updateBudgetInfo(data) {
   })
 }
 // 预算单->操作历史
-function  getBillOperateHis(data) {
+function getBillOperateHis(data) {
   return request({
     url: '/repairYardBudgetInfo/query/getBillOperateHis',
     method: 'get',
@@ -58,7 +58,7 @@ function  getBillOperateHis(data) {
   })
 }
 // 预算单->明细删除
-function  deleteBudgetItem(data) {
+function deleteBudgetItem(data) {
   return request({
     url: '/repairYardBudgetInfo/api/deleteBudgetItem',
     method: 'post',
@@ -66,7 +66,7 @@ function  deleteBudgetItem(data) {
   })
 }
 // 预算单->提交/
-function  submitBudgetInfo(data) {
+function submitBudgetInfo(data) {
   return request({
     url: '/repairYardBudgetInfo/api/submitBudgetInfo',
     method: 'post',
@@ -74,7 +74,7 @@ function  submitBudgetInfo(data) {
   })
 }
 // 预算单->关联单据
-function  getRelevanceBill(data) {
+function getRelevanceBill(data) {
   return request({
     url: 'repairYardBudgetInfo/query/getBudgetRelevanceBill',
     method: 'get',
@@ -82,7 +82,7 @@ function  getRelevanceBill(data) {
   })
 }
 // 预算单->关联单据
-function  sendMail(data) {
+function sendMail(data) {
   return request({
     url: '/repairYardBudgetInfo/api/sendMail',
     method: 'post',
@@ -90,7 +90,7 @@ function  sendMail(data) {
   })
 }
 // 预算单->导出附件
-function  doExportFill(data) {
+function doExportFill(data) {
   return request({
     url: '/repairYardBudgetInfo/query/doExportFill',
     method: 'get',
@@ -98,7 +98,7 @@ function  doExportFill(data) {
   })
 }
 // 预算单->获取公司信息
-function  getCompanyInfoById(data) {
+function getCompanyInfoById(data) {
   return request({
     url: '/company/query/companyInfo',
     method: 'get',
@@ -106,7 +106,7 @@ function  getCompanyInfoById(data) {
   });
 }
 // 工程预算单详情->根据员工ID取得发件箱信息集合
-function  getAllSendMailInfoList(data) {
+function getAllSendMailInfoList(data) {
   return request({
     url: '/commonSendMailInfo/query/getAllSendMailInfoListByStaffId',
     method: 'get',
@@ -114,7 +114,7 @@ function  getAllSendMailInfoList(data) {
   });
 }
 // 工程预算单详情->取得发件箱类型信息
-function  getMailHostTypeList(data) {
+function getMailHostTypeList(data) {
   return request({
     url: '/commonSendMailHostType/query/getMailHostTypeList',
     method: 'get',
@@ -122,7 +122,7 @@ function  getMailHostTypeList(data) {
   });
 }
 // 工程预算单详情->取得发件箱类型信息
-function  getMailHostTypeListByTypeId(data) {
+function getMailHostTypeListByTypeId(data) {
   return request({
     url: '/commonSendMailHostType/query/getMailHostTypeListByTypeId',
     method: 'get',
@@ -130,7 +130,7 @@ function  getMailHostTypeListByTypeId(data) {
   });
 }
 // 工程预算单详情->删除发件箱信息
-function  deleteSendMailInfo(data) {
+function deleteSendMailInfo(data) {
   return request({
     url: '/commonSendMailInfo/api/deleteSendMailInfo',
     method: 'post',
@@ -138,10 +138,30 @@ function  deleteSendMailInfo(data) {
   });
 }
 // 工程预算单详情->保存或者修改邮箱信息
-function  saveOrUpdateSendMailInfos(data) {
+function saveOrUpdateSendMailInfos(data) {
   return request({
     url: '/commonSendMailInfo/api/saveOrUpdateSendMailInfos',
     method: 'post',
     data
   });
+}
+export default {
+  getPageByCondition,
+  getStatusList,
+  getShipyardList,
+  getBudgetInfo,
+  getListByCondition,
+  updateBudgetInfo,
+  getBillOperateHis,
+  deleteBudgetItem,
+  submitBudgetInfo,
+  getRelevanceBill,
+  sendMail,
+  doExportFill,
+  getCompanyInfoById,
+  getAllSendMailInfoList,
+  getMailHostTypeList,
+  getMailHostTypeListByTypeId,
+  deleteSendMailInfo,
+  saveOrUpdateSendMailInfos
 }

@@ -1,7 +1,7 @@
 import request from '../../../request'
 
 // 新增访船报告
-function  saveAdd(data) {
+function saveAdd(data) {
   return request({
     url: '/visitVesselInfo/api/saveAdd',
     method: 'post',
@@ -10,7 +10,7 @@ function  saveAdd(data) {
 }
 
 // 一览查询
-function  getPageBy(params) {
+function getPageBy(params) {
   return request({
     url: '/visitVesselInfo/query/getPageBy',
     method: 'get',
@@ -19,7 +19,7 @@ function  getPageBy(params) {
 }
 
 // 修改访船报告
-function  saveEdit(data) {
+function saveEdit(data) {
   return request({
     url: '/visitVesselInfo/api/saveEdit',
     method: 'post',
@@ -28,7 +28,7 @@ function  saveEdit(data) {
 }
 
 // 详情查询
-function  getOneById(params) {
+function getOneById(params) {
   return request({
     url: '/visitVesselInfo/query/getOneById',
     method: 'get',
@@ -37,7 +37,7 @@ function  getOneById(params) {
 }
 
 // 获取状态列表
-function  getStatusListBy(params) {
+function getStatusListBy(params) {
   return request({
     url: '/visitVesselInfo/query/getStatusListBy',
     method: 'get',
@@ -46,7 +46,7 @@ function  getStatusListBy(params) {
 }
 
 // 缺陷类型查询
-function  getParameterCompanyDefectCategory (data) {
+function getParameterCompanyDefectCategory(data) {
   return request({
     url: '/txParameterCompany/query/getParameterCompanyDefectCategory',
     method: 'get',
@@ -54,7 +54,7 @@ function  getParameterCompanyDefectCategory (data) {
   })
 }
 // 语种
-function  getParameterCompanyLanguage(data) {
+function getParameterCompanyLanguage(data) {
   return request({
     url: '/txParameterCompany/query/getParameterCompanyLanguage',
     method: 'get',
@@ -62,7 +62,7 @@ function  getParameterCompanyLanguage(data) {
   })
 }
 // 批准单位
-function  getParameterCompanyApprovedUnit(data) {
+function getParameterCompanyApprovedUnit(data) {
   return request({
     url: '/txParameterCompany/query/getParameterCompanyApprovedUnit',
     method: 'get',
@@ -71,7 +71,7 @@ function  getParameterCompanyApprovedUnit(data) {
 }
 
 // 项目   检查要点
-function  queryThirdTemplateConfigurationList(data) {
+function queryThirdTemplateConfigurationList(data) {
   return request({
     url: '/txTemplateConfiguration/query/queryThirdTemplateConfigurationList',
     method: 'get',
@@ -80,7 +80,7 @@ function  queryThirdTemplateConfigurationList(data) {
 }
 
 // 项目   检查要点
-function  queryTemplateConfigurationList(data) {
+function queryTemplateConfigurationList(data) {
   return request({
     url: '/txTemplateConfiguration/query/queryTemplateConfigurationList',
     method: 'get',
@@ -88,7 +88,7 @@ function  queryTemplateConfigurationList(data) {
   })
 }
 // 通过部门ID获取岸基发起人数据
-function  deptRoleList(params) {
+function deptRoleList(params) {
   return request({
     url: '/role/query/deptRoleList',
     method: 'get',
@@ -97,7 +97,7 @@ function  deptRoleList(params) {
 }
 
 // 获取全部职务
-function  getQueryList(data) {
+function getQueryList(data) {
   return request({
     url: '/dutyParameter/query/getQueryList',
     method: 'get',
@@ -106,7 +106,7 @@ function  getQueryList(data) {
 }
 
 // 获取数据字典分类信息
-function  items(data) {
+function items(data) {
   return request({
     url: '/dictionary/query/items',
     method: 'get',
@@ -115,7 +115,7 @@ function  items(data) {
 }
 
 // 根据职务查询职员
-function  findRole(data) {
+function findRole(data) {
   return request({
     url: '/staff/query/findRole',
     method: 'get',
@@ -124,7 +124,7 @@ function  findRole(data) {
 }
 
 // 获取操作历史
-function  getHisListBy(data) {
+function getHisListBy(data) {
   return request({
     url: '/visitVesselInfo/query/getHisListBy',
     method: 'get',
@@ -133,7 +133,7 @@ function  getHisListBy(data) {
 }
 
 // 删除船员评定
-function  removeEvaluate(data) {
+function removeEvaluate(data) {
   return request({
     url: '/visitVesselInfo/api/removeEvaluate',
     method: 'post',
@@ -142,7 +142,7 @@ function  removeEvaluate(data) {
 }
 
 // 废弃访船报告
-function  discard(data) {
+function discard(data) {
   return request({
     url: '/visitVesselInfo/api/discard',
     method: 'post',
@@ -151,7 +151,7 @@ function  discard(data) {
 }
 
 // 提交访船报告
-function  submit(data) {
+function submit(data) {
   return request({
     url: '/visitVesselInfo/api/submit',
     method: 'post',
@@ -160,7 +160,7 @@ function  submit(data) {
 }
 
 // 发送访船报告
-function  send(data) {
+function send(data) {
   return request({
     url: '/visitVesselInfo/api/send',
     method: 'post',
@@ -169,7 +169,7 @@ function  send(data) {
 }
 
 // 整改访船报告
-function  rectify(data) {
+function rectify(data) {
   return request({
     url: '/visitVesselInfo/api/rectify',
     method: 'post',
@@ -178,7 +178,7 @@ function  rectify(data) {
 }
 
 // 关闭访船报告
-function  closed(data) {
+function closed(data) {
   return request({
     url: '/visitVesselInfo/api/closed',
     method: 'post',
@@ -187,7 +187,7 @@ function  closed(data) {
 }
 
 // 船舶自查明细删除
-function  deleteSelfShipInspectionDefectList(data) {
+function deleteSelfShipInspectionDefectList(data) {
   return request({
     url: '/txShipInspectionInfo/api/deleteSelfShipInspectionDefectList',
     method: 'post',
@@ -196,7 +196,7 @@ function  deleteSelfShipInspectionDefectList(data) {
 }
 
 // 退回
-function  back(data) {
+function back(data) {
   return request({
     url: '/visitVesselInfo/api/back',
     method: 'post',
@@ -205,7 +205,7 @@ function  back(data) {
 }
 
 // 通过公司ID获取部门列表
-function  deptListByCompId(data) {
+function deptListByCompId(data) {
   return request({
     url: '/staff/query/deptListByCompId',
     method: 'get',
@@ -214,7 +214,7 @@ function  deptListByCompId(data) {
 }
 
 // 通过公司ID获取部门列表
-function  findVesselRole(data) {
+function findVesselRole(data) {
   return request({
     url: '/role/query/findVesselRole',
     method: 'get',
@@ -223,10 +223,39 @@ function  findVesselRole(data) {
 }
 
 // 添加下船船员弹出框信息
-function  getInVesselSeafarerList(data) {
+function getInVesselSeafarerList(data) {
   return request({
     url: '/crewBatchShiftsPlanInfo/query/getInVesselSeafarerList',
     method: 'get',
     params: data
   })
+}
+
+export default {
+  saveAdd,
+  getPageBy,
+  saveEdit,
+  getOneById,
+  getStatusListBy,
+  getParameterCompanyDefectCategory,
+  getParameterCompanyLanguage,
+  getParameterCompanyApprovedUnit,
+  queryThirdTemplateConfigurationList,
+  queryTemplateConfigurationList,
+  deptRoleList,
+  getQueryList,
+  items,
+  findRole,
+  getHisListBy,
+  removeEvaluate,
+  discard,
+  submit,
+  send,
+  rectify,
+  closed,
+  deleteSelfShipInspectionDefectList,
+  back,
+  deptListByCompId,
+  findVesselRole,
+  getInVesselSeafarerList
 }

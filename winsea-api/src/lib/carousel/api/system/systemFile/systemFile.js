@@ -2,7 +2,7 @@ import request from '../../../request'
 
 /* ----------文件管理-----------*/
 // 分页查询模板文件列表
-function  getFileTemplateInfoByPage(data) {
+function getFileTemplateInfoByPage(data) {
   return request({
     url: '/txFileTemplateInfo/query/getFileTemplateInfoByPage',
     method: 'get',
@@ -11,7 +11,7 @@ function  getFileTemplateInfoByPage(data) {
 }
 
 // 批量删除
-function  deleteFileTemplateInfo(data) {
+function deleteFileTemplateInfo(data) {
   return request({
     url: '/txFileTemplateInfo/api/deleteFileTemplateInfo',
     method: 'post',
@@ -20,7 +20,7 @@ function  deleteFileTemplateInfo(data) {
 }
 
 // 批量上传
-function  uploadFiles(data) {
+function uploadFiles(data) {
   return request({
     url: '/txFileTemplateInfo/api/uploadFiles',
     method: 'post',
@@ -29,7 +29,7 @@ function  uploadFiles(data) {
 }
 
 // 发送船长
-function  sendShip(data) {
+function sendShip(data) {
   return request({
     url: '/txFileTemplateInfo/api/sendShip',
     method: 'post',
@@ -38,7 +38,7 @@ function  sendShip(data) {
 }
 
 // 设置
-function  saveFileTemplateInfoSetting(data) {
+function saveFileTemplateInfoSetting(data) {
   return request({
     url: '/txFileTemplateInfo/api/saveFileTemplateInfoSetting',
     method: 'post',
@@ -47,7 +47,7 @@ function  saveFileTemplateInfoSetting(data) {
 }
 
 // 上传文件
-function  uploadFile(data) {
+function uploadFile(data) {
   return request({
     url: '/txFileTemplateInfo/api/saveFileTemplateInfoUploadFiles',
     // url: '/txFileTemplateInfo/api/uploadFile',
@@ -57,7 +57,7 @@ function  uploadFile(data) {
 }
 
 // 根据公司ID获取船舶数据
-function  getAppShips(data) {
+function getAppShips(data) {
   return request({
     url: '/staff/query/vesselListByCompId',
     method: 'get',
@@ -66,16 +66,16 @@ function  getAppShips(data) {
 }
 
 // 获取岸基的部门数据
-function  getDeptListByCompId(data) {
+function getDeptListByCompId(data) {
   return request({
     url: '/staff/query/deptListByCompId',
     method: 'get',
-    params:  data
+    params: data
   })
 }
 
 // 获取船端发起人数据
-function  getRoleDutyByCompId(data) {
+function getRoleDutyByCompId(data) {
   return request({
     url: '/commonDeptRole/query/getRoleDutyByCompId',
     method: 'get',
@@ -86,7 +86,7 @@ function  getRoleDutyByCompId(data) {
 }
 
 // 通过部门ID获取岸基发起人数据
-function  deptRoleList(params) {
+function deptRoleList(params) {
   return request({
     url: '/role/query/deptRoleList',
     method: 'get',
@@ -95,7 +95,7 @@ function  deptRoleList(params) {
 }
 
 // 获取审核流职务列表
-function  getCompRole(data) {
+function getCompRole(data) {
   return request({
     url: '/role/query/roleList',
     method: 'get',
@@ -106,7 +106,7 @@ function  getCompRole(data) {
 }
 
 // 查询文件夹一览信息
-function  getSystemFolderList(data) {
+function getSystemFolderList(data) {
   return request({
     url: '/txFileTypeInfo/query/getFileTypeInfoTree',
     method: 'get',
@@ -115,7 +115,7 @@ function  getSystemFolderList(data) {
 }
 /* ----------体系操作-----------*/
 // 跟踪列表
-function  getFileOperationInfoTrackByPage(data) {
+function getFileOperationInfoTrackByPage(data) {
   return request({
     url: '/txFileOperationInfo/query/getFileOperationInfoTrackByPage',
     method: 'get',
@@ -124,7 +124,7 @@ function  getFileOperationInfoTrackByPage(data) {
 }
 
 // 我的报表
-function  getMyReportByPage(data) {
+function getMyReportByPage(data) {
   return request({
     url: '/txFileOperationInfo/query/getMyReportByPage',
     method: 'get',
@@ -133,7 +133,7 @@ function  getMyReportByPage(data) {
 }
 
 // 全部
-function  getAllFileOperationInfoByPage(data) {
+function getAllFileOperationInfoByPage(data) {
   return request({
     url: '/txFileOperationInfo/query/getAllFileOperationInfoByPage',
     method: 'get',
@@ -142,7 +142,7 @@ function  getAllFileOperationInfoByPage(data) {
 }
 
 // 待处理
-function  getFileOperationInfoWaitDealWithByPage(data) {
+function getFileOperationInfoWaitDealWithByPage(data) {
   return request({
     url: '/txFileOperationInfo/query/getFileOperationInfoWaitDealWithByPage',
     method: 'get',
@@ -151,7 +151,7 @@ function  getFileOperationInfoWaitDealWithByPage(data) {
 }
 
 // 获取船舶id
-function  selectShipId(data) {
+function selectShipId(data) {
   return request({
     url: '/vessel/query/getUserVesselListByStatus',
     method: 'get',
@@ -160,7 +160,7 @@ function  selectShipId(data) {
 }
 
 // 填写报告-我的报表
-function  fillReport(data) {
+function fillReport(data) {
   return request({
     url: '/txFileOperationInfo/api/fillReport',
     method: 'post',
@@ -169,7 +169,7 @@ function  fillReport(data) {
 }
 
 // 填写报告-待处理
-function  waitFillReport(data) {
+function waitFillReport(data) {
   return request({
     url: '/txFileOperationInfo/api/waitFillReport',
     method: 'post',
@@ -178,7 +178,7 @@ function  waitFillReport(data) {
 }
 
 // 废弃
-function  discard(data) {
+function discard(data) {
   return request({
     url: '/txFileOperationInfo/api/discard',
     method: 'post',
@@ -187,7 +187,7 @@ function  discard(data) {
 }
 
 // 存档
-function  archive(data) {
+function archive(data) {
   return request({
     url: 'txFileOperationInfo/api/archive',
     method: 'post',
@@ -196,7 +196,7 @@ function  archive(data) {
 }
 
 // 提交审核- 文件管理
-function  submitReview(data) {
+function submitReview(data) {
   return request({
     url: '/txFileTemplateInfo/api/submitReview',
     method: 'post',
@@ -205,7 +205,7 @@ function  submitReview(data) {
 }
 
 // 审核通过
-function  reviewPass(data) {
+function reviewPass(data) {
   return request({
     url: '/txFileOperationInfo/api/reviewPass',
     method: 'post',
@@ -214,7 +214,7 @@ function  reviewPass(data) {
 }
 
 // 审核不通过
-function  reviewNotPass(data) {
+function reviewNotPass(data) {
   return request({
     url: '/txFileOperationInfo/api/reviewNotPass',
     method: 'post',
@@ -223,7 +223,7 @@ function  reviewNotPass(data) {
 }
 
 // 接收
-function  receive(data) {
+function receive(data) {
   return request({
     url: '/txFileOperationInfo/api/receive',
     method: 'post',
@@ -232,7 +232,7 @@ function  receive(data) {
 }
 
 // 发送
-function  operationSendShip(data) {
+function operationSendShip(data) {
   return request({
     url: '/txFileOperationInfo/api/sendShip',
     method: 'post',
@@ -241,7 +241,7 @@ function  operationSendShip(data) {
 }
 
 // 获取保存文档id
-function  getTempFileId(data) {
+function getTempFileId(data) {
   return request({
     url: '/office/getTempFileId',
     method: 'get',
@@ -250,7 +250,7 @@ function  getTempFileId(data) {
 }
 
 // 文件重命名
-function  renameFileTemplateInfo(data) {
+function renameFileTemplateInfo(data) {
   return request({
     url: '/txFileTemplateInfo/api/renameFileTemplateInfo',
     method: 'post',
@@ -259,7 +259,7 @@ function  renameFileTemplateInfo(data) {
 }
 
 // 上传附件
-function  uploadAttachFile(data) {
+function uploadAttachFile(data) {
   return request({
     url: 'txFileOperationInfo/api/uploadFile',
     method: 'post',
@@ -267,7 +267,7 @@ function  uploadAttachFile(data) {
   })
 }
 // 提交审核- 待处理
-function  toSubmitReview(data) {
+function toSubmitReview(data) {
   return request({
     url: 'txFileOperationInfo/api/submitReview',
     method: 'post',
@@ -275,7 +275,7 @@ function  toSubmitReview(data) {
   })
 }
 // 状态列表
-function  getFileOperationStatusList(data) {
+function getFileOperationStatusList(data) {
   return request({
     url: '/txFileOperationInfo/query/getFileOperationStatusList',
     method: 'get',
@@ -283,10 +283,44 @@ function  getFileOperationStatusList(data) {
   })
 }
 // 批量下载
-function  batchAttachment(data) {
+function batchAttachment(data) {
   return request({
     url: '/appendix/download/batchAttachment',
     method: 'get',
     params: data
   })
+}
+export default {
+  getFileTemplateInfoByPage,
+  deleteFileTemplateInfo,
+  uploadFiles,
+  sendShip,
+  saveFileTemplateInfoSetting,
+  uploadFile,
+  getAppShips,
+  getDeptListByCompId,
+  getRoleDutyByCompId,
+  deptRoleList,
+  getCompRole,
+  getSystemFolderList,
+  getFileOperationInfoTrackByPage,
+  getMyReportByPage,
+  getAllFileOperationInfoByPage,
+  getFileOperationInfoWaitDealWithByPage,
+  selectShipId,
+  fillReport,
+  waitFillReport,
+  discard,
+  archive,
+  submitReview,
+  reviewPass,
+  reviewNotPass,
+  receive,
+  operationSendShip,
+  getTempFileId,
+  renameFileTemplateInfo,
+  uploadAttachFile,
+  toSubmitReview,
+  getFileOperationStatusList,
+  batchAttachment
 }

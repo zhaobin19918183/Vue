@@ -200,3 +200,30 @@ function  getApplyRelation(params) {
     params
   })
 }
+export default{
+  isVesselTerminal,
+getInfoListInListTable,
+getStatusInDialog,
+getApplicationType,
+getApplicationTree,
+getTableDataWithTree,
+saveApplication,
+getUnitInSelect,
+getApplicationDetail,
+saveApplicationEdit,
+submitApplication,
+discardApplication,
+confirmApplication,
+sendBackApplication,
+submitTheWholeApplication,
+getExisting,
+getFormer,
+getOperateHis,
+handle,
+getExamineHis,
+applyImport,
+positionInfo,
+removeDetails,
+getListExist,
+getApplyRelation,
+}

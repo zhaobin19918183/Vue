@@ -90,3 +90,16 @@ function  sendAdjustHistory(data) {
     data
   })
 }
+
+export default{
+  saveAdd,
+  saveEdit,
+  saveSubmit,
+  saveDiscard,
+  saveAdjust,
+  getPageByCondition,
+  getDetailInfoById,
+  getInitDetailInfo,
+  getOperateHistorys,
+  sendAdjustHistory
+}

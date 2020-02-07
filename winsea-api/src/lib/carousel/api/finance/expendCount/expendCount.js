@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from  '../../../request'
 
 // 查询支出统计详情
 function  getStatisticsPayMoney(params) {
@@ -7,4 +7,7 @@ function  getStatisticsPayMoney(params) {
     method: 'get',
     params: params
   })
+}
+export default{
+  getStatisticsPayMoney
 }

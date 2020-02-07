@@ -110,3 +110,20 @@ function  getPageByConditionZj(params) {
     headers: {'request-type': 'zj'},
   })
 }
+
+export default{
+  getPageByCondition,
+  checkExsited,
+  checkAdjusted,
+  saveAdd,
+  getDetailInfoById,
+  refreshBudgetDetails,
+  saveConfirm,
+  getAdjustHistoryPage,
+  exsitNotCompleted,
+  saveSubmitZj,
+  getDetailInfoByIdZj,
+  getPageByConditionZj
+
+}
+

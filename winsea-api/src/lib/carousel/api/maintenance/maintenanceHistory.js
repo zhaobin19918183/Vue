@@ -28,3 +28,8 @@ function  getOperateHistories(data) {
     params: data
   })
 }
+export default{
+  getPageByCondition,
+  getDetailInfoById,
+  getOperateHistories
+}

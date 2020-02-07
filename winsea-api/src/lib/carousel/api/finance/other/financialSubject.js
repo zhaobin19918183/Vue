@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from  '../../../request'
 
 // 保存财务科目
 function  saveFinance(data) {
@@ -17,6 +17,10 @@ function  deleteFinance(data) {
     method: 'post',
     data
   })
+}
+export default{
+  saveFinance,
+  deleteFinance
 }
 
 

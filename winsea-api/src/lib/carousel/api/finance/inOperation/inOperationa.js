@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from  '../../../request'
 
 // 月资金预算新增保存
 function  saveAdd(data) {
@@ -76,4 +76,17 @@ function  monthFundCollect(params) {
     method: 'get',
     params: params
   })
+}
+
+export default{
+  saveAdd,
+  saveEdit,
+  saveSubmit,
+  saveDiscard,
+  getPageByCondition,
+  getDetailInfoById,
+  getInitDetailInfo,
+  getOperateHistorys,
+  monthFundCollect
+
 }

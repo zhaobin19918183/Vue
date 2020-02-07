@@ -1,9 +1,9 @@
 // 厂修预算单Api接口
 
-import request from '../../../../utils/request'
+import request from '../../../../request'
 
 // 验收单详细->工程类别一览查询
-function  getRepairParameterCompany(data) {
+function getRepairParameterCompany(data) {
   return request({
     url: '/repairParameterCompany/query/getRepairParameterCompany',
     method: 'get',
@@ -12,7 +12,7 @@ function  getRepairParameterCompany(data) {
 }
 
 // 厂修工程单一览查询
-function  getPageByCondition(data) {
+function getPageByCondition(data) {
   return request({
     url: '/repairYardAcceptanceInfo/query/getPageByCondition',
     method: 'get',
@@ -21,7 +21,7 @@ function  getPageByCondition(data) {
 }
 
 // 验收单状态集合查询 
-function  getStatusList(data) {
+function getStatusList(data) {
   return request({
     url: '/repairYardAcceptanceInfo/query/getStatusList',
     method: 'get',
@@ -29,7 +29,7 @@ function  getStatusList(data) {
   })
 }
 // 验收单修船厂集合查询
-function  getShipyardList(data) {
+function getShipyardList(data) {
   return request({
     url: '/repairYardAcceptanceInfo/query/getShipyardList',
     method: 'get',
@@ -38,7 +38,7 @@ function  getShipyardList(data) {
 }
 
 // 验收单详情查询 
-function  getAcceptanceInfo(data) {
+function getAcceptanceInfo(data) {
   return request({
     url: '/repairYardAcceptanceInfo/query/getAcceptanceInfo',
     method: 'get',
@@ -47,7 +47,7 @@ function  getAcceptanceInfo(data) {
 }
 
 // 验收单关联单据查询
-function  getRelevanceBill(data) {
+function getRelevanceBill(data) {
   return request({
     url: '/repairYardAcceptanceInfo/query/getRelevanceBill',
     method: 'get',
@@ -56,7 +56,7 @@ function  getRelevanceBill(data) {
 }
 
 // 操作历史 
-function  getBillOperateHis(data) {
+function getBillOperateHis(data) {
   return request({
     url: '/repairYardAcceptanceInfo/query/getBillOperateHis',
     method: 'get',
@@ -65,7 +65,7 @@ function  getBillOperateHis(data) {
 }
 
 // 验收单编辑 
-function  updateBudgetInfo(data) {
+function updateBudgetInfo(data) {
   return request({
     url: '/repairYardAcceptanceInfo/api/updateBudgetInfo',
     method: 'post',
@@ -74,7 +74,7 @@ function  updateBudgetInfo(data) {
 }
 
 // 验收单确认
-function  confirm(data) {
+function confirm(data) {
   return request({
     url: '/repairYardAcceptanceInfo/api/confirm',
     method: 'post',
@@ -83,7 +83,7 @@ function  confirm(data) {
 }
 
 // 验收单退回
-function  returnAcceptanceInfo(data) {
+function returnAcceptanceInfo(data) {
   return request({
     url: '/repairYardAcceptanceInfo/api/returnAcceptanceInfo',
     method: 'post',
@@ -92,7 +92,7 @@ function  returnAcceptanceInfo(data) {
 }
 
 //  提交岸基
-function  submitAcceptanceInfo(data) {
+function submitAcceptanceInfo(data) {
   return request({
     url: '/repairYardAcceptanceInfo/api/submitAcceptanceInfo',
     method: 'post',
@@ -101,10 +101,24 @@ function  submitAcceptanceInfo(data) {
 }
 
 // 验收单明细删除
-function  deleteItem(data) {
+function deleteItem(data) {
   return request({
     url: '/repairYardAcceptanceInfo/api/deleteItem',
     method: 'post',
     data: data
   })
+}
+export default {
+  getRepairParameterCompany,
+  getPageByCondition,
+  getStatusList,
+  getShipyardList,
+  getAcceptanceInfo,
+  getRelevanceBill,
+  getBillOperateHis,
+  updateBudgetInfo,
+  confirm,
+  returnAcceptanceInfo,
+  submitAcceptanceInfo,
+  deleteItem,
 }

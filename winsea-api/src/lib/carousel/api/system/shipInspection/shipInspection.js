@@ -1,7 +1,7 @@
 import request from '../../../request'
 
 // 船舶自查关闭
-function  closeShipSelfInspectionInfo(data) {
+function closeShipSelfInspectionInfo(data) {
   return request({
     url: '/txShipInspectionInfo/api/closeShipSelfInspectionInfo',
     method: 'post',
@@ -10,7 +10,7 @@ function  closeShipSelfInspectionInfo(data) {
 }
 
 // 船舶自查编辑保存
-function  saveShipSelfInspectionInfo(data) {
+function saveShipSelfInspectionInfo(data) {
   return request({
     url: '/txShipInspectionInfo/api/saveShipSelfInspectionInfo',
     method: 'post',
@@ -19,7 +19,7 @@ function  saveShipSelfInspectionInfo(data) {
 }
 
 // 船舶自查提交岸基
-function  submitShipSelfInspectionAudit(data) {
+function submitShipSelfInspectionAudit(data) {
   return request({
     url: '/txShipInspectionInfo/api/submitShipSelfInspectionAudit',
     method: 'post',
@@ -28,7 +28,7 @@ function  submitShipSelfInspectionAudit(data) {
 }
 
 // 船舶自检一览信息查询
-function  getSelfPageByCondition(params) {
+function getSelfPageByCondition(params) {
   return request({
     url: '/txShipInspectionInfo/query/getSelfPageByCondition',
     method: 'get',
@@ -37,7 +37,7 @@ function  getSelfPageByCondition(params) {
 }
 
 // 取得船舶自检中的状态集合
-function  getSelfStatusList(params) {
+function getSelfStatusList(params) {
   return request({
     url: '/txShipInspectionInfo/query/getSelfStatusList',
     method: 'get',
@@ -46,7 +46,7 @@ function  getSelfStatusList(params) {
 }
 
 // 缺陷类型查询
-function  getParameterCompanyDefectCategory(data) {
+function getParameterCompanyDefectCategory(data) {
   return request({
     url: '/txParameterCompany/query/getParameterCompanyDefectCategory',
     method: 'get',
@@ -55,7 +55,7 @@ function  getParameterCompanyDefectCategory(data) {
 }
 
 // 船舶自查详情页查询
-function  getSelfShipInspection(data) {
+function getSelfShipInspection(data) {
   return request({
     url: '/txShipInspectionInfo/query/getSelfShipInspection',
     method: 'get',
@@ -64,7 +64,7 @@ function  getSelfShipInspection(data) {
 }
 
 // 船舶自查明细删除
-function  deleteSelfShipInspectionDefectList(data) {
+function deleteSelfShipInspectionDefectList(data) {
   return request({
     url: '/txShipInspectionInfo/api/deleteSelfShipInspectionDefectList',
     method: 'post',
@@ -73,7 +73,7 @@ function  deleteSelfShipInspectionDefectList(data) {
 }
 
 // 船舶自查签名查询
-function  getSelfSignatureList(data) {
+function getSelfSignatureList(data) {
   return request({
     url: '/txShipInspectionInfo/query/getSelfSignatureList',
     method: 'get',
@@ -82,7 +82,7 @@ function  getSelfSignatureList(data) {
 }
 
 // 船舶自查历史
-function  getSelfHisListBy(data) {
+function getSelfHisListBy(data) {
   return request({
     url: '/txShipInspectionInfo//query/getSelfHisListBy',
     method: 'get',
@@ -91,7 +91,7 @@ function  getSelfHisListBy(data) {
 }
 
 // 船舶自查执行人
-function  getDeptStaffListByCompId(data) {
+function getDeptStaffListByCompId(data) {
   return request({
     url: '/staff/query/getDeptStaffListByCompId',
     method: 'get',
@@ -100,7 +100,7 @@ function  getDeptStaffListByCompId(data) {
 }
 
 // 船舶自查废弃
-function  discardSelfInspection(data) {
+function discardSelfInspection(data) {
   return request({
     url: '/txShipInspectionInfo/query/discardSelfInspection',
     method: 'post',
@@ -109,7 +109,7 @@ function  discardSelfInspection(data) {
 }
 
 // 船舶自查编辑保存
-function  saveSelfFyInspectionInfo(data) {
+function saveSelfFyInspectionInfo(data) {
   return request({
     url: '/txShipInspectionInfo/api/saveSelfFyInspectionInfo',
     method: 'post',
@@ -118,7 +118,7 @@ function  saveSelfFyInspectionInfo(data) {
 }
 
 // 船舶自查编辑修改
-function  updateSelfFyInspectionInfo(data) {
+function updateSelfFyInspectionInfo(data) {
   return request({
     url: '/txShipInspectionInfo/api/updateSelfFyInspectionInfo',
     method: 'post',
@@ -127,7 +127,7 @@ function  updateSelfFyInspectionInfo(data) {
 }
 
 // 船舶自查提交
-function  submitSelfFyInspectionAudit(data) {
+function submitSelfFyInspectionAudit(data) {
   return request({
     url: '/txShipInspectionInfo/api/submitSelfFyInspectionAudit',
     method: 'post',
@@ -136,7 +136,7 @@ function  submitSelfFyInspectionAudit(data) {
 }
 
 // 船舶自查废弃
-function  discardSelfFyInspection(data) {
+function discardSelfFyInspection(data) {
   return request({
     url: '/txShipInspectionInfo/query/discardSelfFyInspection',
     method: 'post',
@@ -145,7 +145,7 @@ function  discardSelfFyInspection(data) {
 }
 
 // 船舶自查-上次报告
-function  getLatestSelfFyInspectionInfo(data) {
+function getLatestSelfFyInspectionInfo(data) {
   return request({
     url: '/txShipInspectionInfo/api/getLatestSelfFyInspectionInfo',
     method: 'get',
@@ -154,7 +154,7 @@ function  getLatestSelfFyInspectionInfo(data) {
 }
 
 // 船舶自检一览信息查询
-function  getSelfFyPageByCondition(params) {
+function getSelfFyPageByCondition(params) {
   return request({
     url: '/txShipInspectionInfo/query/getSelfFyPageByCondition',
     method: 'get',
@@ -163,7 +163,7 @@ function  getSelfFyPageByCondition(params) {
 }
 
 // 船舶自检历史
-function  getSelfFyHisListBy(data) {
+function getSelfFyHisListBy(data) {
   return request({
     url: '/txShipInspectionInfo/query/getSelfFyHisListBy',
     method: 'get',
@@ -172,7 +172,7 @@ function  getSelfFyHisListBy(data) {
 }
 
 // 船舶自检详情
-function  getSelfFyInspection(data) {
+function getSelfFyInspection(data) {
   return request({
     url: '/txShipInspectionInfo/query/getSelfFyInspection',
     method: 'get',
@@ -181,7 +181,7 @@ function  getSelfFyInspection(data) {
 }
 
 // 船舶状态集合
-function  getSelfFyStatusList(data) {
+function getSelfFyStatusList(data) {
   return request({
     url: '/txShipInspectionInfo/query/getSelfFyStatusList',
     method: 'get',
@@ -190,7 +190,7 @@ function  getSelfFyStatusList(data) {
 }
 
 // 获取跳转权限
-function  getJumpPermission(data) {
+function getJumpPermission(data) {
   return request({
     url: '/txShipInspectionInfo/query/getJumpPermission',
     method: 'get',
@@ -198,7 +198,7 @@ function  getJumpPermission(data) {
   })
 }
 // 船舶自检报告缺陷项目删除
-function  deleteSelfFyShipInspectionDefectList(data) {
+function deleteSelfFyShipInspectionDefectList(data) {
   return request({
     url: '/txShipInspectionInfo/api/deleteSelfFyShipInspectionDefectList',
     method: 'post',
@@ -207,7 +207,7 @@ function  deleteSelfFyShipInspectionDefectList(data) {
 }
 
 // 船舶自检审核回复信息保存
-function  saveSelfFyIncompatibleReportInfo(data) {
+function saveSelfFyIncompatibleReportInfo(data) {
   return request({
     url: '/txShipInspectionInfo/api/saveSelfFyIncompatibleReportInfo',
     method: 'post',
@@ -216,7 +216,7 @@ function  saveSelfFyIncompatibleReportInfo(data) {
 }
 
 // 是否退回
-function  getSelfFyShipInspectionReturn(data) {
+function getSelfFyShipInspectionReturn(data) {
   return request({
     url: '/txShipInspectionInfo/query/getSelfFyShipInspectionReturn',
     method: 'get',
@@ -224,3 +224,30 @@ function  getSelfFyShipInspectionReturn(data) {
   })
 }
 
+export default {
+  closeShipSelfInspectionInfo,
+  saveShipSelfInspectionInfo,
+  submitShipSelfInspectionAudit,
+  getSelfPageByCondition,
+  getSelfStatusList,
+  getParameterCompanyDefectCategory,
+  getSelfShipInspection,
+  deleteSelfShipInspectionDefectList,
+  getSelfSignatureList,
+  getSelfHisListBy,
+  getDeptStaffListByCompId,
+  discardSelfInspection,
+  saveSelfFyInspectionInfo,
+  updateSelfFyInspectionInfo,
+  submitSelfFyInspectionAudit,
+  discardSelfFyInspection,
+  getLatestSelfFyInspectionInfo,
+  getSelfFyPageByCondition,
+  getSelfFyHisListBy,
+  getSelfFyInspection,
+  getSelfFyStatusList,
+  getJumpPermission,
+  deleteSelfFyShipInspectionDefectList,
+  saveSelfFyIncompatibleReportInfo,
+  getSelfFyShipInspectionReturn,
+}

@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from  '../../../request'
 
 // 查询公司预算预警值详情信息
 function  getDetailInfoByCondition(params) {
@@ -7,4 +7,7 @@ function  getDetailInfoByCondition(params) {
     method: 'get',
     params: params
   })
+}
+export default{
+  getDetailInfoByCondition
 }

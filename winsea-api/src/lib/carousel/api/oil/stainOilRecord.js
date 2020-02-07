@@ -2,7 +2,7 @@
 import request from '../../request'
 
 // 污油水记录新增的 容量信息
-function  getOilywaterTankPage(data) {
+function getOilywaterTankPage(data) {
   return request({
     url: '/oilWaterTank/query/last',
     method: 'get',
@@ -11,7 +11,7 @@ function  getOilywaterTankPage(data) {
 }
 
 // 污油水记录新增和修改
-function  createOrUpdate(data) {
+function createOrUpdate(data) {
   return request({
     url: '/oilWater/api/createOrUpdate',
     method: 'post',
@@ -20,7 +20,7 @@ function  createOrUpdate(data) {
 }
 
 // 污油水记录新增的 容量信息
-function  getPageByCondition(data) {
+function getPageByCondition(data) {
   return request({
     url: '/oilWater/query/page',
     method: 'get',
@@ -29,7 +29,7 @@ function  getPageByCondition(data) {
 }
 
 // 污油水存量查询one
-function  getDetailInfoById(data) {
+function getDetailInfoById(data) {
   return request({
     url: '/oilWater/query/one',
     method: 'get',
@@ -38,10 +38,17 @@ function  getDetailInfoById(data) {
 }
 
 // 污油水存量记录删除
-function  removeInfo(data) {
+function removeInfo(data) {
   return request({
     url: '/oilWater/api/remove',
     method: 'post',
     data
   })
+}
+export default {
+  getOilywaterTankPage,
+  createOrUpdate,
+  getPageByCondition,
+  getDetailInfoById,
+  removeInfo
 }

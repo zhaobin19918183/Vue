@@ -1,10 +1,10 @@
 // 加油申请
-import request from "../../utils/request";
+import request from "../../request";
 
 // **********************油品************************
 
 // 加油申请一览列表page
-function  page(data) {
+function page(data) {
   return request({
     url: "/oilBunkeringApply/query/page",
     method: "get",
@@ -13,7 +13,7 @@ function  page(data) {
 }
 
 // 加油申请详情
-function  one(data) {
+function one(data) {
   return request({
     url: "/oilBunkeringApply/query/one",
     method: "get",
@@ -22,7 +22,7 @@ function  one(data) {
 }
 
 // 油品
-function  oilPage(data) {
+function oilPage(data) {
   return request({
     url: "/oilName/query/page",
     method: "get",
@@ -31,7 +31,7 @@ function  oilPage(data) {
 }
 
 // 加油申请save
-function  save(data) {
+function save(data) {
   return request({
     url: "/oilBunkeringApply/api/save",
     method: "post",
@@ -40,7 +40,7 @@ function  save(data) {
 }
 
 // 加油申请-选择油品
-function  choiceOilName(data) {
+function choiceOilName(data) {
   return request({
     url: "/oilBunkeringApply/query/choiceOilName",
     method: "get",
@@ -49,7 +49,7 @@ function  choiceOilName(data) {
 }
 
 // 加油申请submit
-function  submit(data) {
+function submit(data) {
   return request({
     url: "/oilBunkeringApply/api/submit",
     method: "post",
@@ -58,7 +58,7 @@ function  submit(data) {
 }
 
 // 加油申请confirm
-function  confirm(data) {
+function confirm(data) {
   return request({
     url: "/oilBunkeringApply/api/confirm",
     method: "post",
@@ -67,7 +67,7 @@ function  confirm(data) {
 }
 
 // 加油申请commitLandbased
-function  commitLandbased(data) {
+function commitLandbased(data) {
   return request({
     url: "/oilBunkeringApply/api/commitLandbased",
     method: "post",
@@ -76,7 +76,7 @@ function  commitLandbased(data) {
 }
 
 // 加油申请approval
-function  approval(data) {
+function approval(data) {
   return request({
     url: "/oilBunkeringApply/api/approval",
     method: "post",
@@ -85,7 +85,7 @@ function  approval(data) {
 }
 
 // 加油申请notifyVessel
-function  notifyVessel(data) {
+function notifyVessel(data) {
   return request({
     url: "/oilBunkeringApply/api/notifyVessel",
     method: "post",
@@ -94,7 +94,7 @@ function  notifyVessel(data) {
 }
 
 // 加油申请vesselReceive
-function  vesselReceive(data) {
+function vesselReceive(data) {
   return request({
     url: "/oilBunkeringApply/api/vesselReceive",
     method: "post",
@@ -103,7 +103,7 @@ function  vesselReceive(data) {
 }
 
 // 加油申请return
-function  oilReturn(data) {
+function oilReturn(data) {
   return request({
     url: "/oilBunkeringApply/api/return",
     method: "post",
@@ -112,7 +112,7 @@ function  oilReturn(data) {
 }
 
 // 加油申请deprecated
-function  deprecated(data) {
+function deprecated(data) {
   return request({
     url: "/oilBunkeringApply/api/deprecated",
     method: "post",
@@ -121,7 +121,7 @@ function  deprecated(data) {
 }
 
 // 供油方
-function  getListByCondition(data) {
+function getListByCondition(data) {
   return request({
     url: "/servicerMerchantInfo/query/getListByCondition",
     method: "get",
@@ -130,7 +130,7 @@ function  getListByCondition(data) {
 }
 
 // 加油申请查询操作历史
-function  getBillOperateHis(data) {
+function getBillOperateHis(data) {
   return request({
     url: "/oilBunkeringApply/query/getBillOperateHis",
     method: "get",
@@ -139,10 +139,28 @@ function  getBillOperateHis(data) {
 }
 
 // 通过船舶加载油
-function  findOilNamesByVessel(data) {
+function findOilNamesByVessel(data) {
   return request({
     url: "/oilName/query/findOilNamesByVessel",
     method: "get",
     params: data
   });
+}
+export default {
+  page,
+  one,
+  oilPage,
+  save,
+  choiceOilName,
+  submit,
+  confirm,
+  commitLandbased,
+  approval,
+  notifyVessel,
+  vesselReceive,
+  oilReturn,
+  deprecated,
+  getListByCondition,
+  getBillOperateHis,
+  findOilNamesByVessel,
 }

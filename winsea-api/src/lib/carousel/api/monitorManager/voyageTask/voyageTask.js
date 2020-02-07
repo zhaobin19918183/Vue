@@ -161,7 +161,26 @@ function  getVoyageOrderFlowResponseList(data) {
     data
   })
 }
-
+export default{
+  getPageVoyageMissionInfo,
+  deptListByCompId,
+  add,
+  edit,
+  saveDelete,
+  getArr,
+  getVoyageMissionInfoResponse,
+  getstatusList,
+  saveVoyageMissionInfo,
+  submitVoyageMissionInfo,
+  reviewedVoyageMissionInfo,
+  returnVoyageMissionCommon,
+  improveVoyageMissionInfo,
+  implementationVoyageMissionInfo,
+  generalReviewVoyageMissionInfo,
+  exportVoyageMission,
+  departmentReviewVoyageMissionInfo,
+  getVoyageOrderFlowResponseList
+}
 
 
 

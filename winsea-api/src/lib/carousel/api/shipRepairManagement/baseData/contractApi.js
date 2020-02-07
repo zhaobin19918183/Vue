@@ -1,7 +1,7 @@
 import request from '../../../request'
 
 // 合同 一览查询
-function  getPageByCondition(data) {
+function getPageByCondition(data) {
   return request({
     url: '/repairContractTemplateInfo/query/selectPage',
     method: 'get',
@@ -9,7 +9,7 @@ function  getPageByCondition(data) {
   })
 }
 // 合同 保存
-function  saveContract(data) {
+function saveContract(data) {
   return request({
     url: '/repairContractTemplateInfo/api/saveContract',
     method: 'post',
@@ -17,7 +17,7 @@ function  saveContract(data) {
   })
 }
 // 合同 更新
-function  updateContract(data) {
+function updateContract(data) {
   return request({
     url: '/repairContractTemplateInfo/api/updateContract',
     method: 'post',
@@ -25,7 +25,7 @@ function  updateContract(data) {
   })
 }
 // 合同 删除
-function  deleteContract(data) {
+function deleteContract(data) {
   return request({
     url: '/repairContractTemplateInfo/api/deleteContract',
     method: 'post',
@@ -33,10 +33,17 @@ function  deleteContract(data) {
   })
 }
 // 合同 查询详情
-function  selectDetail(data) {
+function selectDetail(data) {
   return request({
     url: '/repairContractTemplateInfo/query/selectDetail',
     method: 'get',
     params: data
   })
+}
+export default {
+  getPageByCondition,
+  saveContract,
+  updateContract,
+  deleteContract,
+  selectDetail,
 }

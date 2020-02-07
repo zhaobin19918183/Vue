@@ -1,4 +1,4 @@
-import request from '../utils/request'
+import request from '../request'
 
 // 公告-首页使用 获取前三条
 function  issueList(data) {
@@ -16,4 +16,8 @@ function  issueDetail(data) {
     method: 'get',
     params: data
   })
+}
+export default{
+  issueList,
+  issueDetail
 }

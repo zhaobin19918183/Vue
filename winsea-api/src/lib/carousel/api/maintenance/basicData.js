@@ -63,3 +63,12 @@ function  getDeviceWorkCountByDeviceTypeId(data) {
     params: data
   })
 }
+export default{
+  saveAdd,
+  saveEdit,
+  deleteById,
+  changeOrder,
+  getPageByCondition,
+  getDeviceInfoList,
+  getDeviceWorkCountByDeviceTypeId
+}

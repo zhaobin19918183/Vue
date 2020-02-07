@@ -1,7 +1,7 @@
-import request from '../utils/request'
+import request from '../request'
 
 // 新增付款申请
-function  addPaymentApply(data) {
+function addPaymentApply(data) {
   return request({
     url: '/financePaymentApply/api/addPaymentApply',
     method: 'post',
@@ -10,7 +10,7 @@ function  addPaymentApply(data) {
 }
 
 // 修改付款申请
-function  editPaymentApply(data) {
+function editPaymentApply(data) {
   return request({
     url: '/financePaymentApply/api/editPaymentApply',
     method: 'post',
@@ -19,7 +19,7 @@ function  editPaymentApply(data) {
 }
 
 // 删除付款申请
-function  deletePaymentApply(data) {
+function deletePaymentApply(data) {
   return request({
     url: '/financePaymentApply/api/deletePaymentApply',
     method: 'post',
@@ -28,7 +28,7 @@ function  deletePaymentApply(data) {
 }
 
 // 获取当前登录用户信息
-function  getCurrentUserInfo(data) {
+function getCurrentUserInfo(data) {
   return request({
     url: '/staff/query/getCurrentUserInfo',
     method: 'get',
@@ -38,7 +38,7 @@ function  getCurrentUserInfo(data) {
 }
 
 // 查询付款申请列表
-function  getListByCondition(data) {
+function getListByCondition(data) {
   return request({
     url: '/financePaymentApply/query/getListByCondition',
     method: 'get',
@@ -48,7 +48,7 @@ function  getListByCondition(data) {
 }
 
 // 查询付款申请详情
-function  getPaymentApplyById(data) {
+function getPaymentApplyById(data) {
   return request({
     url: '/financePaymentApply/query/getPaymentApplyById',
     method: 'get',
@@ -58,7 +58,7 @@ function  getPaymentApplyById(data) {
 }
 
 // 获取公司下所有部门
-function  getDeptListByCompId(data) {
+function getDeptListByCompId(data) {
   return request({
     url: '/staff/query/deptListByCompId',
     method: 'get',
@@ -69,7 +69,7 @@ function  getDeptListByCompId(data) {
 }
 
 // 查询部门下职员
-function  getStaffListByDeptId(data) {
+function getStaffListByDeptId(data) {
   return request({
     url: '/staff/query/getStaffListByDeptId',
     method: 'get',
@@ -78,7 +78,7 @@ function  getStaffListByDeptId(data) {
 }
 
 // 付款申请提交审核
-function  submitWorkFlow(data) {
+function submitWorkFlow(data) {
   return request({
     url: '/financePaymentApply/api/submitWorkFlow',
     method: 'post',
@@ -87,7 +87,7 @@ function  submitWorkFlow(data) {
 }
 
 // 查询付款申请检索类别默认值
-function  getDefaultSearchType(data) {
+function getDefaultSearchType(data) {
   return request({
     url: '/financePaymentApply/query/getDefaultSearchType',
     method: 'get',
@@ -95,10 +95,23 @@ function  getDefaultSearchType(data) {
   })
 }
 // 获取任务审批历史
-function  taskHistories(data) {
+function taskHistories(data) {
   return request({
     url: '/workflowHistory/query/taskHistories',
     method: 'get',
     params: data
   })
+}
+export default {
+  addPaymentApply,
+  editPaymentApply,
+  deletePaymentApply,
+  getCurrentUserInfo,
+  getListByCondition,
+  getPaymentApplyById,
+  getDeptListByCompId,
+  getStaffListByDeptId,
+  submitWorkFlow,
+  getDefaultSearchType,
+  taskHistories
 }

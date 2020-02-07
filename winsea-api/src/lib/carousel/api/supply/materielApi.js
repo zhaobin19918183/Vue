@@ -1,11 +1,11 @@
 // 物料管理模块Api接口
 
-import request from "../../utils/request";
+import request from "../../request";
 
 // #region 设备管理
 
 // 设备管理 -> 设备管理-保存
-function  saveSupplyDeviceInfo(data) {
+function saveSupplyDeviceInfo(data) {
   return request({
     url: "/supplyDeviceInfo/api/saveSupplyDeviceInfo",
     method: "post",
@@ -14,12 +14,12 @@ function  saveSupplyDeviceInfo(data) {
 }
 // 申请-申请单详情导出
 // 获得下载文件URl
-function  materialExport(id) {
+function materialExport(id) {
   return `${process.env.VUE_APP_BASE_API}/materialExport/down/material/export?id=${id}`;
 }
 
 // 设备管理 -> 设备管理-删除
-function  delSupplyDeviceInfo(data) {
+function delSupplyDeviceInfo(data) {
   return request({
     url: "/supplyDeviceInfo/api/deleteSupplyDeviceInfo",
     method: "post",
@@ -28,7 +28,7 @@ function  delSupplyDeviceInfo(data) {
 }
 
 // 设备管理 -> 设备管理-分页查询
-function  selectSupplyDeviceInfoPage(data) {
+function selectSupplyDeviceInfoPage(data) {
   return request({
     url: "/supplyDeviceInfo/query/selectPage",
     method: "get",
@@ -37,7 +37,7 @@ function  selectSupplyDeviceInfoPage(data) {
 }
 
 // 设备管理 -> 设备管理-列表查询
-function  selectSupplyDeviceInfoList(data) {
+function selectSupplyDeviceInfoList(data) {
   return request({
     url: "/supplyDeviceInfo/query/selectList",
     method: "get",
@@ -46,7 +46,7 @@ function  selectSupplyDeviceInfoList(data) {
 }
 
 // 设备管理 -> 设备管理-设备排序
-function  supplyDeviceInfoorder(data) {
+function supplyDeviceInfoorder(data) {
   return request({
     url: "/supplyDeviceInfo/api/order",
     method: "post",
@@ -54,7 +54,7 @@ function  supplyDeviceInfoorder(data) {
   });
 }
 // 设备管理->船舶设备树
-function  deviceTree(data) {
+function deviceTree(data) {
   return request({
     url: "/supplyDeviceInfo/query/deviceTree",
     method: "get",
@@ -63,7 +63,7 @@ function  deviceTree(data) {
 }
 
 // 物料管理->物料分类列表
-function  getMaterielDeviceTypeList(data) {
+function getMaterielDeviceTypeList(data) {
   return request({
     url: "/supplyMaterielTypeInfo/query/selectList",
     method: "get",
@@ -72,7 +72,7 @@ function  getMaterielDeviceTypeList(data) {
 }
 
 // 物料管理->新增保存物料分类列表
-function  saveMaterielDeviceType(data) {
+function saveMaterielDeviceType(data) {
   return request({
     url: "/supplyMaterielTypeInfo/api/saveInsert ",
     method: "post",
@@ -81,7 +81,7 @@ function  saveMaterielDeviceType(data) {
 }
 
 // 物料管理->编辑保存物料分类列表
-function  saveMaterielDeviceTypeModify(data) {
+function saveMaterielDeviceTypeModify(data) {
   return request({
     url: "/supplyMaterielTypeInfo/api/saveModify ",
     method: "post",
@@ -90,7 +90,7 @@ function  saveMaterielDeviceTypeModify(data) {
 }
 
 // 物料管理->删除物料分类列表
-function  delMaterielDeviceType(data) {
+function delMaterielDeviceType(data) {
   return request({
     url: "/supplyMaterielTypeInfo/api/delete",
     method: "post",
@@ -99,7 +99,7 @@ function  delMaterielDeviceType(data) {
 }
 
 // 船载物料->拖动排序物料分类列表
-function  orderMaterielDeviceType(data) {
+function orderMaterielDeviceType(data) {
   return request({
     url: "/supplyMaterielTypeInfo/api/order ",
     method: "post",
@@ -113,7 +113,7 @@ function  orderMaterielDeviceType(data) {
 
 // 船载物料 -> 新增物料
 
-function  materielPartInfoInsert(data) {
+function materielPartInfoInsert(data) {
   return request({
     url: "/supplyMaterielPartInfo/api/saveInsert",
     method: "post",
@@ -121,7 +121,7 @@ function  materielPartInfoInsert(data) {
   });
 }
 // 船载物料 -> 编辑物料
-function  materielPartInfoUpdate(data) {
+function materielPartInfoUpdate(data) {
   return request({
     url: "/supplyMaterielPartInfo/api/saveModify",
     method: "post",
@@ -130,7 +130,7 @@ function  materielPartInfoUpdate(data) {
 }
 
 // 船载物料 -> 删除物料
-function  deleteSupplyMaterielInfo(data) {
+function deleteSupplyMaterielInfo(data) {
   return request({
     url: "/supplyMaterielPartInfo/api/deleteSupplyMaterielPartInfo",
     method: "post",
@@ -139,7 +139,7 @@ function  deleteSupplyMaterielInfo(data) {
 }
 
 // 船载物料->物料分类树
-function  maDeviceTree(data) {
+function maDeviceTree(data) {
   return request({
     url: "/supplyMaterielTypeInfo/query/selectList",
     method: "get",
@@ -148,7 +148,7 @@ function  maDeviceTree(data) {
 }
 
 // 船载物料 -> 分页查询
-function  selectMaterielPartInfoPage(data) {
+function selectMaterielPartInfoPage(data) {
   return request({
     url: "/supplyMaterielPartInfo/query/selectPage",
     method: "get",
@@ -157,7 +157,7 @@ function  selectMaterielPartInfoPage(data) {
 }
 
 // 船载物料 -> 审核通过
-function  auditSupplyMaterielInfo(data) {
+function auditSupplyMaterielInfo(data) {
   return request({
     url: "/supplyMaterielPartInfo/api/auditSupplyMaterielPartInfo",
     method: "post",
@@ -169,7 +169,7 @@ function  auditSupplyMaterielInfo(data) {
 
 // #region ipma6物料
 // 获取impa6分类
-function  maImpaDeviceTree(data) {
+function maImpaDeviceTree(data) {
   return request({
     url: "/supplyImpa6MaterialTypeInfo/query/selectList",
     method: "get",
@@ -177,7 +177,7 @@ function  maImpaDeviceTree(data) {
   });
 }
 // 获取impa6列表
-function  selectImpaMalApplPage(query) {
+function selectImpaMalApplPage(query) {
   return request({
     url: "/supplyImpa6MaterialInfo/query/selectPage",
     method: "get",
@@ -185,7 +185,7 @@ function  selectImpaMalApplPage(query) {
   });
 }
 // 获取impa6列表明细
-function  selectImpaListMoreAppl(query) {
+function selectImpaListMoreAppl(query) {
   return request({
     url: "/supplyImpa6MaterialInfo/query/getIpma6Info",
     method: "get",
@@ -199,7 +199,7 @@ function  selectImpaListMoreAppl(query) {
 // 申请 -> 获取申请列表
 
 // 获取申请数据
-function  fetchList(query, activeName) {
+function fetchList(query, activeName) {
   return request({
     url: "/purMaApplInfo/query/selectPage",
     method: "get",
@@ -209,7 +209,7 @@ function  fetchList(query, activeName) {
 
 // 获取申请采购明细列表
 // vesselId 船舶ID 必传
-function  selectMaApplPageList(query) {
+function selectMaApplPageList(query) {
   return request({
     url: "/supplyMaterielPartInfo/query/selectMaApplPageList",
     method: "get",
@@ -219,7 +219,7 @@ function  selectMaApplPageList(query) {
 
 // 获取申请采购明细新增列表
 // vesselId 船舶ID 必传
-function  selectMalApplPage(query) {
+function selectMalApplPage(query) {
   return request({
     url: "/supplyMaterielPartInfo/query/selectApplPageList",
     method: "get",
@@ -228,7 +228,7 @@ function  selectMalApplPage(query) {
 }
 
 // 申请单新增保存接口
-function  billaddMaSave(data) {
+function billaddMaSave(data) {
   return request({
     url: "/materielApplInfo/api/BilladdSpSave",
     method: "post",
@@ -237,7 +237,7 @@ function  billaddMaSave(data) {
 }
 
 // 根据ID获取申请单明细信息
-function  getApplTempById(data) {
+function getApplTempById(data) {
   return request({
     url: "materielApplInfo/query/selectDetail",
     method: "get",
@@ -246,7 +246,7 @@ function  getApplTempById(data) {
 }
 
 // 修改备件申请
-function  updateApplTemp(data) {
+function updateApplTemp(data) {
   return request({
     url: "materielApplInfo/api/updatePur",
     method: "post",
@@ -255,7 +255,7 @@ function  updateApplTemp(data) {
 }
 
 // 删除备件申请
-function  delApplTemp(data) {
+function delApplTemp(data) {
   return request({
     url: "materielApplInfo/api/deletePart",
     method: "post",
@@ -264,7 +264,7 @@ function  delApplTemp(data) {
 }
 
 // 根据ID修改备件申请状态
-function  updateApplStatusbyId(data) {
+function updateApplStatusbyId(data) {
   return request({
     url: "materielApplInfo/api/updatePurStatus",
     method: "post",
@@ -273,7 +273,7 @@ function  updateApplStatusbyId(data) {
 }
 
 // 根据ID审核备件申请
-function  approveApplbyId(data) {
+function approveApplbyId(data) {
   return request({
     url: "materielApplInfo/api/approveWorkFlow",
     method: "post",
@@ -282,7 +282,7 @@ function  approveApplbyId(data) {
 }
 
 // 拆分单据
-function  splitApplBills(data) {
+function splitApplBills(data) {
   return request({
     url: "materielApplInfo/api/splitPurMatAppl",
     method: "post",
@@ -291,7 +291,7 @@ function  splitApplBills(data) {
 }
 
 // 提交至工作流
-function  submitToWorkFlowAppl(data) {
+function submitToWorkFlowAppl(data) {
   return request({
     url: "materielApplInfo/api/submitToWorkflow",
     method: "post",
@@ -301,7 +301,7 @@ function  submitToWorkFlowAppl(data) {
 
 // 申请-获得历史单据明细
 // 参数 purSpApplDetailIds 逗号分隔的 appl_no
-function  selectListMoreAppl(data) {
+function selectListMoreAppl(data) {
   return request({
     url: "/purSpApplDetail/api/selectListMoreAppl",
     method: "post",
@@ -314,7 +314,7 @@ function  selectListMoreAppl(data) {
 // #region 供船接口
 
 // 分页查询
-function  supplyMaterielInStoreInfoPage(query) {
+function supplyMaterielInStoreInfoPage(query) {
   return request({
     url: "/supplyMaterielInStoreInfo/query/selectPage",
     method: "get",
@@ -323,7 +323,7 @@ function  supplyMaterielInStoreInfoPage(query) {
 }
 
 // 查询详情
-function  supplyMaterielInStoreInfoDetail(query) {
+function supplyMaterielInStoreInfoDetail(query) {
   return request({
     url: "/supplyMaterielInStoreInfo/query/selectDetail",
     method: "get",
@@ -332,7 +332,7 @@ function  supplyMaterielInStoreInfoDetail(query) {
 }
 
 // 强制关闭
-function  supplyMaterielInStoreInfoForceClose(data) {
+function supplyMaterielInStoreInfoForceClose(data) {
   return request({
     url: "/supplyMaterielInStoreInfo/api/forceClose",
     method: "post",
@@ -341,7 +341,7 @@ function  supplyMaterielInStoreInfoForceClose(data) {
 }
 
 // 入库
-function  supplyMaterielInStoreInfoInStore(data) {
+function supplyMaterielInStoreInfoInStore(data) {
   return request({
     url: "/supplyMaterielInStoreInfo/api/inStore ",
     method: "post",
@@ -350,7 +350,7 @@ function  supplyMaterielInStoreInfoInStore(data) {
 }
 
 // 提交签收单
-function  supplyMaterielInStoreInfoSubmitBill(data) {
+function supplyMaterielInStoreInfoSubmitBill(data) {
   return request({
     url: "/supplyMaterielInStoreInfo/api/submitBill",
     method: "post",
@@ -362,7 +362,7 @@ function  supplyMaterielInStoreInfoSubmitBill(data) {
 
 // #region 库存管理
 
-function  supplyMaterielInfoPage(query) {
+function supplyMaterielInfoPage(query) {
   return request({
     url: "/supplyMaterielStoreInfo/query/selectPage",
     method: "get",
@@ -375,7 +375,7 @@ function  supplyMaterielInfoPage(query) {
 // #region 库存盘点
 
 // 查询库存盘点列表带分页
-function  supplyMaterielCheckStoreInfoSelectPage(query) {
+function supplyMaterielCheckStoreInfoSelectPage(query) {
   return request({
     url: "/supplyMaterielCheckStoreInfo/query/selectPage",
     method: "get",
@@ -383,7 +383,7 @@ function  supplyMaterielCheckStoreInfoSelectPage(query) {
   });
 }
 // 新增库存盘点明细列表
-function  supplyMaterielInfoCheckPageList(query) {
+function supplyMaterielInfoCheckPageList(query) {
   return request({
     url: "/supplyMaterielPartInfo/query/selectCheckPageList",
     method: "get",
@@ -391,7 +391,7 @@ function  supplyMaterielInfoCheckPageList(query) {
   });
 }
 // 新增库存盘点明细保存
-function  supplyMaterielCheckStoreInfoSave(data) {
+function supplyMaterielCheckStoreInfoSave(data) {
   return request({
     url: "/supplyMaterielCheckStoreInfo/api/BilladdSpSave",
     method: "post",
@@ -400,7 +400,7 @@ function  supplyMaterielCheckStoreInfoSave(data) {
 }
 
 // 库存盘点.详情查询
-function  supplyMaterielCheckStoreInfoSelectDetail(data) {
+function supplyMaterielCheckStoreInfoSelectDetail(data) {
   return request({
     url: "/supplyMaterielCheckStoreInfo/query/selectDetail",
     method: "get",
@@ -409,7 +409,7 @@ function  supplyMaterielCheckStoreInfoSelectDetail(data) {
 }
 
 // 库存盘点.保存单据详情
-function  supplyMaterielCheckSave(data) {
+function supplyMaterielCheckSave(data) {
   return request({
     url: "/supplyMaterielCheckStoreInfo/api/save",
     method: "post",
@@ -418,7 +418,7 @@ function  supplyMaterielCheckSave(data) {
 }
 
 // 库存盘点.提交单据详情
-function  supplyMaterielCheckSubmitBill(data) {
+function supplyMaterielCheckSubmitBill(data) {
   return request({
     url: "/supplyMaterielCheckStoreInfo/api/submitBill",
     method: "post",
@@ -427,7 +427,7 @@ function  supplyMaterielCheckSubmitBill(data) {
 }
 
 // 库存盘点.审核确认
-function  supplyMaterielCheckStoreInfoVerifyBill(data) {
+function supplyMaterielCheckStoreInfoVerifyBill(data) {
   return request({
     url: "/supplyMaterielCheckStoreInfo/api/verifyBill",
     method: "post",
@@ -439,7 +439,7 @@ function  supplyMaterielCheckStoreInfoVerifyBill(data) {
 
 // #region 库位
 
-function  supplyMaLocationInfoList(query) {
+function supplyMaLocationInfoList(query) {
   return request({
     url: "/supplyLocationInfo/query/selectList",
     method: "get",
@@ -447,7 +447,7 @@ function  supplyMaLocationInfoList(query) {
   });
 }
 
-function  supplyMaLocationInfoSave(data) {
+function supplyMaLocationInfoSave(data) {
   return request({
     url: "/supplyLocationInfo/api/save",
     method: "post",
@@ -455,7 +455,7 @@ function  supplyMaLocationInfoSave(data) {
   });
 }
 
-function  supplyMaLocationInfoDel(data) {
+function supplyMaLocationInfoDel(data) {
   return request({
     url: "/supplyLocationInfo/api/delete",
     method: "post",
@@ -463,7 +463,7 @@ function  supplyMaLocationInfoDel(data) {
   });
 }
 
-function  selectMaCheckPageList(query) {
+function selectMaCheckPageList(query) {
   return request({
     url: "/supplyMaterielInfo/query/selectCheckPageList",
     method: "get",
@@ -476,7 +476,7 @@ function  selectMaCheckPageList(query) {
 // #region 出库
 
 // 出库-单据列表
-function  materielOutStoreInfoSlectPage(query) {
+function materielOutStoreInfoSlectPage(query) {
   return request({
     url: "/supplyMaterielOutStoreInfo/query/selectPage",
     method: "get",
@@ -485,7 +485,7 @@ function  materielOutStoreInfoSlectPage(query) {
 }
 
 // 出库-查询物料明细列表
-function  selectOutStorePageList(query) {
+function selectOutStorePageList(query) {
   return request({
     url: "/supplyMaterielPartInfo/query/selectOutStorePageList",
     method: "get",
@@ -494,7 +494,7 @@ function  selectOutStorePageList(query) {
 }
 
 // 出库-出库类型为退掉出库之外的出库
-function  materielOutStoreInfoAddSpSave(data) {
+function materielOutStoreInfoAddSpSave(data) {
   return request({
     url: "/supplyMaterielOutStoreInfo/api/addBillSave",
     method: "post",
@@ -503,7 +503,7 @@ function  materielOutStoreInfoAddSpSave(data) {
 }
 
 // 出库-单据列表(无分页)
-function  materielOutStoreInfoSlectList(query) {
+function materielOutStoreInfoSlectList(query) {
   return request({
     url: "/supplyMaterielOutStoreInfo/query/selectList",
     method: "get",
@@ -512,7 +512,7 @@ function  materielOutStoreInfoSlectList(query) {
 }
 
 // 出库-单据详情
-function  materielOutStoreInfoSelectDetail(query) {
+function materielOutStoreInfoSelectDetail(query) {
   return request({
     url: "/supplyMaterielOutStoreInfo/query/selectDetail",
     method: "get",
@@ -521,7 +521,7 @@ function  materielOutStoreInfoSelectDetail(query) {
 }
 
 // 出库-废弃单据状态
-function  materielOutStoreInfoCancelBill(data) {
+function materielOutStoreInfoCancelBill(data) {
   return request({
     url: "/supplyMaterielOutStoreInfo/api/cancelBill",
     method: "post",
@@ -530,7 +530,7 @@ function  materielOutStoreInfoCancelBill(data) {
 }
 
 // 出库-保存单据
-function  materielOutStoreInfoSave(data) {
+function materielOutStoreInfoSave(data) {
   return request({
     url: "/supplyMaterielOutStoreInfo/api/save",
     method: "post",
@@ -539,7 +539,7 @@ function  materielOutStoreInfoSave(data) {
 }
 
 // 出库-单据审核
-function  materielOutStoreInfoVerifyBill(data) {
+function materielOutStoreInfoVerifyBill(data) {
   return request({
     url: "/supplyMaterielOutStoreInfo/api/verifyBill",
     method: "post",
@@ -548,7 +548,7 @@ function  materielOutStoreInfoVerifyBill(data) {
 }
 
 // 出库-单据提交
-function  materielOutStoreInfoSubmitBill(data) {
+function materielOutStoreInfoSubmitBill(data) {
   return request({
     url: "/supplyMaterielOutStoreInfo/api/submitBill",
     method: "post",
@@ -557,7 +557,7 @@ function  materielOutStoreInfoSubmitBill(data) {
 }
 
 // 出库-根据供船单ID获取供船备件明细
-function  materielOutStoreInfoGetInStoreDetail(data) {
+function materielOutStoreInfoGetInStoreDetail(data) {
   return request({
     url: "/supplyMaterielInStoreInfo/query/getInStoreDetail",
     method: "get",
@@ -566,7 +566,7 @@ function  materielOutStoreInfoGetInStoreDetail(data) {
 }
 
 // 物料质量反馈
-function  materielQualityPageList(query) {
+function materielQualityPageList(query) {
   return request({
     url: "/materielFeedbackInfo/query/getPageBy",
     method: "get",
@@ -574,7 +574,7 @@ function  materielQualityPageList(query) {
   });
 }
 // 物料质量反馈详情
-function  materielQualityDetail(query) {
+function materielQualityDetail(query) {
   return request({
     url: "/materielFeedbackInfo/query/getOneById",
     method: "get",
@@ -582,7 +582,7 @@ function  materielQualityDetail(query) {
   });
 }
 // 物料质量反馈列表页状态
-function  materielQualityStatus(query) {
+function materielQualityStatus(query) {
   return request({
     url: "/materielFeedbackInfo/query/getStatus",
     method: "get",
@@ -590,7 +590,7 @@ function  materielQualityStatus(query) {
   });
 }
 // 物料质量反馈操作历史
-function  materielQualityOperateHis(query) {
+function materielQualityOperateHis(query) {
   return request({
     url: "/materielFeedbackInfo/query/getBillOperateHis",
     method: "get",
@@ -598,7 +598,7 @@ function  materielQualityOperateHis(query) {
   });
 }
 // 物料质量反馈供应商列表
-function  materielQualitySupplier(query) {
+function materielQualitySupplier(query) {
   return request({
     url: "/materielFeedbackInfo/query/getSupplierStatus",
     method: "get",
@@ -606,7 +606,7 @@ function  materielQualitySupplier(query) {
   });
 }
 // 物料质量反馈保存
-function  saveMaterielQuality(data) {
+function saveMaterielQuality(data) {
   return request({
     url: "/materielFeedbackInfo/api/saveEdit",
     method: "post",
@@ -614,7 +614,7 @@ function  saveMaterielQuality(data) {
   });
 }
 //物料质量反馈提交
-function  submitMaterielQuality(data) {
+function submitMaterielQuality(data) {
   return request({
     url: "/materielFeedbackInfo/api/vesselSubmit",
     method: "post",
@@ -622,7 +622,7 @@ function  submitMaterielQuality(data) {
   });
 }
 // 物料质量反馈确认
-function  confirmMaterielQuality(data) {
+function confirmMaterielQuality(data) {
   return request({
     url: "/materielFeedbackInfo/api/confirm",
     method: "post",
@@ -630,7 +630,7 @@ function  confirmMaterielQuality(data) {
   });
 }
 // 物料质量反馈提交岸基
-function  bankSubmitMaterielQuality(data) {
+function bankSubmitMaterielQuality(data) {
   return request({
     url: "/materielFeedbackInfo/api/bankSubmit",
     method: "post",
@@ -638,7 +638,7 @@ function  bankSubmitMaterielQuality(data) {
   });
 }
 // 物料质量反馈普通退回
-function  backMaterielQuality(data) {
+function backMaterielQuality(data) {
   return request({
     url: "/materielFeedbackInfo/api/back",
     method: "post",
@@ -646,7 +646,7 @@ function  backMaterielQuality(data) {
   });
 }
 // 物料质量反馈审核之后再确认
-function  vesselSubmitMaterielQuality(data) {
+function vesselSubmitMaterielQuality(data) {
   return request({
     url: "/materielFeedbackInfo/api/completeSubmit",
     method: "post",
@@ -654,7 +654,7 @@ function  vesselSubmitMaterielQuality(data) {
   });
 }
 // 物料质量反馈审核之后再确认
-function  completeConfirmMaterielQuality(data) {
+function completeConfirmMaterielQuality(data) {
   return request({
     url: "/materielFeedbackInfo/api/completeConfirm",
     method: "post",
@@ -665,7 +665,7 @@ function  completeConfirmMaterielQuality(data) {
 
 // #endregion
 
-function  saveMaterielMaterielInfoInsert(data) {
+function saveMaterielMaterielInfoInsert(data) {
   return request({
     url: "/supplyMaterielInStoreInfo/query/getInStoreDetail",
     method: "get",
@@ -673,7 +673,7 @@ function  saveMaterielMaterielInfoInsert(data) {
   });
 }
 
-function  saveMaterielMaterielInfoModify(data) {
+function saveMaterielMaterielInfoModify(data) {
   return request({
     url: "/supplyMaterielInStoreInfo/query/getInStoreDetail",
     method: "get",
@@ -681,10 +681,88 @@ function  saveMaterielMaterielInfoModify(data) {
   });
 }
 
-function  spDeviceTree(data) {
+function spDeviceTree(data) {
   return request({
     url: "/supplyMaterielInStoreInfo/query/getInStoreDetail",
     method: "get",
     params: data
   });
+}
+export default {
+
+  saveSupplyDeviceInfo,
+  materialExport,
+  delSupplyDeviceInfo,
+  selectSupplyDeviceInfoPage,
+  selectSupplyDeviceInfoList,
+  supplyDeviceInfoorder,
+  deviceTree,
+  getMaterielDeviceTypeList,
+  saveMaterielDeviceType,
+  saveMaterielDeviceTypeModify,
+  delMaterielDeviceType,
+  orderMaterielDeviceType,
+  materielPartInfoInsert,
+  materielPartInfoUpdate,
+  deleteSupplyMaterielInfo,
+  maDeviceTree,
+  selectMaterielPartInfoPage,
+  auditSupplyMaterielInfo,
+  maImpaDeviceTree,
+  selectImpaMalApplPage,
+  selectImpaListMoreAppl,
+  fetchList,
+  selectMaApplPageList,
+  selectMalApplPage,
+  billaddMaSave,
+  getApplTempById,
+  updateApplTemp,
+  delApplTemp,
+  updateApplStatusbyId,
+  approveApplbyId,
+  splitApplBills,
+  submitToWorkFlowAppl,
+  selectListMoreAppl,
+  supplyMaterielInStoreInfoPage,
+  supplyMaterielInStoreInfoDetail,
+  supplyMaterielInStoreInfoForceClose,
+  supplyMaterielInStoreInfoInStore,
+  supplyMaterielInStoreInfoSubmitBill,
+  supplyMaterielInfoPage,
+  supplyMaterielCheckStoreInfoSelectPage,
+  supplyMaterielInfoCheckPageList,
+  supplyMaterielCheckStoreInfoSave,
+  supplyMaterielCheckStoreInfoSelectDetail,
+  supplyMaterielCheckSave,
+  supplyMaterielCheckSubmitBill,
+  supplyMaterielCheckStoreInfoVerifyBill,
+  supplyMaLocationInfoList,
+  supplyMaLocationInfoSave,
+  supplyMaLocationInfoDel,
+  selectMaCheckPageList,
+  materielOutStoreInfoSlectPage,
+  selectOutStorePageList,
+  materielOutStoreInfoAddSpSave,
+  materielOutStoreInfoSlectList,
+  materielOutStoreInfoSelectDetail,
+  materielOutStoreInfoCancelBill,
+  materielOutStoreInfoSave,
+  materielOutStoreInfoVerifyBill,
+  materielOutStoreInfoSubmitBill,
+  materielOutStoreInfoGetInStoreDetail,
+  materielQualityPageList,
+  materielQualityDetail,
+  materielQualityStatus,
+  materielQualityOperateHis,
+  materielQualitySupplier,
+  saveMaterielQuality,
+  submitMaterielQuality,
+  confirmMaterielQuality,
+  bankSubmitMaterielQuality,
+  backMaterielQuality,
+  vesselSubmitMaterielQuality,
+  completeConfirmMaterielQuality,
+  saveMaterielMaterielInfoInsert,
+  saveMaterielMaterielInfoModify,
+  spDeviceTree
 }

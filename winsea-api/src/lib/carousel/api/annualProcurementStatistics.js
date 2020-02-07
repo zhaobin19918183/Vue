@@ -1,4 +1,4 @@
-import request from '../utils/request'
+import request from '../request'
 
 
 
@@ -18,4 +18,8 @@ function  selectShipId(data) {
     method: 'get',
     params: data
   })
+}
+export default{
+  getAnnualPurStatisticsInfo,
+  selectShipId
 }

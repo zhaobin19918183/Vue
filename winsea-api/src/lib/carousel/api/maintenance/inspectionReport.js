@@ -117,3 +117,19 @@ function  returnReport(data) {
     data
   })
 }
+export default{
+  saveTemplate,
+  getPageByCondition,
+  deleteTemplate,
+  getInfoById,
+  getTemplateDatas,
+  getTemplateById,
+  saveOrSubmitReport,
+  getInspectPageByCondition,
+  getInspectInfoById,
+  confirmReport,
+  submitReportToLand,
+  replyReport,
+  returnReport
+
+}

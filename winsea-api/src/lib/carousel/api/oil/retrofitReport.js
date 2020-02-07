@@ -1,8 +1,8 @@
 // 加装报告
-import request from "../../utils/request";
+import request from "../../request";
 
 // 加装报告save
-function  saveDate(data) {
+function saveDate(data) {
   return request({
     url: "/oilBunkeringReport/api/save",
     method: "post",
@@ -11,7 +11,7 @@ function  saveDate(data) {
 }
 
 // 加装报告submit
-function  submitDate(data) {
+function submitDate(data) {
   return request({
     url: "/oilBunkeringReport/api/submit",
     method: "post",
@@ -20,7 +20,7 @@ function  submitDate(data) {
 }
 
 // 加装报告一览列表page
-function  getOilBunkReportPage(data) {
+function getOilBunkReportPage(data) {
   return request({
     url: "/oilBunkeringReport/query/page",
     method: "get",
@@ -29,7 +29,7 @@ function  getOilBunkReportPage(data) {
 }
 
 // 加装报告查询one
-function  getOilBunkReportOne(data) {
+function getOilBunkReportOne(data) {
   return request({
     url: "/oilBunkeringReport/query/one",
     method: "get",
@@ -38,7 +38,7 @@ function  getOilBunkReportOne(data) {
 }
 
 // 加装报告删除
-function  removeDate(data) {
+function removeDate(data) {
   return request({
     url: "/oilBunkeringReport/api/remove",
     method: "post",
@@ -47,7 +47,7 @@ function  removeDate(data) {
 }
 
 // 加装报告confirm
-function  confirmDate(data) {
+function confirmDate(data) {
   return request({
     url: "/oilBunkeringReport/api/confirm",
     method: "post",
@@ -56,7 +56,7 @@ function  confirmDate(data) {
 }
 
 // 加装报告return退回
-function  returnDate(data) {
+function returnDate(data) {
   return request({
     url: "/oilBunkeringReport/api/return",
     method: "post",
@@ -65,7 +65,7 @@ function  returnDate(data) {
 }
 
 // 加装报告deprecated废弃
-function  deprecatedDate(data) {
+function deprecatedDate(data) {
   return request({
     url: "/oilBunkeringReport/api/deprecated",
     method: "post",
@@ -74,7 +74,7 @@ function  deprecatedDate(data) {
 }
 
 // 加油报告-选择油舱
-function  choiceOilTank(data) {
+function choiceOilTank(data) {
   return request({
     url: "/oilBunkeringReport/query/choiceOilTank",
     method: "get",
@@ -83,7 +83,7 @@ function  choiceOilTank(data) {
 }
 
 // 加装报告commitLandbased
-function  commitLandbased(data) {
+function commitLandbased(data) {
   return request({
     url: "/oilBunkeringReport/api/commitLandbased",
     method: "post",
@@ -92,10 +92,23 @@ function  commitLandbased(data) {
 }
 
 // 加装报告查询操作历史
-function  getBillOperateHis(data) {
+function getBillOperateHis(data) {
   return request({
     url: "/oilBunkeringReport/query/getBillOperateHis",
     method: "get",
     params: data
   });
+}
+export default {
+  saveDate,
+  submitDate,
+  getOilBunkReportPage,
+  getOilBunkReportOne,
+  removeDate,
+  confirmDate,
+  returnDate,
+  deprecatedDate,
+  choiceOilTank,
+  commitLandbased,
+  getBillOperateHis
 }

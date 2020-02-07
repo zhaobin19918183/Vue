@@ -2,7 +2,7 @@
 
 import request from '../../../request'
 // 自修结算单一览->自修结算单一览查询
-function  getPageByCondition(data) {
+function getPageByCondition(data) {
   return request({
     url: '/repairSelfSettlementInfo/query/getPageByCondition',
     method: 'get',
@@ -10,7 +10,7 @@ function  getPageByCondition(data) {
   })
 }
 // 自修结算单一览->自修结算单状态查询
-function  getStatusList(data) {
+function getStatusList(data) {
   return request({
     url: '/repairSelfSettlementInfo/query/getStatusList',
     method: 'get',
@@ -18,7 +18,7 @@ function  getStatusList(data) {
   })
 }
 // 制定自修结算单->新增保存
-function  createSettlementInfo(data) {
+function createSettlementInfo(data) {
   return request({
     url: '/repairSelfSettlementInfo/api/createSettlementInfo',
     method: 'post',
@@ -26,7 +26,7 @@ function  createSettlementInfo(data) {
   })
 }
 // 制定自修结算单->编辑保存
-function  updateSettlementInfo(data) {
+function updateSettlementInfo(data) {
   return request({
     url: '/repairSelfSettlementInfo/api/updateSettlementInfo',
     method: 'post',
@@ -34,7 +34,7 @@ function  updateSettlementInfo(data) {
   })
 }
 // 制定自修结算单->详细页查询
-function  getSettlementInfo(data) {
+function getSettlementInfo(data) {
   return request({
     url: '/repairSelfSettlementInfo/query/getSettlementInfo',
     method: 'get',
@@ -42,7 +42,7 @@ function  getSettlementInfo(data) {
   })
 }
 // 制定申请单->删除单条->删除明细
-function  deleteSettlementDetail(data) {
+function deleteSettlementDetail(data) {
   return request({
     url: '/repairSelfSettlementInfo/api/deleteSettlementDetail',
     method: 'post',
@@ -50,7 +50,7 @@ function  deleteSettlementDetail(data) {
   })
 }
 // 制定自修结算单->废弃
-function  discardSettlementInfo(data) {
+function discardSettlementInfo(data) {
   return request({
     url: '/repairSelfSettlementInfo/api/discardSettlementInfo',
     method: 'post',
@@ -58,7 +58,7 @@ function  discardSettlementInfo(data) {
   })
 }
 // 制定自修结算单->普通提交
-function  submitSettlementInfo(data) {
+function submitSettlementInfo(data) {
   return request({
     url: '/repairSelfSettlementInfo/api/submitSettlementInfo',
     method: 'post',
@@ -66,7 +66,7 @@ function  submitSettlementInfo(data) {
   })
 }
 // 自修结算单详细->工作流审核通过,退回
-function  checkPass(data) {
+function checkPass(data) {
   return request({
     url: '/workflow/api/handle',
     method: 'post',
@@ -74,7 +74,7 @@ function  checkPass(data) {
   })
 }
 // 自修结算单详细->普通退回
-function  returnSettlementInfo(data) {
+function returnSettlementInfo(data) {
   return request({
     url: '/repairSelfSettlementInfo/api/returnSettlementInfo',
     method: 'post',
@@ -82,7 +82,7 @@ function  returnSettlementInfo(data) {
   })
 }
 // 自修结算单详细->确认
-function  confirmSettlementInfo(data) {
+function confirmSettlementInfo(data) {
   return request({
     url: '/repairSelfSettlementInfo/api/confirmSettlementInfo',
     method: 'post',
@@ -90,7 +90,7 @@ function  confirmSettlementInfo(data) {
   })
 }
 // 自修结算单详细->提交岸基
-function  submitSettlementInfoAudit(data) {
+function submitSettlementInfoAudit(data) {
   return request({
     url: '/repairSelfSettlementInfo/api/submitSettlementInfoAudit',
     method: 'post',
@@ -98,7 +98,7 @@ function  submitSettlementInfoAudit(data) {
   })
 }
 // 自修结算单详细->审核信息查询
-function  getAuditInformations(data) {
+function getAuditInformations(data) {
   return request({
     url: '/repairSelfSettlementInfo/query/getAuditInformations',
     method: 'get',
@@ -106,7 +106,7 @@ function  getAuditInformations(data) {
   })
 }
 // 自修结算单详细->操作历史查询
-function  getBillOperateHis(data) {
+function getBillOperateHis(data) {
   return request({
     url: '/repairSelfSettlementInfo/query/getBillOperateHis',
     method: 'get',
@@ -114,7 +114,7 @@ function  getBillOperateHis(data) {
   })
 }
 // 通过公司ID获取船舶列表
-function  getVesselListByCompId(data) {
+function getVesselListByCompId(data) {
   return request({
     url: '/staff/query/vesselListByCompId',
     method: 'get',
@@ -122,7 +122,7 @@ function  getVesselListByCompId(data) {
   })
 }
 // 获取公司下所有部门 船端
-function  getVesselDeptByCompId(data) {
+function getVesselDeptByCompId(data) {
   return request({
     url: '/commonDeptRole/query/getVesselDeptByCompId',
     method: 'get',
@@ -130,7 +130,7 @@ function  getVesselDeptByCompId(data) {
   });
 }
 // 制定自修结算单->工程类别一览查询
-function  getRepairParameterCompany(data) {
+function getRepairParameterCompany(data) {
   return request({
     url: '/repairParameterCompany/query/getRepairParameterCompany',
     method: 'get',
@@ -138,7 +138,7 @@ function  getRepairParameterCompany(data) {
   })
 }
 // 可编辑单位下拉选查询
-function  customDropDown(data) {
+function customDropDown(data) {
   return request({
     url: '/customDropDown/query/customDropDown',
     method: 'get',
@@ -146,7 +146,7 @@ function  customDropDown(data) {
   })
 }
 // 下拉添加
-function  add(data) {
+function add(data) {
   return request({
     url: '/customDropDown/api/saveAdd',
     method: 'post',
@@ -154,7 +154,7 @@ function  add(data) {
   })
 }
 // 下拉编辑
-function  edit(data) {
+function edit(data) {
   return request({
     url: '/customDropDown/api/saveEdit',
     method: 'post',
@@ -162,10 +162,33 @@ function  edit(data) {
   })
 }
 // 下拉删除
-function  saveDelete(data) {
+function saveDelete(data) {
   return request({
     url: '/customDropDown/api/saveDelete',
     method: 'post',
     data
   })
+}
+export default {
+  getPageByCondition,
+  getStatusList,
+  createSettlementInfo,
+  updateSettlementInfo,
+  getSettlementInfo,
+  deleteSettlementDetail,
+  discardSettlementInfo,
+  submitSettlementInfo,
+  checkPass,
+  returnSettlementInfo,
+  confirmSettlementInfo,
+  submitSettlementInfoAudit,
+  getAuditInformations,
+  getBillOperateHis,
+  getVesselListByCompId,
+  getVesselDeptByCompId,
+  getRepairParameterCompany,
+  customDropDown,
+  add,
+  edit,
+  saveDelete
 }

@@ -1,8 +1,8 @@
 // 修船模块-航修验收单Api接口
 
-import request from '../../../../utils/request'
+import request from '../../../../request'
 // 验收单一览->验收单一览查询
-function  getPageByCondition(data) {
+function getPageByCondition(data) {
   return request({
     url: '/repairVoyageAcceptanceInfo/query/getPageByCondition',
     method: 'get',
@@ -10,7 +10,7 @@ function  getPageByCondition(data) {
   })
 }
 // 验收单一览->验收单状态查询
-function  getStatusList(data) {
+function getStatusList(data) {
   return request({
     url: '/repairVoyageAcceptanceInfo/query/getStatusList',
     method: 'get',
@@ -18,7 +18,7 @@ function  getStatusList(data) {
   })
 }
 // 验收单详细->验收单详细页查询
-function  getAcceptanceInfo(data) {
+function getAcceptanceInfo(data) {
   return request({
     url: '/repairVoyageAcceptanceInfo/query/getAcceptanceInfo',
     method: 'get',
@@ -26,7 +26,7 @@ function  getAcceptanceInfo(data) {
   })
 }
 // 验收单详细->验收单编辑保存
-function  saveAcceptanceInfo(data) {
+function saveAcceptanceInfo(data) {
   return request({
     url: '/repairVoyageAcceptanceInfo/api/saveAcceptanceInfo',
     method: 'post',
@@ -34,7 +34,7 @@ function  saveAcceptanceInfo(data) {
   })
 }
 // 验收单详细->工程类别一览查询
-function  getRepairParameterCompany(data) {
+function getRepairParameterCompany(data) {
   return request({
     url: '/repairParameterCompany/query/getRepairParameterCompany',
     method: 'get',
@@ -42,7 +42,7 @@ function  getRepairParameterCompany(data) {
   })
 }
 // 验收单详细->验收单普通提交
-function  submitAcceptanceReport(data) {
+function submitAcceptanceReport(data) {
   return request({
     url: '/repairVoyageAcceptanceInfo/api/submitAcceptanceReport',
     method: 'post',
@@ -50,7 +50,7 @@ function  submitAcceptanceReport(data) {
   })
 }
 // 验收单详细->验收单提交岸基
-function  submitAcceptanceReportAudit(data) {
+function submitAcceptanceReportAudit(data) {
   return request({
     url: '/repairVoyageAcceptanceInfo/api/submitAcceptanceReportAudit',
     method: 'post',
@@ -58,7 +58,7 @@ function  submitAcceptanceReportAudit(data) {
   })
 }
 // 验收单详细->删除单条->删除明细
-function  deleteAcceptanceItemList(data) {
+function deleteAcceptanceItemList(data) {
   return request({
     url: '/repairVoyageAcceptanceInfo/api/deleteAcceptanceItemList',
     method: 'post',
@@ -66,7 +66,7 @@ function  deleteAcceptanceItemList(data) {
   })
 }
 // 验收单详细->验收单批复通过
-function  checkPass(data) {
+function checkPass(data) {
   return request({
     url: '/workflow/api/handle',
     method: 'post',
@@ -74,7 +74,7 @@ function  checkPass(data) {
   })
 }
 // 验收单详细->验收单退回
-function  returnAcceptanceInfo(data) {
+function returnAcceptanceInfo(data) {
   return request({
     url: '/repairVoyageAcceptanceInfo/api/returnAcceptanceInfo',
     method: 'post',
@@ -82,7 +82,7 @@ function  returnAcceptanceInfo(data) {
   })
 }
 // 验收单详细->验收单确认
-function  confirmAcceptanceReport(data) {
+function confirmAcceptanceReport(data) {
   return request({
     url: '/repairVoyageAcceptanceInfo/api/confirmAcceptanceReport',
     method: 'post',
@@ -90,7 +90,7 @@ function  confirmAcceptanceReport(data) {
   })
 }
 // 验收单详细->验收单审核信息查询
-function  getAcceptanceAuditInformations(data) {
+function getAcceptanceAuditInformations(data) {
   return request({
     url: '/repairVoyageAcceptanceInfo/query/getAcceptanceAuditInformations',
     method: 'get',
@@ -98,7 +98,7 @@ function  getAcceptanceAuditInformations(data) {
   })
 }
 // 验收单详细->验收单操作历史查询
-function  getBillOperateHis(data) {
+function getBillOperateHis(data) {
   return request({
     url: '/repairVoyageAcceptanceInfo/query/getBillOperateHis',
     method: 'get',
@@ -106,7 +106,7 @@ function  getBillOperateHis(data) {
   })
 }
 // 可编辑单位下拉选查询
-function  customDropDown(data) {
+function customDropDown(data) {
   return request({
     url: '/customDropDown/query/customDropDown',
     method: 'get',
@@ -114,7 +114,7 @@ function  customDropDown(data) {
   })
 }
 // 下拉添加
-function  add(data) {
+function add(data) {
   return request({
     url: '/customDropDown/api/saveAdd',
     method: 'post',
@@ -122,7 +122,7 @@ function  add(data) {
   })
 }
 // 下拉编辑
-function  edit(data) {
+function edit(data) {
   return request({
     url: '/customDropDown/api/saveEdit',
     method: 'post',
@@ -130,7 +130,7 @@ function  edit(data) {
   })
 }
 // 下拉删除
-function  saveDelete(data) {
+function saveDelete(data) {
   return request({
     url: '/customDropDown/api/saveDelete',
     method: 'post',
@@ -138,7 +138,7 @@ function  saveDelete(data) {
   })
 }
 // 验收单新增->通过公司ID获取船舶列表
-function  getVesselListByCompId(data) {
+function getVesselListByCompId(data) {
   return request({
     url: '/staff/query/vesselListByCompId',
     method: 'get',
@@ -146,7 +146,7 @@ function  getVesselListByCompId(data) {
   })
 }
 // 验收单详细->验收单关联单据查询
-function  getAcceptanceRelevanceBill(data) {
+function getAcceptanceRelevanceBill(data) {
   return request({
     url: '/repairVoyageAcceptanceInfo/query/getAcceptanceRelevanceBill',
     method: 'get',
@@ -154,11 +154,32 @@ function  getAcceptanceRelevanceBill(data) {
   })
 }
 // 验收单一览->修船厂过滤查询
-function  getShipyardList(data) {
+function getShipyardList(data) {
   return request({
     url: '/repairVoyageAcceptanceInfo/query/getShipyardList',
     method: 'get',
     params: data
   })
 }
-
+export default {
+  getPageByCondition,
+  getStatusList,
+  getAcceptanceInfo,
+  saveAcceptanceInfo,
+  getRepairParameterCompany,
+  submitAcceptanceReport,
+  submitAcceptanceReportAudit,
+  deleteAcceptanceItemList,
+  checkPass,
+  returnAcceptanceInfo,
+  confirmAcceptanceReport,
+  getAcceptanceAuditInformations,
+  getBillOperateHis,
+  customDropDown,
+  add,
+  edit,
+  saveDelete,
+  getVesselListByCompId,
+  getAcceptanceRelevanceBill,
+  getShipyardList
+}

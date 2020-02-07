@@ -24,3 +24,8 @@ function  batchAttachment(data) {
     params: data
   })
 }
+export default{
+  getArchiveInfo,
+  getShipDeptList,
+  batchAttachment
+}

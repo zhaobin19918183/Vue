@@ -71,3 +71,13 @@ function  getBillViewPageByCondition(params) {
     params: params
   })
 }
+export default{
+  getPageByCondition,
+  refreshMonthSettlement,
+  checkExsitOrEnabled,
+  saveConfirm,
+  getDetailInfoById,
+  saveAdd,
+  getDetailInfoByCondition,
+  getBillViewPageByCondition
+}

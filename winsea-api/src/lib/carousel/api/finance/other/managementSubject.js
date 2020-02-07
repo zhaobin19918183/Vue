@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from  '../../../request'
 
 // 保存管理科目
 function  saveManage(data) {
@@ -27,4 +27,8 @@ function  getListByCondition(data) {
     params: data
   })
 }
-
+export default{
+  saveManage,
+  deleteManage,
+  getListByCondition
+}

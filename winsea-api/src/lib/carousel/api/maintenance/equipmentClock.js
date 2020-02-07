@@ -143,3 +143,21 @@ function  moveMaintainDevice(data) {
     data: data
   })
 }
+export default{
+  getPageByCondition,
+  getOnShipDutyList,
+  setWarn,
+  getEquipmentSortList,
+  getEquipmentList,
+  saveNew,
+  saveEdit,
+  delateClock,
+  seleteHistroyList,
+  getEquipmentInfoById,
+  cleanTimerInfoZero,
+  cleanTimerInfoZeroAll,
+  saveTimerInfo,
+  queryMaintainDevice,
+  saveMaintainDevice,
+  moveMaintainDevice
+}

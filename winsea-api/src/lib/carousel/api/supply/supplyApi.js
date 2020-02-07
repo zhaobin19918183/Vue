@@ -1,11 +1,11 @@
 // 供应模块Api接口
 
-import request from "../../utils/request";
+import request from "../../request";
 
 // #region 设备管理
 
 // 设备管理 -> 设备管理-保存
-function  saveSupplyDeviceInfo(data) {
+function saveSupplyDeviceInfo(data) {
   return request({
     url: "/supplyDeviceInfo/api/saveSupplyDeviceInfo",
     method: "post",
@@ -14,7 +14,7 @@ function  saveSupplyDeviceInfo(data) {
 }
 
 // 设备管理 -> 设备管理-删除
-function  delSupplyDeviceInfo(data) {
+function delSupplyDeviceInfo(data) {
   return request({
     url: "/supplyDeviceInfo/api/deleteSupplyDeviceInfo",
     method: "post",
@@ -23,7 +23,7 @@ function  delSupplyDeviceInfo(data) {
 }
 
 // 设备管理 -> 设备管理-分页查询
-function  selectSupplyDeviceInfoPage(data) {
+function selectSupplyDeviceInfoPage(data) {
   return request({
     url: "/supplyDeviceInfo/query/selectPage",
     method: "get",
@@ -32,7 +32,7 @@ function  selectSupplyDeviceInfoPage(data) {
 }
 
 // 设备管理 -> 设备管理-列表查询
-function  selectSupplyDeviceInfoList(data) {
+function selectSupplyDeviceInfoList(data) {
   return request({
     url: "/supplyDeviceInfo/query/selectList",
     method: "get",
@@ -41,7 +41,7 @@ function  selectSupplyDeviceInfoList(data) {
 }
 
 // 设备管理 -> 设备管理-设备排序
-function  supplyDeviceInfoorder(data) {
+function supplyDeviceInfoorder(data) {
   return request({
     url: "/supplyDeviceInfo/api/order",
     method: "post",
@@ -49,7 +49,7 @@ function  supplyDeviceInfoorder(data) {
   });
 }
 // 设备管理->船舶设备树
-function  deviceTree(data) {
+function deviceTree(data) {
   return request({
     url: "/supplyDeviceInfo/query/deviceTree",
     method: "get",
@@ -58,7 +58,7 @@ function  deviceTree(data) {
 }
 
 // 设备管理->备件分类列表
-function  getSupplyDeviceTypeList(data) {
+function getSupplyDeviceTypeList(data) {
   return request({
     url: "/supplyDeviceTypeInfo/query/selectList",
     method: "get",
@@ -67,7 +67,7 @@ function  getSupplyDeviceTypeList(data) {
 }
 
 // 设备管理->保存备件分类列表
-function  saveSupplyDeviceType(data) {
+function saveSupplyDeviceType(data) {
   return request({
     url: "/supplyDeviceTypeInfo/api/save",
     method: "post",
@@ -76,7 +76,7 @@ function  saveSupplyDeviceType(data) {
 }
 
 // 设备管理->删除备件分类列表
-function  delSupplyDeviceType(data) {
+function delSupplyDeviceType(data) {
   return request({
     url: "/supplyDeviceTypeInfo/api/delete",
     method: "post",
@@ -85,7 +85,7 @@ function  delSupplyDeviceType(data) {
 }
 
 // 设备管理->拖动排序备件分类列表
-function  orderSupplyDeviceType(data) {
+function orderSupplyDeviceType(data) {
   return request({
     url: "/supplyDeviceTypeInfo/api/order",
     method: "post",
@@ -98,7 +98,7 @@ function  orderSupplyDeviceType(data) {
 // #region 备件手册
 
 // 备件手册 -> 保存手册
-function  saveSupplySparePartInfo(data) {
+function saveSupplySparePartInfo(data) {
   return request({
     url: "/supplySparePartInfo/api/save",
     method: "post",
@@ -107,7 +107,7 @@ function  saveSupplySparePartInfo(data) {
 }
 
 // 备件手册 -> 删除手册
-function  deleteSupplySparePartInfo(data) {
+function deleteSupplySparePartInfo(data) {
   return request({
     url: "/supplySparePartInfo/api/deleteSupplySparePartInfo",
     method: "post",
@@ -116,7 +116,7 @@ function  deleteSupplySparePartInfo(data) {
 }
 
 // 备件手册->船舶设备树
-function  spDeviceTree(data) {
+function spDeviceTree(data) {
   return request({
     url: "/supplyDeviceInfo/query/spDeviceTree",
     method: "get",
@@ -125,7 +125,7 @@ function  spDeviceTree(data) {
 }
 
 // 备件手册 -> 分页查询
-function  selectSupplySparePartInfoPage(data) {
+function selectSupplySparePartInfoPage(data) {
   return request({
     url: "/supplySparePartInfo/query/selectPage",
     method: "get",
@@ -134,7 +134,7 @@ function  selectSupplySparePartInfoPage(data) {
 }
 
 // 备件手册 -> 手册审核通过
-function  auditSupplySparePartInfo(data) {
+function auditSupplySparePartInfo(data) {
   return request({
     url: "/supplySparePartInfo/api/auditSupplySparePartInfo",
     method: "post",
@@ -149,7 +149,7 @@ function  auditSupplySparePartInfo(data) {
 // 申请 -> 获取申请列表
 
 // 获取申请数据
-function  fetchList(query, activeName) {
+function fetchList(query, activeName) {
   return request({
     url: "/purSpApplInfo/query/selectPage",
     method: "get",
@@ -159,7 +159,7 @@ function  fetchList(query, activeName) {
 
 // 获取申请采购明细列表
 // vesselId 船舶ID 必传
-function  selectApplPageList(query) {
+function selectApplPageList(query) {
   return request({
     url: "/supplySparePartInfo/query/selectApplPageList",
     method: "get",
@@ -168,7 +168,7 @@ function  selectApplPageList(query) {
 }
 
 // 申请单新增保存接口
-function  billaddSpSave(data) {
+function billaddSpSave(data) {
   return request({
     url: "/sparepartApplInfo/api/BilladdSpSave",
     method: "post",
@@ -177,7 +177,7 @@ function  billaddSpSave(data) {
 }
 
 // 根据ID获取申请单明细信息
-function  getApplTempById(data) {
+function getApplTempById(data) {
   return request({
     url: "sparepartApplInfo/query/selectDetail",
     method: "get",
@@ -186,7 +186,7 @@ function  getApplTempById(data) {
 }
 
 // 修改备件申请单
-function  updateApplTemp(data) {
+function updateApplTemp(data) {
   return request({
     url: "sparepartApplInfo/api/updatePur",
     method: "post",
@@ -195,7 +195,7 @@ function  updateApplTemp(data) {
 }
 
 // 删除备件申请单
-function  delApplTemp(data) {
+function delApplTemp(data) {
   return request({
     url: "sparepartApplInfo/api/deletePart",
     method: "post",
@@ -204,7 +204,7 @@ function  delApplTemp(data) {
 }
 
 // 根据ID修改备件单申请状态
-function  updateApplStatusbyId(data) {
+function updateApplStatusbyId(data) {
   return request({
     url: "sparepartApplInfo/api/updatePurStatus",
     method: "post",
@@ -213,7 +213,7 @@ function  updateApplStatusbyId(data) {
 }
 
 // 根据ID审核备件申请单
-function  approveApplbyId(data) {
+function approveApplbyId(data) {
   return request({
     url: "sparepartApplInfo/api/approveWorkFlow",
     method: "post",
@@ -222,7 +222,7 @@ function  approveApplbyId(data) {
 }
 
 // 拆分单据
-function  splitApplBills(data) {
+function splitApplBills(data) {
   return request({
     url: "sparepartApplInfo/api/splitPurSpAppl",
     method: "post",
@@ -231,7 +231,7 @@ function  splitApplBills(data) {
 }
 
 // 提交至工作流
-function  submitToWorkFlowAppl(data) {
+function submitToWorkFlowAppl(data) {
   return request({
     url: "sparepartApplInfo/api/submitToWorkflow",
     method: "post",
@@ -241,7 +241,7 @@ function  submitToWorkFlowAppl(data) {
 
 // 申请-获得历史单据明细
 // 参数 purSpApplDetailIds 逗号分隔的 appl_no
-function  selectListMoreAppl(data) {
+function selectListMoreAppl(data) {
   return request({
     url: "/purSpApplDetail/api/selectListMoreAppl",
     method: "post",
@@ -251,7 +251,7 @@ function  selectListMoreAppl(data) {
 
 // 申请-申请单详情导出
 // 获得下载文件URl
-function  sparepartExport(id) {
+function sparepartExport(id) {
   return `${process.env.VUE_APP_BASE_API}/sparepartExport/down/sparepart/export?id=${id}`;
 }
 
@@ -260,7 +260,7 @@ function  sparepartExport(id) {
 // #region 供船接口
 
 // 分页查询
-function  supplySparepartInStoreInfoPage(query) {
+function supplySparepartInStoreInfoPage(query) {
   return request({
     url: "/supplySparepartInStoreInfo/query/selectPage",
     method: "get",
@@ -269,7 +269,7 @@ function  supplySparepartInStoreInfoPage(query) {
 }
 
 // 查询详情
-function  supplySparepartInStoreInfoDetail(query) {
+function supplySparepartInStoreInfoDetail(query) {
   return request({
     url: "/supplySparepartInStoreInfo/query/selectDetail",
     method: "get",
@@ -278,7 +278,7 @@ function  supplySparepartInStoreInfoDetail(query) {
 }
 
 // 强制关闭
-function  supplySparepartInStoreInfoForceClose(data) {
+function supplySparepartInStoreInfoForceClose(data) {
   return request({
     url: "/supplySparepartInStoreInfo/api/forceClose",
     method: "post",
@@ -287,7 +287,7 @@ function  supplySparepartInStoreInfoForceClose(data) {
 }
 
 // 入库
-function  supplySparepartInStoreInfoInStore(data) {
+function supplySparepartInStoreInfoInStore(data) {
   return request({
     url: "/supplySparepartInStoreInfo/api/inStore",
     method: "post",
@@ -296,7 +296,7 @@ function  supplySparepartInStoreInfoInStore(data) {
 }
 
 // 提交签收单
-function  supplySparepartInStoreInfoSubmitBill(data) {
+function supplySparepartInStoreInfoSubmitBill(data) {
   return request({
     url: "/supplySparepartInStoreInfo/api/submitBill",
     method: "post",
@@ -309,7 +309,7 @@ function  supplySparepartInStoreInfoSubmitBill(data) {
 // #region 出库
 
 // 出库-单据列表
-function  sparepartOutStoreInfoSlectPage(query) {
+function sparepartOutStoreInfoSlectPage(query) {
   return request({
     url: "/supplySparepartOutStoreInfo/query/selectPage",
     method: "get",
@@ -318,7 +318,7 @@ function  sparepartOutStoreInfoSlectPage(query) {
 }
 
 // 出库-出库类型为退掉出库之外的出库
-function  sparepartOutStoreInfoAddSpSave(data) {
+function sparepartOutStoreInfoAddSpSave(data) {
   return request({
     url: "/supplySparepartOutStoreInfo/api/addBillSave",
     method: "post",
@@ -327,7 +327,7 @@ function  sparepartOutStoreInfoAddSpSave(data) {
 }
 
 // 出库-单据列表(无分页)
-function  sparepartOutStoreInfoSlectList(query) {
+function sparepartOutStoreInfoSlectList(query) {
   return request({
     url: "/supplySparepartOutStoreInfo/query/selectList",
     method: "get",
@@ -336,7 +336,7 @@ function  sparepartOutStoreInfoSlectList(query) {
 }
 
 // 出库-单据详情
-function  sparepartOutStoreInfoSelectDetail(query) {
+function sparepartOutStoreInfoSelectDetail(query) {
   return request({
     url: "/supplySparepartOutStoreInfo/query/selectDetail",
     method: "get",
@@ -345,7 +345,7 @@ function  sparepartOutStoreInfoSelectDetail(query) {
 }
 
 // 出库-废弃单据状态
-function  sparepartOutStoreInfoCancelBill(data) {
+function sparepartOutStoreInfoCancelBill(data) {
   return request({
     url: "/supplySparepartOutStoreInfo/api/cancelBill",
     method: "post",
@@ -354,7 +354,7 @@ function  sparepartOutStoreInfoCancelBill(data) {
 }
 
 // 出库-保存单据
-function  sparepartOutStoreInfoSave(data) {
+function sparepartOutStoreInfoSave(data) {
   return request({
     url: "/supplySparepartOutStoreInfo/api/save",
     method: "post",
@@ -363,7 +363,7 @@ function  sparepartOutStoreInfoSave(data) {
 }
 
 // 出库-单据审核
-function  sparepartOutStoreInfoVerifyBill(data) {
+function sparepartOutStoreInfoVerifyBill(data) {
   return request({
     url: "/supplySparepartOutStoreInfo/api/verifyBill",
     method: "post",
@@ -372,7 +372,7 @@ function  sparepartOutStoreInfoVerifyBill(data) {
 }
 
 // 出库-单据提交
-function  sparepartOutStoreInfoSubmitBill(data) {
+function sparepartOutStoreInfoSubmitBill(data) {
   return request({
     url: "/supplySparepartOutStoreInfo/api/submitBill",
     method: "post",
@@ -381,7 +381,7 @@ function  sparepartOutStoreInfoSubmitBill(data) {
 }
 
 // 出库-根据供船单ID获取供船备件明细
-function  sparepartOutStoreInfoGetInStoreDetail(data) {
+function sparepartOutStoreInfoGetInStoreDetail(data) {
   return request({
     url: "/supplySparepartInStoreInfo/query/getInStoreDetail",
     method: "get",
@@ -393,7 +393,7 @@ function  sparepartOutStoreInfoGetInStoreDetail(data) {
 
 // #region 库存管理
 
-function  supplySparePartInfoPage(query) {
+function supplySparePartInfoPage(query) {
   return request({
     url: "/supplySparePartInfo/query/selectCheckPageList",
     method: "get",
@@ -406,7 +406,7 @@ function  supplySparePartInfoPage(query) {
 // #region 库位
 
 // 批量保存
-function  supplyLocationInfoSaveList(data) {
+function supplyLocationInfoSaveList(data) {
   return request({
     url: "/supplyLocationInfo/api/saveList ",
     method: "post",
@@ -414,21 +414,21 @@ function  supplyLocationInfoSaveList(data) {
   });
 }
 
-function  supplyLocationInfoList(query) {
+function supplyLocationInfoList(query) {
   return request({
     url: "/supplyLocationInfo/query/selectList",
     method: "get",
     params: query
   });
 }
-function  supplyLocationInfoSave(data) {
+function supplyLocationInfoSave(data) {
   return request({
     url: "/supplyLocationInfo/api/save",
     method: "post",
     data: data
   });
 }
-function  supplyLocationInfoDel(data) {
+function supplyLocationInfoDel(data) {
   return request({
     url: "/supplyLocationInfo/api/delete",
     method: "post",
@@ -439,7 +439,7 @@ function  supplyLocationInfoDel(data) {
 // #endregion
 
 // #region  库位
-function  selectCheckPageList(query) {
+function selectCheckPageList(query) {
   return request({
     url: "/supplySparePartInfo/query/selectCheckPageList",
     method: "get",
@@ -452,7 +452,7 @@ function  selectCheckPageList(query) {
 // #region 库存盘点
 
 // 查询库存盘点列表带分页
-function  supplySparepartCheckStoreInfoSelectPage(query) {
+function supplySparepartCheckStoreInfoSelectPage(query) {
   return request({
     url: "/supplySparepartCheckStoreInfo/query/selectPage",
     method: "get",
@@ -460,7 +460,7 @@ function  supplySparepartCheckStoreInfoSelectPage(query) {
   });
 }
 // 新增库存盘点明细列表
-function  supplySparePartInfoCheckPageList(query) {
+function supplySparePartInfoCheckPageList(query) {
   return request({
     url: "/supplySparePartInfo/query/selectCheckPageList",
     method: "get",
@@ -468,7 +468,7 @@ function  supplySparePartInfoCheckPageList(query) {
   });
 }
 // 新增库存盘点明细保存
-function  supplySparepartCheckStoreInfoSave(data) {
+function supplySparepartCheckStoreInfoSave(data) {
   return request({
     url: "/supplySparepartCheckStoreInfo/api/BilladdSpSave",
     method: "post",
@@ -477,7 +477,7 @@ function  supplySparepartCheckStoreInfoSave(data) {
 }
 
 // 库存盘点.详情查询
-function  supplySparepartCheckStoreInfoSelectDetail(data) {
+function supplySparepartCheckStoreInfoSelectDetail(data) {
   return request({
     url: "/supplySparepartCheckStoreInfo/query/selectDetail",
     method: "get",
@@ -486,7 +486,7 @@ function  supplySparepartCheckStoreInfoSelectDetail(data) {
 }
 
 // 库存盘点.保存单据详情
-function  supplySparepartCheckSave(data) {
+function supplySparepartCheckSave(data) {
   return request({
     url: "/supplySparepartCheckStoreInfo/api/save",
     method: "post",
@@ -495,7 +495,7 @@ function  supplySparepartCheckSave(data) {
 }
 
 // 库存盘点.提交单据详情
-function  supplySparepartCheckSubmitBill(data) {
+function supplySparepartCheckSubmitBill(data) {
   return request({
     url: "/supplySparepartCheckStoreInfo/api/submitBill",
     method: "post",
@@ -504,7 +504,7 @@ function  supplySparepartCheckSubmitBill(data) {
 }
 
 // 库存盘点.审核确认
-function  supplySparepartCheckStoreInfoVerifyBill(data) {
+function supplySparepartCheckStoreInfoVerifyBill(data) {
   return request({
     url: "/supplySparepartCheckStoreInfo/api/verifyBill",
     method: "post",
@@ -516,7 +516,7 @@ function  supplySparepartCheckStoreInfoVerifyBill(data) {
 
 // #region 库存
 
-function  supplySparepartStoreInfoSelectPage(query) {
+function supplySparepartStoreInfoSelectPage(query) {
   return request({
     url: "supplySparepartStoreInfo/query/selectPage",
     method: "get",
@@ -527,7 +527,7 @@ function  supplySparepartStoreInfoSelectPage(query) {
 // #endregion
 
 // 备件质量反馈列表页
-function  supplyQualityPageList(query) {
+function supplyQualityPageList(query) {
   return request({
     url: "/sparepartFeedbackInfo/query/getPageBy",
     method: "get",
@@ -535,7 +535,7 @@ function  supplyQualityPageList(query) {
   });
 }
 // 备件质量反馈列表页状态
-function  supplyQualityStatus(query) {
+function supplyQualityStatus(query) {
   return request({
     url: "/sparepartFeedbackInfo/query/getStatus",
     method: "get",
@@ -543,7 +543,7 @@ function  supplyQualityStatus(query) {
   });
 }
 // 备件质量反馈操作历史
-function  supplyQualityOperateHis(query) {
+function supplyQualityOperateHis(query) {
   return request({
     url: "/sparepartFeedbackInfo/query/getBillOperateHis",
     method: "get",
@@ -551,7 +551,7 @@ function  supplyQualityOperateHis(query) {
   });
 }
 // 备件质量反馈供应商列表
-function  supplyQualitySupplier(query) {
+function supplyQualitySupplier(query) {
   return request({
     url: "/sparepartFeedbackInfo/query/getSupplierStatus",
     method: "get",
@@ -559,7 +559,7 @@ function  supplyQualitySupplier(query) {
   });
 }
 // 备件质量反馈详情
-function  supplyQualityDetail(query) {
+function supplyQualityDetail(query) {
   return request({
     url: "/sparepartFeedbackInfo/query/getOneById",
     method: "get",
@@ -567,7 +567,7 @@ function  supplyQualityDetail(query) {
   });
 }
 // 备件质量反馈保存
-function  saveSupplyQuality(data) {
+function saveSupplyQuality(data) {
   return request({
     url: "/sparepartFeedbackInfo/api/saveEdit",
     method: "post",
@@ -575,7 +575,7 @@ function  saveSupplyQuality(data) {
   });
 }
 //备件质量反馈提交
-function  submitSupplyQuality(data) {
+function submitSupplyQuality(data) {
   return request({
     url: "/sparepartFeedbackInfo/api/vesselSubmit",
     method: "post",
@@ -583,7 +583,7 @@ function  submitSupplyQuality(data) {
   });
 }
 // 备件质量反馈确认
-function  confirmSupplyQuality(data) {
+function confirmSupplyQuality(data) {
   return request({
     url: "/sparepartFeedbackInfo/api/confirm",
     method: "post",
@@ -591,7 +591,7 @@ function  confirmSupplyQuality(data) {
   });
 }
 // 备件质量反馈提交岸基
-function  bankSubmitSupplyQuality(data) {
+function bankSubmitSupplyQuality(data) {
   return request({
     url: "/sparepartFeedbackInfo/api/bankSubmit",
     method: "post",
@@ -599,7 +599,7 @@ function  bankSubmitSupplyQuality(data) {
   });
 }
 // 备件质量反馈普通退回
-function  backSupplyQuality(data) {
+function backSupplyQuality(data) {
   return request({
     url: "/sparepartFeedbackInfo/api/back",
     method: "post",
@@ -607,7 +607,7 @@ function  backSupplyQuality(data) {
   });
 }
 // 备件质量反馈审核之后再提交
-function  vesselSubmitSupplyQuality(data) {
+function vesselSubmitSupplyQuality(data) {
   return request({
     url: "/sparepartFeedbackInfo/api/completeSubmit",
     method: "post",
@@ -615,12 +615,82 @@ function  vesselSubmitSupplyQuality(data) {
   });
 }
 // 备件质量反馈审核之后再确认
-function  completeConfirmSupplyQuality(data) {
+function completeConfirmSupplyQuality(data) {
   return request({
     url: "/sparepartFeedbackInfo/api/completeConfirm",
     method: "post",
     data: data
   });
+}
+
+export default {
+  saveSupplyDeviceInfo,
+  delSupplyDeviceInfo,
+  selectSupplyDeviceInfoPage,
+  selectSupplyDeviceInfoList,
+  supplyDeviceInfoorder,
+  deviceTree,
+  getSupplyDeviceTypeList,
+  saveSupplyDeviceType,
+  delSupplyDeviceType,
+  orderSupplyDeviceType,
+  saveSupplySparePartInfo,
+  deleteSupplySparePartInfo,
+  spDeviceTree,
+  selectSupplySparePartInfoPage,
+  auditSupplySparePartInfo,
+  fetchList,
+  selectApplPageList,
+  billaddSpSave,
+  getApplTempById,
+  updateApplTemp,
+  delApplTemp,
+  updateApplStatusbyId,
+  approveApplbyId,
+  splitApplBills,
+  submitToWorkFlowAppl,
+  selectListMoreAppl,
+  sparepartExport,
+  supplySparepartInStoreInfoPage,
+  supplySparepartInStoreInfoDetail,
+  supplySparepartInStoreInfoForceClose,
+  supplySparepartInStoreInfoInStore,
+  supplySparepartInStoreInfoSubmitBill,
+  sparepartOutStoreInfoSlectPage,
+  sparepartOutStoreInfoAddSpSave,
+  sparepartOutStoreInfoSlectList,
+  sparepartOutStoreInfoSelectDetail,
+  sparepartOutStoreInfoCancelBill,
+  sparepartOutStoreInfoSave,
+  sparepartOutStoreInfoVerifyBill,
+  sparepartOutStoreInfoSubmitBill,
+  sparepartOutStoreInfoGetInStoreDetail,
+  supplySparePartInfoPage,
+  supplyLocationInfoSaveList,
+  supplyLocationInfoList,
+  supplyLocationInfoSave,
+  supplyLocationInfoDel,
+  selectCheckPageList,
+  supplySparepartCheckStoreInfoSelectPage,
+  supplySparePartInfoCheckPageList,
+  supplySparepartCheckStoreInfoSave,
+  supplySparepartCheckStoreInfoSelectDetail,
+  supplySparepartCheckSave,
+  supplySparepartCheckSubmitBill,
+  supplySparepartCheckStoreInfoVerifyBill,
+  supplySparepartStoreInfoSelectPage,
+  supplyQualityPageList,
+  supplyQualityStatus,
+  supplyQualityOperateHis,
+  supplyQualitySupplier,
+  supplyQualityDetail,
+  saveSupplyQuality,
+  submitSupplyQuality,
+  confirmSupplyQuality,
+  bankSubmitSupplyQuality,
+  backSupplyQuality,
+  vesselSubmitSupplyQuality,
+  completeConfirmSupplyQuality
 }
 
 

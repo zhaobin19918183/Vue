@@ -227,3 +227,30 @@ function  cancelMaBillDl(data) {
     data
   })
 }
+export default{
+  getReportPageByCondition,
+  getDetailInfoById,
+  saveAddTempOrder,
+  saveExecutionOrder,
+  saveConfirm,
+  saveBatchConfirm,
+  saveSubmit,
+  saveBatchSubmit,
+  saveReply,
+  saveBatchReply,
+  workFlowReturn,
+  deleteTempReport,
+  delayPlanOrder,
+  cancelPlanOrder,
+  getDeviceTimerInfoByDeviceId,
+  selectSparePartByIds,
+  deleteSparePartById,
+  selectMaterielByIds,
+  deleteMaterielById,
+  submitSpBillDl,
+  submitMaBillDl,
+  verifySpBillDl,
+  verifyMaBillDl,
+  cancelSpBillDl,
+  cancelMaBillDl
+}

@@ -153,3 +153,23 @@ function  selectShipId(data) {
     params: data
   })
 }
+export default{
+  getPageIncompatibleReportInfo,
+  getSystemFileIdByVesselId,
+  getVoyagePlanInfoResponseList,
+  getFileOperationHisResponseList,
+  getstatusList,
+  submitVoyagePlanCommon,
+  saveVoyagePlanCommon,
+  returnVoyagePlanCommon,
+  discardVoyagePlanCommon,
+  commitVoyagePlanCommon,
+  handle,
+  SubmissionVoyagePlanCommon,
+  getSystemFilesInfo,
+  saveSystemFilesInfoList,
+  saveSystemFilesInfo,
+  deleteSystemFilesInfo,
+  selectShipId
+  
+}

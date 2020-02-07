@@ -1,8 +1,8 @@
 // 修船模块-航修工程单Api接口
 
-import request from '../../../../utils/request'
+import request from '../../../../request'
 // 工程单一览->工程单一览查询
-function  getPageByCondition(data) {
+function getPageByCondition(data) {
   return request({
     url: '/repairVoyageRepairProjectInfo/query/getPageByCondition',
     method: 'get',
@@ -10,7 +10,7 @@ function  getPageByCondition(data) {
   })
 }
 // 工程单一览->工程单状态下拉选
-function  getProjectStatusList(data) {
+function getProjectStatusList(data) {
   return request({
     url: '/repairVoyageRepairProjectInfo/query/getProjectStatusList',
     method: 'get',
@@ -18,7 +18,7 @@ function  getProjectStatusList(data) {
   })
 }
 // 工程单详情->工程单信息查询
-function  getProjectInfo(data) {
+function getProjectInfo(data) {
   return request({
     url: '/repairVoyageRepairProjectInfo/query/getProjectInfo',
     method: 'get',
@@ -26,7 +26,7 @@ function  getProjectInfo(data) {
   })
 }
 // 工程单详情->单位下拉选
-function  customDropDown(data) {
+function customDropDown(data) {
   return request({
     url: '/customDropDown/query/customDropDown',
     method: 'get',
@@ -34,7 +34,7 @@ function  customDropDown(data) {
   })
 }
 // 获取公司下所有部门 船端
-function  getVesselDeptByCompId(data) {
+function getVesselDeptByCompId(data) {
   return request({
     url: '/commonDeptRole/query/getVesselDeptByCompId',
     method: 'get',
@@ -42,7 +42,7 @@ function  getVesselDeptByCompId(data) {
   });
 }
 // 工程单详情->编辑保存
-function  saveVoyageProjectInfo(data) {
+function saveVoyageProjectInfo(data) {
   return request({
     url: '/repairVoyageRepairProjectInfo/api/saveVoyageProjectInfo',
     method: 'post',
@@ -50,7 +50,7 @@ function  saveVoyageProjectInfo(data) {
   });
 }
 // 工程单详情->废弃
-function  discardVoyageProjectInfo(data) {
+function discardVoyageProjectInfo(data) {
   return request({
     url: '/repairVoyageRepairProjectInfo/api/discardVoyageProjectInfo',
     method: 'post',
@@ -58,7 +58,7 @@ function  discardVoyageProjectInfo(data) {
   });
 }
 // 工程单详情->判断审核流是否存在
-function  isWorkFlow(data) {
+function isWorkFlow(data) {
   return request({
     url: '/repairVoyageRepairProjectInfo/query/isWorkFlow',
     method: 'get',
@@ -66,7 +66,7 @@ function  isWorkFlow(data) {
   });
 }
 // 工程单详情->操作历史
-function  getBillOperateHis(data) {
+function getBillOperateHis(data) {
   return request({
     url: '/repairVoyageRepairProjectInfo/query/getBillOperateHis',
     method: 'get',
@@ -74,7 +74,7 @@ function  getBillOperateHis(data) {
   });
 }
 // 下拉添加
-function  add(data) {
+function add(data) {
   return request({
     url: '/customDropDown/api/saveAdd',
     method: 'post',
@@ -82,7 +82,7 @@ function  add(data) {
   })
 }
 // 下拉编辑
-function  edit(data) {
+function edit(data) {
   return request({
     url: '/customDropDown/api/saveEdit',
     method: 'post',
@@ -90,7 +90,7 @@ function  edit(data) {
   })
 }
 // 下拉删除
-function  saveDelete(data) {
+function saveDelete(data) {
   return request({
     url: '/customDropDown/api/saveDelete',
     method: 'post',
@@ -98,7 +98,7 @@ function  saveDelete(data) {
   })
 }
 // 工程单详情->删除操作
-function  deleteProjectItem(data) {
+function deleteProjectItem(data) {
   return request({
     url: '/repairVoyageRepairProjectInfo/api/deleteProjectItem',
     method: 'post',
@@ -106,7 +106,7 @@ function  deleteProjectItem(data) {
   });
 }
 // 工程单详情->查询申请单汇总
-function  getRepairApplSummaryList(data) {
+function getRepairApplSummaryList(data) {
   return request({
     url: '/repairVoyageRepairProjectInfo/query/getRepairApplSummaryList',
     method: 'get',
@@ -114,7 +114,7 @@ function  getRepairApplSummaryList(data) {
   });
 }
 // 工程单详情->删除修船厂
-function  deleteShipyardItem(data) {
+function deleteShipyardItem(data) {
   return request({
     url: '/repairVoyageRepairProjectInfo/api/deleteShipyardItem',
     method: 'post',
@@ -122,7 +122,7 @@ function  deleteShipyardItem(data) {
   });
 }
 // 工程单详情->根据员工ID取得发件箱信息集合
-function  getAllSendMailInfoList(data) {
+function getAllSendMailInfoList(data) {
   return request({
     url: '/commonSendMailInfo/query/getAllSendMailInfoListByStaffId',
     method: 'get',
@@ -130,7 +130,7 @@ function  getAllSendMailInfoList(data) {
   });
 }
 // 工程单详情->取得发件箱类型信息
-function  getMailHostTypeList(data) {
+function getMailHostTypeList(data) {
   return request({
     url: '/commonSendMailHostType/query/getMailHostTypeList',
     method: 'get',
@@ -138,7 +138,7 @@ function  getMailHostTypeList(data) {
   });
 }
 // 工程单详情->取得发件箱类型信息
-function  getMailHostTypeListByTypeId(data) {
+function getMailHostTypeListByTypeId(data) {
   return request({
     url: '/commonSendMailHostType/query/getMailHostTypeListByTypeId',
     method: 'get',
@@ -146,7 +146,7 @@ function  getMailHostTypeListByTypeId(data) {
   });
 }
 // 工程单详情->删除发件箱信息
-function  deleteSendMailInfo(data) {
+function deleteSendMailInfo(data) {
   return request({
     url: '/commonSendMailInfo/api/deleteSendMailInfo',
     method: 'post',
@@ -154,7 +154,7 @@ function  deleteSendMailInfo(data) {
   });
 }
 // 工程单详情->保存或者修改邮箱信息
-function  saveOrUpdateSendMailInfos(data) {
+function saveOrUpdateSendMailInfos(data) {
   return request({
     url: '/commonSendMailInfo/api/saveOrUpdateSendMailInfos',
     method: 'post',
@@ -162,7 +162,7 @@ function  saveOrUpdateSendMailInfos(data) {
   });
 }
 // 工程单详情->关联单据
-function  getProjectRelevanceBill(data) {
+function getProjectRelevanceBill(data) {
   return request({
     url: '/repairVoyageRepairProjectInfo/query/getProjectRelevanceBill',
     method: 'get',
@@ -170,7 +170,7 @@ function  getProjectRelevanceBill(data) {
   });
 }
 // 获取公司信息
-function  getCompanyInfoById(data) {
+function getCompanyInfoById(data) {
   return request({
     url: '/company/query/companyInfo',
     method: 'get',
@@ -178,7 +178,7 @@ function  getCompanyInfoById(data) {
   });
 }
 // 发邮件
-function  sendMail(data) {
+function sendMail(data) {
   return request({
     url: '/repairVoyageRepairProjectInfo/api/sendMail',
     method: 'post',
@@ -187,7 +187,7 @@ function  sendMail(data) {
 }
 
 // 附件导出
-function  doExportFill(data) {
+function doExportFill(data) {
   return request({
     url: '/repairVoyageRepairProjectInfo/query/doExportFill',
     method: 'get',
@@ -195,10 +195,37 @@ function  doExportFill(data) {
   });
 }
 // 修船厂查询
-function  getListByCondition(data) {
+function getListByCondition(data) {
   return request({
     url: '/servicerMerchantInfo/query/getPageByCondition',
     method: 'get',
     params: data
   });
+}
+export default {
+  getPageByCondition,
+  getProjectStatusList,
+  getProjectInfo,
+  customDropDown,
+  getVesselDeptByCompId,
+  saveVoyageProjectInfo,
+  discardVoyageProjectInfo,
+  isWorkFlow,
+  getBillOperateHis,
+  add,
+  edit,
+  saveDelete,
+  deleteProjectItem,
+  getRepairApplSummaryList,
+  deleteShipyardItem,
+  getAllSendMailInfoList,
+  getMailHostTypeList,
+  getMailHostTypeListByTypeId,
+  deleteSendMailInfo,
+  saveOrUpdateSendMailInfos,
+  getProjectRelevanceBill,
+  getCompanyInfoById,
+  sendMail,
+  doExportFill,
+  getListByCondition
 }

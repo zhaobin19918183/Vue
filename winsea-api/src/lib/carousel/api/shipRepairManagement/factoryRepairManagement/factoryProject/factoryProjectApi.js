@@ -1,6 +1,6 @@
 // 修船模块-厂修工程单Api接口
 
-import request from '../../../../utils/request'
+import request from '../../../../request'
 // 工程单一览->工程单一览查询
 function  getPage(data) {
   return request({
@@ -178,4 +178,28 @@ function  saveOrUpdateSendMailInfos(data) {
     method: 'post',
     data
   });
+}
+export default{
+  getPage,
+getStatusList,
+getApplyInfo,
+getProjectInfo,
+create,
+changeInfo,
+discard,
+getListByCondition,
+deleteShipyardItem,
+removeDetails,
+getBillOperateHis,
+customDropDown,
+getRelevanceBill,
+sendMail,
+doExportFill,
+getCompanyInfoById,
+getAllSendMailInfoList,
+getMailHostTypeList,
+getMailHostTypeListByTypeId,
+deleteSendMailInfo,
+saveOrUpdateSendMailInfos,
+submitProjectInfo
 }

@@ -50,3 +50,11 @@ function  downLoadFiles(data) {
     params: data
   })
 }
+export default{
+  getPageByCondition,
+  createNewKnowledge,
+  customDropDown,
+  getKnowledgeInfo,
+  deleteInfo,
+  downLoadFiles
+}

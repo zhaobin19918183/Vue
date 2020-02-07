@@ -1,8 +1,8 @@
 // 航海资料管理-航海资料管理Api接口
 
-import request from '../utils/request'
+import request from '../request'
 // 资料管理->列表查询
-function  findFileUnderFolder(data) {
+function findFileUnderFolder(data) {
   return request({
     url: '/dataManagerFile/query/findFileUnderFolder',
     method: 'get',
@@ -10,7 +10,7 @@ function  findFileUnderFolder(data) {
   })
 }
 // 文档类型->列表查询
-function  findFileType(data) {
+function findFileType(data) {
   return request({
     url: '/dataManagerFile/query/findFileType',
     method: 'get',
@@ -18,7 +18,7 @@ function  findFileType(data) {
   })
 }
 // 资料管理->新增
-function  addFile(data) {
+function addFile(data) {
   return request({
     url: '/dataManagerFile/api/saveFile',
     method: 'post',
@@ -26,7 +26,7 @@ function  addFile(data) {
   })
 }
 // 资料管理->移动
-function  moveFile(data) {
+function moveFile(data) {
   return request({
     url: '/dataManagerFile/api/update',
     method: 'post',
@@ -34,7 +34,7 @@ function  moveFile(data) {
   })
 }
 // 资料管理->批量删除
-function  removeAll(data) {
+function removeAll(data) {
   return request({
     url: '/dataManagerFile/api/removeAll',
     method: 'post',
@@ -43,7 +43,7 @@ function  removeAll(data) {
 }
 
 // 资料管理->批量下载
-function  batchDownFile(data) {
+function batchDownFile(data) {
   return request({
     url: '/appendix/download/batchAttachment',
     method: 'get',
@@ -52,7 +52,7 @@ function  batchDownFile(data) {
 }
 
 // 资料管理文件夹->数据
-function  findTreeList(data) {
+function findTreeList(data) {
   return request({
     url: '/dataManagerFolder/query/findTreeList',
     method: 'get',
@@ -60,7 +60,7 @@ function  findTreeList(data) {
   })
 }
 // 资料管理文件夹->新增
-function  addInfo(data) {
+function addInfo(data) {
   return request({
     url: '/dataManagerFolder/api/saveInfo',
     method: 'post',
@@ -68,7 +68,7 @@ function  addInfo(data) {
   })
 }
 // 资料管理文件夹->修改
-function  changeInfo(data) {
+function changeInfo(data) {
   return request({
     url: '/dataManagerFolder/api/changeInfo',
     method: 'post',
@@ -76,7 +76,7 @@ function  changeInfo(data) {
   })
 }
 // 资料管理文件夹->删除
-function  removeInfo(data) {
+function removeInfo(data) {
   return request({
     url: '/dataManagerFolder/api/remove',
     method: 'post',
@@ -84,7 +84,7 @@ function  removeInfo(data) {
   })
 }
 // 资料管理->重命名
-function  fileRename(data) {
+function fileRename(data) {
   return request({
     url: '/dataManagerFile/api/fileRename',
     method: 'post',
@@ -92,13 +92,26 @@ function  fileRename(data) {
   })
 }
 // 查询附件
-function  getFileList(params) {
+function getFileList(params) {
   return request({
     url: '/appendix/query/getFileList',
     method: 'get',
     params
   })
 }
-
+export default {
+  addPaymentApply,
+  editPaymentApply,
+  deletePaymentApply,
+  getCurrentUserInfo,
+  getListByCondition,
+  getPaymentApplyById,
+  getDeptListByCompId,
+  getStaffListByDeptId,
+  submitWorkFlow,
+  getDefaultSearchType,
+  taskHistories,
+  getFileList
+}
 
 

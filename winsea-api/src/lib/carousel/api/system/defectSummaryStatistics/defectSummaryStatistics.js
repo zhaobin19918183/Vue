@@ -1,7 +1,7 @@
 import request from '../../../request'
 
 // 缺陷数据统计
-function  getStatisticsInfo(data) {
+function getStatisticsInfo(data) {
   return request({
     url: 'txDefectStatistics/query/getPageDefectStatisticsInfo',
     method: 'get',
@@ -9,7 +9,7 @@ function  getStatisticsInfo(data) {
   })
 }
 // 缺陷数据统计图表
-function  getStatisticsChart(data) {
+function getStatisticsChart(data) {
   return request({
     url: '/txDefectStatistics/query/getDefectStatisticsChart',
     method: 'get',
@@ -17,7 +17,7 @@ function  getStatisticsChart(data) {
   })
 }
 // 查询公司常量基础数据
-function  getParameterTenant(params) {
+function getParameterTenant(params) {
   return request({
     url: '/parameterCompany/query/parameterTenant',
     method: 'get',
@@ -25,7 +25,7 @@ function  getParameterTenant(params) {
   });
 }
 // 获取公司下所有部门 岸端
-function  getDeptListByCompId(data) {
+function getDeptListByCompId(data) {
   return request({
     url: '/staff/query/deptListByCompId',
     method: 'get',
@@ -33,10 +33,17 @@ function  getDeptListByCompId(data) {
   });
 }
 // 缺陷类型查询
-function  getQueryPage(data) {
+function getQueryPage(data) {
   return request({
     url: '/txParameterCompany/query/getParameterCompanyDefectCategory',
     method: 'get',
     params: data
   })
+}
+export default {
+  getStatisticsInfo,
+  getStatisticsChart,
+  getParameterTenant,
+  getDeptListByCompId,
+  getQueryPage
 }

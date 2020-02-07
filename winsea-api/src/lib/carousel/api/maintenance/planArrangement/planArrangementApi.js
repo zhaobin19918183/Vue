@@ -64,4 +64,13 @@ function  workArrange(data) {
     data
   })
 }
-
+export default{
+  selectShipId,
+  getAppShips,
+  getEquipmentTypeList,
+  getQueryList,
+  getDepartmentList,
+  getWorkArrangePageByCondition,
+  saveWorkArrange,
+  workArrange
+}

@@ -1,7 +1,7 @@
-import request from '../utils/request'
+import request from '../request'
 
 // 证书一览列表
-function  getCrtListByCondition(companyId) {
+function getCrtListByCondition(companyId) {
   return request({
     url: '/certificate/query/getCrtListByCondition',
     method: 'get',
@@ -9,7 +9,7 @@ function  getCrtListByCondition(companyId) {
   })
 }
 // 获取证书概况
-function  getCrtNumByCompId(companyId) {
+function getCrtNumByCompId(companyId) {
   return request({
     url: '/certificate/query/getCrtNumByCompId',
     method: 'get',
@@ -17,7 +17,7 @@ function  getCrtNumByCompId(companyId) {
   })
 }
 // 获取证书详情
-function  getCrtByPk(id) {
+function getCrtByPk(id) {
   return request({
     url: '/certificate/query/getCrtByPk',
     method: 'get',
@@ -25,7 +25,7 @@ function  getCrtByPk(id) {
   })
 }
 // 删除证书
-function  deleteCrt(data) {
+function deleteCrt(data) {
   return request({
     url: '/certificate/api/deleteCrt',
     method: 'post',
@@ -34,7 +34,7 @@ function  deleteCrt(data) {
 }
 
 // 查询基础数据
-function  getListByCondition(data) {
+function getListByCondition(data) {
   return request({
     url: '/certificateParameter/query/getListByCondition',
     method: 'get',
@@ -42,7 +42,7 @@ function  getListByCondition(data) {
   })
 }
 // 查询币种
-function  parameterTenant(data) {
+function parameterTenant(data) {
   return request({
     url: '/parameterCompany/query/parameterTenant',
     method: 'get',
@@ -51,7 +51,7 @@ function  parameterTenant(data) {
 }
 
 // 查询换证历史
-function  getCrtChangeHistorys(data) {
+function getCrtChangeHistorys(data) {
   return request({
     url: '/certificate/query/getCrtChangeHistorys',
     method: 'get',
@@ -60,7 +60,7 @@ function  getCrtChangeHistorys(data) {
 }
 
 // 所属船舶
-function  getUserVesselListByStatus(data) {
+function getUserVesselListByStatus(data) {
   return request({
     url: '/vessel/query/getUserVesselListByStatus',
     method: 'get',
@@ -69,7 +69,7 @@ function  getUserVesselListByStatus(data) {
 }
 
 // 新增证书
-function  addCrt(data) {
+function addCrt(data) {
   return request({
     url: '/certificate/api/addCrt',
     method: 'post',
@@ -78,7 +78,7 @@ function  addCrt(data) {
 }
 
 // 换证
-function  changeCrt(data) {
+function changeCrt(data) {
   return request({
     url: '/certificate/api/changeCrt',
     method: 'post',
@@ -87,7 +87,7 @@ function  changeCrt(data) {
 }
 
 // 更新证书
-function  updateCrt(data) {
+function updateCrt(data) {
   return request({
     url: '/certificate/api/updateCrt',
     method: 'post',
@@ -95,7 +95,7 @@ function  updateCrt(data) {
   })
 }
 // 保存证书检验信息
-function  saveCrtSurvey(data) {
+function saveCrtSurvey(data) {
   return request({
     url: '/certificateSurvey/api/saveCrtSurvey',
     method: 'post',
@@ -103,7 +103,7 @@ function  saveCrtSurvey(data) {
   })
 }
 // 根据id查询检验信息
-function  getSurveyByPk(data) {
+function getSurveyByPk(data) {
   return request({
     url: '/certificateSurvey/query/getSurveyByPk',
     method: 'get',
@@ -111,7 +111,7 @@ function  getSurveyByPk(data) {
   })
 }
 // 获取证书检验信息列表
-function  getCrtSurveyListByCondition(data) {
+function getCrtSurveyListByCondition(data) {
   return request({
     url: '/certificateSurvey/query/getCrtSurveyListByCondition',
     method: 'get',
@@ -119,7 +119,7 @@ function  getCrtSurveyListByCondition(data) {
   })
 }
 // 删除证书检验信息
-function  deleteCrtSurvey(data) {
+function deleteCrtSurvey(data) {
   return request({
     url: '/certificateSurvey/api/deleteCrtSurvey',
     method: 'post',
@@ -127,7 +127,7 @@ function  deleteCrtSurvey(data) {
   })
 }
 // 新增或修改基础数据
-function  save1(data) {
+function save1(data) {
   return request({
     url: '/certificateParameter/api/save',
     method: 'post',
@@ -135,7 +135,7 @@ function  save1(data) {
   })
 }
 // 删除基础数据
-function  deleteMsg(data) {
+function deleteMsg(data) {
   return request({
     url: '/certificateParameter/api/delete',
     method: 'post',
@@ -143,7 +143,7 @@ function  deleteMsg(data) {
   })
 }
 // 基础数据排序
-function  order(data) {
+function order(data) {
   return request({
     url: '/certificateParameter/api/order',
     method: 'post',
@@ -151,7 +151,7 @@ function  order(data) {
   })
 }
 // 上传附件
-function  uploadFiles(data) {
+function uploadFiles(data) {
   return request({
     url: '/appendix/api/uploadFiles',
     method: 'post',
@@ -159,7 +159,7 @@ function  uploadFiles(data) {
   })
 }
 // 责任部门基础数据
-function  deptListByCompId(data) {
+function deptListByCompId(data) {
   return request({
     url: '/staff/query/deptListByCompId',
     method: 'get',
@@ -168,7 +168,7 @@ function  deptListByCompId(data) {
 }
 
 // 导入文件
-function  importCertificate(data) {
+function importCertificate(data) {
   return request({
     url: '/certificate/api/importMultipartFile',
     method: 'post',
@@ -178,10 +178,35 @@ function  importCertificate(data) {
 // certificate/api/importRepeatCertificate
 
 // 导入文件
-function  importRepeatCertificate(data) {
+function importRepeatCertificate(data) {
   return request({
     url: '/certificate/api/importRepeatCertificate',
     method: 'post',
     data: data
   })
+}
+
+export default {
+  getCrtListByCondition,
+  getCrtNumByCompId,
+  getCrtByPk,
+  deleteCrt,
+  getListByCondition,
+  parameterTenant,
+  getCrtChangeHistorys,
+  getUserVesselListByStatus,
+  addCrt,
+  changeCrt,
+  updateCrt,
+  saveCrtSurvey,
+  getSurveyByPk,
+  getCrtSurveyListByCondition,
+  deleteCrtSurvey,
+  save1,
+  deleteMsg,
+  order,
+  uploadFiles,
+  deptListByCompId,
+  importCertificate,
+  importRepeatCertificate
 }

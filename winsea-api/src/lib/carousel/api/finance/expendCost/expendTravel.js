@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from '../../../request'
 
 // 新增差旅费付款申请
 function  addTravelExpensesApply(data) {
@@ -136,4 +136,20 @@ function  sendToPay(data) {
     data
   })
 }
-
+export default{
+  addTravelExpensesApply,
+  editTravelExpensesApply,
+  deleteTravelExpensesApply,
+  getTravelListByCondition,
+  getTravelExpensesApplyById,
+  getDefaultTravelSearchType,
+  getOperateHistorys,
+  payMoney,
+  getCurrencyRates,
+  getListByCondition,
+  getListByConditionSub,
+  petpayeeListByCondition,
+  getPersonalReceiveById,
+  submitTravelExpensesApply,
+  sendToPay
+}

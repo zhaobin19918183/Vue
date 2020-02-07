@@ -1,7 +1,7 @@
-import request from '../utils/request'
+import request from '../request'
 
 // 分页查询船舶列表
-function  getVesselPage(params) {
+function getVesselPage(params) {
   return request({
     url: '/systemVessel/query/getVesselPage',
     method: 'get',
@@ -10,7 +10,7 @@ function  getVesselPage(params) {
 }
 
 // 查询船舶详情
-function  getVesselOne(params) {
+function getVesselOne(params) {
   return request({
     url: '/systemVessel/query/getVesselOne',
     method: 'get',
@@ -19,10 +19,15 @@ function  getVesselOne(params) {
 }
 
 // 修改船舶信息表
-function  changeInfo(data) {
+function changeInfo(data) {
   return request({
     url: '/systemVessel/api/changeInfo',
     method: 'post',
     data
   })
+}
+export default {
+  getVesselPage,
+  getVesselOne,
+  changeInfo
 }

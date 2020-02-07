@@ -1,8 +1,8 @@
 // 修船模块-航修申请单Api接口
 
-import request from '../../../../utils/request'
+import request from '../../../../request'
 // 申请单一览->申请单一览查询
-function  getPageByCondition(data) {
+function getPageByCondition(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/query/getPageByCondition',
     method: 'get',
@@ -10,7 +10,7 @@ function  getPageByCondition(data) {
   })
 }
 // 申请单一览->申请单状态查询
-function  getApplyStatusList(data) {
+function getApplyStatusList(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/query/getApplyStatusList',
     method: 'get',
@@ -18,7 +18,7 @@ function  getApplyStatusList(data) {
   })
 }
 // 制定申请单->申请单新增/编辑保存
-function  saveApplicationInfo(data) {
+function saveApplicationInfo(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/api/saveVoyageRepairInfo',
     method: 'post',
@@ -26,7 +26,7 @@ function  saveApplicationInfo(data) {
   })
 }
 // 制定申请单->工程类别一览查询
-function  getRepairParameterCompany(data) {
+function getRepairParameterCompany(data) {
   return request({
     url: '/repairParameterCompany/query/getRepairParameterCompany',
     method: 'get',
@@ -34,7 +34,7 @@ function  getRepairParameterCompany(data) {
   })
 }
 // 制定申请单->申请单详细页查询
-function  getRepairVoyageRepairApplyInfo(data) {
+function getRepairVoyageRepairApplyInfo(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/query/getRepairVoyageRepairApplyInfo',
     method: 'get',
@@ -42,7 +42,7 @@ function  getRepairVoyageRepairApplyInfo(data) {
   })
 }
 // 制定申请单->删除单条->删除明细
-function  deleteApplyItem(data) {
+function deleteApplyItem(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/api/deleteApplyItem',
     method: 'post',
@@ -50,7 +50,7 @@ function  deleteApplyItem(data) {
   })
 }
 // 申请单详细->申请单废弃
-function  discardVoyageApplInfo(data) {
+function discardVoyageApplInfo(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/api/discardVoyageApplInfo',
     method: 'post',
@@ -58,7 +58,7 @@ function  discardVoyageApplInfo(data) {
   })
 }
 // 申请单详细->申请单普通提交
-function  submitReport(data) {
+function submitReport(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/api/submitReport',
     method: 'post',
@@ -66,7 +66,7 @@ function  submitReport(data) {
   })
 }
 // 申请单详细->申请单审核通过
-function  checkPass(data) {
+function checkPass(data) {
   return request({
     url: '/workflow/api/handle',
     method: 'post',
@@ -74,7 +74,7 @@ function  checkPass(data) {
   })
 }
 // 申请单详细->申请单退回
-function  returnReport(data) {
+function returnReport(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/api/returnReport',
     method: 'post',
@@ -82,7 +82,7 @@ function  returnReport(data) {
   })
 }
 // 申请单详细->申请单确认
-function  confirmReport(data) {
+function confirmReport(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/api/confirmReport',
     method: 'post',
@@ -90,7 +90,7 @@ function  confirmReport(data) {
   })
 }
 // 申请单详细->申请单提交岸基
-function  submitReportAudit(data) {
+function submitReportAudit(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/api/submitReportAudit',
     method: 'post',
@@ -98,7 +98,7 @@ function  submitReportAudit(data) {
   })
 }
 // 申请单详细->申请单审核信息查询
-function  getOperateHistorys(data) {
+function getOperateHistorys(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/query/getAuditInformations',
     method: 'get',
@@ -106,7 +106,7 @@ function  getOperateHistorys(data) {
   })
 }
 // 申请单详细->申请单操作历史查询
-function  getBillOperateHis(data) {
+function getBillOperateHis(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/query/getBillOperateHis',
     method: 'get',
@@ -114,7 +114,7 @@ function  getBillOperateHis(data) {
   })
 }
 // 申请单详细->删除按钮->删除选中checkbox明细
-function  deleteApplyItems(data) {
+function deleteApplyItems(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/api/deleteApplyItems',
     method: 'post',
@@ -122,7 +122,7 @@ function  deleteApplyItems(data) {
   })
 }
 // 申请单详细->已退回,待操作/重新做成申请单
-function  anewMakeApplyInfo(data) {
+function anewMakeApplyInfo(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/api/anewMakeApplyInfo',
     method: 'post',
@@ -130,7 +130,7 @@ function  anewMakeApplyInfo(data) {
   })
 }
 // 可编辑单位下拉选查询
-function  customDropDown(data) {
+function customDropDown(data) {
   return request({
     url: '/customDropDown/query/customDropDown',
     method: 'get',
@@ -138,7 +138,7 @@ function  customDropDown(data) {
   })
 }
 // 下拉添加
-function  add(data) {
+function add(data) {
   return request({
     url: '/customDropDown/api/saveAdd',
     method: 'post',
@@ -146,7 +146,7 @@ function  add(data) {
   })
 }
 // 下拉编辑
-function  edit(data) {
+function edit(data) {
   return request({
     url: '/customDropDown/api/saveEdit',
     method: 'post',
@@ -154,7 +154,7 @@ function  edit(data) {
   })
 }
 // 下拉删除
-function  saveDelete(data) {
+function saveDelete(data) {
   return request({
     url: '/customDropDown/api/saveDelete',
     method: 'post',
@@ -162,7 +162,7 @@ function  saveDelete(data) {
   })
 }
 // 申请单新增->通过公司ID获取船舶列表
-function  getVesselListByCompId(data) {
+function getVesselListByCompId(data) {
   return request({
     url: '/staff/query/vesselListByCompId',
     method: 'get',
@@ -170,7 +170,7 @@ function  getVesselListByCompId(data) {
   })
 }
 // 申请单汇总->申请单汇总一览查询
-function  getPageByConditionHZ(data) {
+function getPageByConditionHZ(data) {
   return request({
     url: '/repairRepairApplSummary/query/getPageByCondition',
     method: 'get',
@@ -178,7 +178,7 @@ function  getPageByConditionHZ(data) {
   })
 }
 // 获取公司下所有部门 船端
-function  getVesselDeptByCompId(data) {
+function getVesselDeptByCompId(data) {
   return request({
     url: '/commonDeptRole/query/getVesselDeptByCompId',
     method: 'get',
@@ -186,7 +186,7 @@ function  getVesselDeptByCompId(data) {
   });
 }
 // 申请单汇总->申请单汇总退回
-function  returnApplyItems(data) {
+function returnApplyItems(data) {
   return request({
     url: '/repairRepairApplSummary/api/returnApplyItems',
     method: 'post',
@@ -194,10 +194,37 @@ function  returnApplyItems(data) {
   })
 }
 // 申请单详细->申请单关联单据查询
-function  getApplyRelevanceBill(data) {
+function getApplyRelevanceBill(data) {
   return request({
     url: '/repairVoyageRepairApplyInfo/query/getApplyRelevanceBill',
     method: 'get',
     params: data
   })
+}
+export default {
+  getPageByCondition,
+  getApplyStatusList,
+  saveApplicationInfo,
+  getRepairParameterCompany,
+  getRepairVoyageRepairApplyInfo,
+  deleteApplyItem,
+  discardVoyageApplInfo,
+  submitReport,
+  checkPass,
+  returnReport,
+  confirmReport,
+  submitReportAudit,
+  getOperateHistorys,
+  getBillOperateHis,
+  deleteApplyItems,
+  anewMakeApplyInfo,
+  customDropDown,
+  add,
+  edit,
+  saveDelete,
+  getVesselListByCompId,
+  getPageByConditionHZ,
+  getVesselDeptByCompId,
+  returnApplyItems,
+  getApplyRelevanceBill
 }

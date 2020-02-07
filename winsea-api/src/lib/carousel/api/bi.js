@@ -1,4 +1,4 @@
-import request from '../utils/request'
+import request from '../request'
 
 // 获取BI报表路径
 function  reportUrl(data) {
@@ -7,5 +7,8 @@ function  reportUrl(data) {
     method: 'get',
     params: data
   })
+}
+export default{
+  reportUrl
 }
 

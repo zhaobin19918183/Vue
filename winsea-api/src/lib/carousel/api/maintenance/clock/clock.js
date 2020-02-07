@@ -25,3 +25,8 @@ function  getReportPageByCondition(data) {
     params: data
   })
 }
+export default{
+  selectShipId,
+  getAppShips,
+  getReportPageByCondition
+}

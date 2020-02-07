@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from  '../../../request'
 
 // 新增付款申请
 function  addPaymentApply(data) {
@@ -143,4 +143,23 @@ function  sendPayToPay(data) {
     method: 'post',
     data
   })
+}
+export default{
+  addPaymentApply,
+  submitPaymentApply,
+  getPaymentApplyById,
+  deletePaymentApply,
+  editPaymentApply,
+  getPaymentApplyOperateHistorys,
+  paymentApplyMoney,
+  uploadWaterBill,
+  getPayedMoneyByPhurchaseNos,
+  getRelationBillNos,
+  selectPayBillList,
+  createPayApplChangeState,
+  completeApplPayBill,
+  checkInvoiceRepeat,
+  sendPayMessage,
+  sendPayToPay
+
 }

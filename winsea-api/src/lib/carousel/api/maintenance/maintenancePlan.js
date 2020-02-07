@@ -54,3 +54,11 @@ function  deletePlanOrder(data) {
     data
   })
 }
+export default{
+  savePlanOrder,
+  getPlanPageByCondition,
+  getDetailInfoById,
+  delayPlanOrder,
+  cancelPlanOrder,
+  deletePlanOrder
+}

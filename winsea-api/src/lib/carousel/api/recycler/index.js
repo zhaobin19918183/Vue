@@ -1,27 +1,33 @@
 import request from '../../request';
 
-function  queryRecycleData(params) {
+function queryRecycleData(params) {
   return request({
     url: '/recycleBin/query/records',
     params
   })
 }
-function  queryModules() {
+function queryModules() {
   return request({
     url: '/recycleBin/query/moduleInfos',
   })
 }
-function  retrieveDeletedData(data) {
+function retrieveDeletedData(data) {
   return request({
     url: '/recycleBin/api/retrieveData',
     method: 'post',
     data
   })
 }
-function  removeDataPermanently(data) {
+function removeDataPermanently(data) {
   return request({
     url: '/recycleBin/api/removePermanently',
     method: 'post',
     data
   })
+}
+export default {
+  queryRecycleData,
+  queryModules,
+  retrieveDeletedData,
+  removeDataPermanently
 }

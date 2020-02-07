@@ -104,3 +104,18 @@ function  getCurrentUserInfo(data) {
     params: data
   });
 }
+export default{
+  getPageByCondition,
+  getReportStatus,
+  getBasicDataSetting,
+  getGroupBillBasicDataSetting,
+  getBillBasicDataSetting,
+  saveDynamicReport,
+  getReportInfoById,
+  getReportDetailsInfoById,
+  queryItems,
+  getDynamicHistorys,
+  discardDynamicReportInfo,
+  findTenant,
+  getCurrentUserInfo
+}

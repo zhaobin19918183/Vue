@@ -1,6 +1,6 @@
 // 年度修理计划Api接口
 
-import request from '../../../../utils/request'
+import request from '../../../../request'
 // 新增年度计划-保存
 function  saveAdd(data) {
   return request({

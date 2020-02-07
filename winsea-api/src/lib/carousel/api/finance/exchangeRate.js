@@ -26,3 +26,8 @@ function  getExchangeRate(data) {
     params: data
   })
 }
+export default{
+  getListByCondition,
+  saveRate,
+  getExchangeRate
+}

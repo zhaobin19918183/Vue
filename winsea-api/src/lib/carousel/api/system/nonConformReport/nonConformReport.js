@@ -1,7 +1,7 @@
 import request from '../../../request'
 
 // 不符合报告一览查询
-function  getNonConformReportInfo(data) {
+function getNonConformReportInfo(data) {
   return request({
     url: '/txIncompatibleReportInfo/query/getPageIncompatibleReportInfo',
     method: 'get',
@@ -9,7 +9,7 @@ function  getNonConformReportInfo(data) {
   })
 }
 // 获取状态信息集合
-function  getReportStatus(data) {
+function getReportStatus(data) {
   return request({
     url: '/txIncompatibleReportInfo/query/getIncompatibleReportStatus',
     method: 'get',
@@ -17,7 +17,7 @@ function  getReportStatus(data) {
   })
 }
 // 缺陷类型查询
-function  getQueryPage(data) {
+function getQueryPage(data) {
   return request({
     url: '/txParameterCompany/query/getParameterCompany',
     method: 'get',
@@ -25,7 +25,7 @@ function  getQueryPage(data) {
   })
 }
 // 获取检查类型集合
-function  getParameterTenant(params) {
+function getParameterTenant(params) {
   return request({
     url: '/parameterCompany/query/parameterTenant',
     method: 'get',
@@ -34,7 +34,7 @@ function  getParameterTenant(params) {
 }
 
 // 获取检查类型集合-新
-function  getCheckType(params) {
+function getCheckType(params) {
   return request({
     url: '/incompatibleSituationInfo/query/getCheckType',
     method: 'get',
@@ -43,7 +43,7 @@ function  getCheckType(params) {
 }
 
 // 获取公司下所有部门 岸端
-function  getDeptListByCompId(data) {
+function getDeptListByCompId(data) {
   return request({
     url: '/staff/query/deptListByCompId',
     method: 'get',
@@ -51,7 +51,7 @@ function  getDeptListByCompId(data) {
   });
 }
 // 获取公司下所有船舶信息
-function  getVesselListByCompId(data) {
+function getVesselListByCompId(data) {
   return request({
     url: '/staff/query/vesselListByCompId',
     method: 'get',
@@ -60,7 +60,7 @@ function  getVesselListByCompId(data) {
 }
 
 // 查询不符合报告明细
-function  getNonConformReportDetail(data) {
+function getNonConformReportDetail(data) {
   return request({
     url: '/txIncompatibleReportInfo/api/getIncompatibleReportDetail',
     method: 'post',
@@ -68,7 +68,7 @@ function  getNonConformReportDetail(data) {
   });
 }
 // 取得操作历史
-function  getOperateHistorys(params) {
+function getOperateHistorys(params) {
   return request({
     url: '/crewYearTrainingPlanInfo/query/getOperateHistorys',
     method: 'get',
@@ -76,7 +76,7 @@ function  getOperateHistorys(params) {
   })
 }
 // 保存或提交不符合报告明细
-function  saveUpdateReport(data) {
+function saveUpdateReport(data) {
   return request({
     url: '/txIncompatibleReportInfo/api/saveIncompatibleReportInfo',
     method: 'post',
@@ -84,7 +84,7 @@ function  saveUpdateReport(data) {
   })
 }
 // 保存不符合报告第一级审核信息
-function  saveFirstLevel(data) {
+function saveFirstLevel(data) {
   return request({
     url: '/txIncompatibleReportInfo/api/saveFirstLevelIncompatibleReportInfo',
     method: 'post',
@@ -92,7 +92,7 @@ function  saveFirstLevel(data) {
   })
 }
 // 保存不符合报告第二级审核信息
-function  saveSecondLevel(data) {
+function saveSecondLevel(data) {
   return request({
     url: '/txIncompatibleReportInfo/api/saveTwoLevelIncompatibleReportInfo',
     method: 'post',
@@ -100,7 +100,7 @@ function  saveSecondLevel(data) {
   })
 }
 // 关闭不符合报告
-function  closeIncompatibleReport(data) {
+function closeIncompatibleReport(data) {
   return request({
     url: '/txIncompatibleReportInfo/api/closeIncompatibleReport',
     method: 'post',
@@ -108,7 +108,7 @@ function  closeIncompatibleReport(data) {
   })
 }
 // 废弃不符合报告
-function  discardIncompatibleReport(data) {
+function discardIncompatibleReport(data) {
   return request({
     url: '/txIncompatibleReportInfo/api/discardIncompatibleReport',
     method: 'post',
@@ -116,7 +116,7 @@ function  discardIncompatibleReport(data) {
   })
 }
 // 获取操作历史
-function  getHisList(params) {
+function getHisList(params) {
   return request({
     url: '/txIncompatibleReportInfo/query/getHisListBy',
     method: 'get',
@@ -125,7 +125,7 @@ function  getHisList(params) {
 }
 
 // 不符合情况报告一览
-function  getIncompatibleSituationPageByCondition(params) {
+function getIncompatibleSituationPageByCondition(params) {
   return request({
     url: '/incompatibleSituationInfo/query/getIncompatibleSituationPageByCondition',
     method: 'get',
@@ -134,7 +134,7 @@ function  getIncompatibleSituationPageByCondition(params) {
 }
 
 // 不符合情况报告详情
-function  getIncompatibleSituationInfo(params) {
+function getIncompatibleSituationInfo(params) {
   return request({
     url: '/incompatibleSituationInfo/query/getIncompatibleSituationInfo',
     method: 'get',
@@ -143,7 +143,7 @@ function  getIncompatibleSituationInfo(params) {
 }
 
 // 不符合情况报告状态集合
-function  getIncompatibleSituationStatusList(params) {
+function getIncompatibleSituationStatusList(params) {
   return request({
     url: '/incompatibleSituationInfo/query/getIncompatibleSituationStatusList',
     method: 'get',
@@ -152,7 +152,7 @@ function  getIncompatibleSituationStatusList(params) {
 }
 
 // 不符合情况报告操作历史
-function  getIncompatibleSituationHisListBy(params) {
+function getIncompatibleSituationHisListBy(params) {
   return request({
     url: 'incompatibleSituationInfo/query/getIncompatibleSituationHisListBy',
     method: 'get',
@@ -161,7 +161,7 @@ function  getIncompatibleSituationHisListBy(params) {
 }
 
 // 跳转不符合报告
-function  getReportJumpPermission(params) {
+function getReportJumpPermission(params) {
   return request({
     url: 'incompatibleSituationInfo/query/getReportJumpPermission',
     method: 'get',
@@ -170,7 +170,7 @@ function  getReportJumpPermission(params) {
 }
 
 // 不符合情况报告跳转判断
-function  getJumpPermission(params) {
+function getJumpPermission(params) {
   return request({
     url: 'incompatibleSituationInfo/query/getJumpPermission',
     method: 'get',
@@ -179,7 +179,7 @@ function  getJumpPermission(params) {
 }
 
 // 不符合情况报告编辑保存
-function  saveIncompatibleSituationInfo(data) {
+function saveIncompatibleSituationInfo(data) {
   return request({
     url: '/incompatibleSituationInfo/api/saveIncompatibleSituationInfo',
     method: 'post',
@@ -188,7 +188,7 @@ function  saveIncompatibleSituationInfo(data) {
 }
 
 // 不符合情况报告编辑提交
-function  submitIncompatibleSituationAudit(data) {
+function submitIncompatibleSituationAudit(data) {
   return request({
     url: '/incompatibleSituationInfo/api/submitIncompatibleSituationAudit',
     method: 'post',
@@ -197,7 +197,7 @@ function  submitIncompatibleSituationAudit(data) {
 }
 
 // 不符合情况报告回复信息
-function  saveSelfFyIncompatibleReportInfo(data) {
+function saveSelfFyIncompatibleReportInfo(data) {
   return request({
     url: '/incompatibleSituationInfo/api/saveSelfFyIncompatibleReportInfo',
     method: 'post',
@@ -206,10 +206,37 @@ function  saveSelfFyIncompatibleReportInfo(data) {
 }
 
 // 不符合情况报告明细删除
-function  deleteSituationDefectList(data) {
+function deleteSituationDefectList(data) {
   return request({
     url: '/incompatibleSituationInfo/api/deleteSituationDefectList',
     method: 'post',
     data
   })
+}
+export default {
+  getNonConformReportInfo,
+  getReportStatus,
+  getQueryPage,
+  getParameterTenant,
+  getCheckType,
+  getDeptListByCompId,
+  getVesselListByCompId,
+  getNonConformReportDetail,
+  getOperateHistorys,
+  saveUpdateReport,
+  saveFirstLevel,
+  saveSecondLevel,
+  closeIncompatibleReport,
+  discardIncompatibleReport,
+  getHisList,
+  getIncompatibleSituationPageByCondition,
+  getIncompatibleSituationInfo,
+  getIncompatibleSituationStatusList,
+  getIncompatibleSituationHisListBy,
+  getReportJumpPermission,
+  getJumpPermission,
+  saveIncompatibleSituationInfo,
+  submitIncompatibleSituationAudit,
+  saveSelfFyIncompatibleReportInfo,
+  deleteSituationDefectList
 }

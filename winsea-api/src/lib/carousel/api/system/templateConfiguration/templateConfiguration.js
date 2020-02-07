@@ -24,3 +24,8 @@ function  deleteTemplateConfigurationInfo(data) {
     data
   })
 }
+export default{
+  getTemplateConfigurationInfoList,
+  saveTemplateConfigurationInfo,
+  deleteTemplateConfigurationInfo
+}

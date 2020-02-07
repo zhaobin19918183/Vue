@@ -1,8 +1,8 @@
 // 质量反馈 Api接口
 
-import request from '../../../../utils/request'
+import request from '../../../../request'
 // 质量反馈一览查询
-function  getPageByCondition(data) {
+function getPageByCondition(data) {
   return request({
     url: '/repairQualityFeedbackInfo/query/getPageByCondition',
     method: 'get',
@@ -11,7 +11,7 @@ function  getPageByCondition(data) {
 }
 
 // 查询质量反馈状态集合
-function  getStatusList(data) {
+function getStatusList(data) {
   return request({
     url: '/repairQualityFeedbackInfo/query/getStatusList',
     method: 'get',
@@ -20,7 +20,7 @@ function  getStatusList(data) {
 }
 
 // 质量反馈详情查询
-function  getFeedbackInfo(data) {
+function getFeedbackInfo(data) {
   return request({
     url: '/repairQualityFeedbackInfo/query/getFeedbackInfo',
     method: 'get',
@@ -29,7 +29,7 @@ function  getFeedbackInfo(data) {
 }
 
 // 质量反馈关联单据查询
-function  getRelevanceBill(data) {
+function getRelevanceBill(data) {
   return request({
     url: '/repairQualityFeedbackInfo/query/getRelevanceBill',
     method: 'get',
@@ -38,7 +38,7 @@ function  getRelevanceBill(data) {
 }
 
 // 质量反馈编辑
-function  updateFeedbackInfo(data) {
+function updateFeedbackInfo(data) {
   return request({
     url: '/repairQualityFeedbackInfo/api/updateFeedbackInfo',
     method: 'post',
@@ -47,7 +47,7 @@ function  updateFeedbackInfo(data) {
 }
 
 // 质量反馈明细删除
-function  deleteFeedbackDetail(data) {
+function deleteFeedbackDetail(data) {
   return request({
     url: '/repairQualityFeedbackInfo/api/deleteFeedbackDetail',
     method: 'post',
@@ -56,7 +56,7 @@ function  deleteFeedbackDetail(data) {
 }
 
 // 质量反馈故障原因删除
-function  deleteFeedbackReason(data) {
+function deleteFeedbackReason(data) {
   return request({
     url: '/repairQualityFeedbackInfo/api/deleteFeedbackReason',
     method: 'post',
@@ -65,7 +65,7 @@ function  deleteFeedbackReason(data) {
 }
 
 // 质量反馈确认
-function  confirmInfo(data) {
+function confirmInfo(data) {
   return request({
     url: '/repairQualityFeedbackInfo/api/confirmFeedbackInfo',
     method: 'post',
@@ -74,7 +74,7 @@ function  confirmInfo(data) {
 }
 
 // 质量反馈退回
-function  returnFeedbackInfo(data) {
+function returnFeedbackInfo(data) {
   return request({
     url: '/repairQualityFeedbackInfo/api/returnFeedbackInfo',
     method: 'post',
@@ -83,7 +83,7 @@ function  returnFeedbackInfo(data) {
 }
 
 // 质量反馈提交审核
-function  submitFeedbackInfo(data) {
+function submitFeedbackInfo(data) {
   return request({
     url: '/repairQualityFeedbackInfo/api/submitFeedbackInfo',
     method: 'post',
@@ -92,10 +92,23 @@ function  submitFeedbackInfo(data) {
 }
 
 // 质量反馈操作历史查询
-function  getBillOperateHis(data) {
+function getBillOperateHis(data) {
   return request({
     url: '/repairQualityFeedbackInfo/query/getBillOperateHis',
     method: 'get',
     params: data
   })
+}
+export default {
+  getPageByCondition,
+  getStatusList,
+  getFeedbackInfo,
+  getRelevanceBill,
+  updateFeedbackInfo,
+  deleteFeedbackDetail,
+  deleteFeedbackReason,
+  confirmInfo,
+  returnFeedbackInfo,
+  submitFeedbackInfo,
+  getBillOperateHis
 }

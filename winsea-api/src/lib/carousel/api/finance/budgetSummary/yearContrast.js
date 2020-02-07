@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from  '../../../request'
 
 // 查询年度对比一览列表
 function  getPageByCondition(params) {
@@ -61,4 +61,13 @@ function  saveConfirm(data) {
     method: 'post',
     data
   })
+}
+export default{
+  getPageByCondition,
+  checkAllCreated,
+  getDetailInfoById,
+  saveAdd,
+  checkCreated,
+  refreshDetailInfos,
+  saveConfirm
 }

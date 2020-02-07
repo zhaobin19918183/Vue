@@ -137,3 +137,22 @@ function  getRoleDutyByCompId(data) {
     params: data
   })
 }
+export default{
+  deviceTree,
+  getDeviceInfoList,
+  selectSupplyDeviceInfoPage,
+  saveDeviceInfoorder,
+  deleteWorkInfo,
+  save,
+  getReferOtherWrokinfo,
+  deleteWorkInfoList,
+  getDeviceWorkList,
+  updateWorkInfoList,
+  getDeviceTimerInfoByDeviceId,
+  getDeviceTypeById,
+  getVesselListByCompId,
+  getDeviceWorkListCount,
+  getInfoById,
+  getDeviceCode,
+  getRoleDutyByCompId
+}

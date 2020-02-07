@@ -1,7 +1,7 @@
 import request from '../../../request'
 
 // PSC检查编辑保存
-function  saveShipFscInspectionInfo(data) {
+function saveShipFscInspectionInfo(data) {
   return request({
     url: '/txShipInspectionInfo/api/saveShipFscInspectionInfo',
     method: 'post',
@@ -10,7 +10,7 @@ function  saveShipFscInspectionInfo(data) {
 }
 
 // Psc一览信息查询
-function  getFscPageByCondition(params) {
+function getFscPageByCondition(params) {
   return request({
     url: '/txShipInspectionInfo/query/getFscPageByCondition',
     method: 'get',
@@ -19,7 +19,7 @@ function  getFscPageByCondition(params) {
 }
 
 // PSC检查状态查询
-function  getFscStatusList(params) {
+function getFscStatusList(params) {
   return request({
     url: '/txShipInspectionInfo/query/getFscStatusList',
     method: 'get',
@@ -28,7 +28,7 @@ function  getFscStatusList(params) {
 }
 
 // PSC检查提交岸基
-function  submitShipFscInspectionAudit(data) {
+function submitShipFscInspectionAudit(data) {
   return request({
     url: '/txShipInspectionInfo/api/submitShipFscInspectionAudit',
     method: 'post',
@@ -37,7 +37,7 @@ function  submitShipFscInspectionAudit(data) {
 }
 
 // PSC检查详情页查询
-function  getFscShipInspection(params) {
+function getFscShipInspection(params) {
   return request({
     url: '/txShipInspectionInfo/query/getFscShipInspection',
     method: 'get',
@@ -46,7 +46,7 @@ function  getFscShipInspection(params) {
 }
 
 // Psc检查关闭
-function  closeShipFscInspectionInfo(data) {
+function closeShipFscInspectionInfo(data) {
   return request({
     url: '/txShipInspectionInfo/api/closeShipFscInspectionInfo',
     method: 'post',
@@ -55,7 +55,7 @@ function  closeShipFscInspectionInfo(data) {
 }
 
 // PSC检查明细删除
-function  deleteFscShipInspectionDefectList(data) {
+function deleteFscShipInspectionDefectList(data) {
   return request({
     url: '/txShipInspectionInfo/api/deleteFscShipInspectionDefectList',
     method: 'post',
@@ -64,7 +64,7 @@ function  deleteFscShipInspectionDefectList(data) {
 }
 
 // PSC检查签名查询
-function  getFscSignatureList(params) {
+function getFscSignatureList(params) {
   return request({
     url: '/txShipInspectionInfo/query/getFscSignatureList',
     method: 'get',
@@ -73,7 +73,7 @@ function  getFscSignatureList(params) {
 }
 
 // PSC检查签名查询
-function  getFscHisListBy(params) {
+function getFscHisListBy(params) {
   return request({
     url: '/txShipInspectionInfo/query/getFscHisListBy',
     method: 'get',
@@ -82,7 +82,7 @@ function  getFscHisListBy(params) {
 }
 
 // 缺陷类型查询
-function  getParameterCompanyDefectCategory(data) {
+function getParameterCompanyDefectCategory(data) {
   return request({
     url: '/txParameterCompany/query/getParameterCompanyDefectCategory',
     method: 'get',
@@ -91,7 +91,7 @@ function  getParameterCompanyDefectCategory(data) {
 }
 
 // 执行人
-function  getDeptStaffListByCompId(data) {
+function getDeptStaffListByCompId(data) {
   return request({
     url: '/staff/query/getDeptStaffListByCompId',
     method: 'get',
@@ -100,7 +100,7 @@ function  getDeptStaffListByCompId(data) {
 }
 
 // 检查类型
-function  getCheckType(data) {
+function getCheckType(data) {
   return request({
     url: '/txIncompatibleReportInfo/query/getCheckType',
     method: 'get',
@@ -109,10 +109,25 @@ function  getCheckType(data) {
 }
 
 // psc废弃
-function  discardFscInspection(data) {
+function discardFscInspection(data) {
   return request({
     url: '/txShipInspectionInfo/query/discardFscInspection',
     method: 'post',
     data
   })
+}
+export default {
+  saveShipFscInspectionInfo,
+  getFscPageByCondition,
+  getFscStatusList,
+  submitShipFscInspectionAudit,
+  getFscShipInspection,
+  closeShipFscInspectionInfo,
+  deleteFscShipInspectionDefectList,
+  getFscSignatureList,
+  getFscHisListBy,
+  getParameterCompanyDefectCategory,
+  getDeptStaffListByCompId,
+  getCheckType,
+  discardFscInspection
 }

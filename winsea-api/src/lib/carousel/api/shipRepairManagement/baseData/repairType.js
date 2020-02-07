@@ -1,7 +1,7 @@
 import request from '../../../request'
 
 // 修理类别 新增或修改
-function  createOrEdit(data) {
+function createOrEdit(data) {
   return request({
     url: '/repairParameterCompany/api/saveRepairParameterCompany',
     method: 'post',
@@ -10,16 +10,16 @@ function  createOrEdit(data) {
 }
 
 // 修理类别 删除
-function  remove(data) {
+function remove(data) {
   return request({
     url: '/repairParameterCompany/api/deleteRepairParameterCompanyById',
     method: 'post',
-    data:data
+    data: data
   })
 }
 
 // 修理类别 分页查询
-function  getQueryPage(data) {
+function getQueryPage(data) {
   return request({
     url: '/repairType/query/getRepairParameterCompany',
     method: 'get',
@@ -28,11 +28,16 @@ function  getQueryPage(data) {
 }
 
 // 修理类别 拖拽排序
-function  changeList(data) {
+function changeList(data) {
   return request({
     url: '/repairParameterCompany/api/changeOrder',
     method: 'post',
     data
   })
 }
-
+export default {
+  createOrEdit,
+  remove,
+  getQueryPage,
+  changeList,
+}

@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from '../../../request'
 
 // 查询付款申请列表
 function  getPaymentListByCondition(data) {
@@ -95,4 +95,17 @@ function  editTravelRemark(data) {
     method: 'post',
     data
   })
+}
+export default{
+  getPaymentListByCondition,
+  getPaymentBatchPayInfos,
+  paymentApplyMoney,
+  getReimburseListByCondition,
+  reimburseApplyMoney,
+  getReimburseBatchPayInfos,
+  getTravelListByCondition,
+  editRemark,
+  editReimburseRemark,
+  editTravelRemark
+
 }

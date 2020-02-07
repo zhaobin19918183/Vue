@@ -16,3 +16,8 @@ function  getDeptListByCompId(data) {
     params: { compId: data }
   });
 }
+export default{
+  getWarnList,
+  getDeptListByCompId
+
+}

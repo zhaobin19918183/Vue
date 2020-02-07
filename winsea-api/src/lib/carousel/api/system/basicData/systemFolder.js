@@ -1,7 +1,7 @@
 import request from '../../../request'
 
 // 查询当前租户信息
-function  getCurrentUserInfo(data) {
+function getCurrentUserInfo(data) {
   return request({
     url: '/staff/query/getCurrentUserInfo',
     method: 'get',
@@ -9,7 +9,7 @@ function  getCurrentUserInfo(data) {
   })
 }
 // 查询租户下分公司信息
-function  getTenantCompanyInfo(data) {
+function getTenantCompanyInfo(data) {
   return request({
     url: '/company/query/findTenantCompany',
     method: 'get',
@@ -17,7 +17,7 @@ function  getTenantCompanyInfo(data) {
   })
 }
 // 查询文件夹一览信息
-function  getSystemFolderList(data) {
+function getSystemFolderList(data) {
   return request({
     url: '/txFileTypeInfo/query/getFileTypeInfoTree',
     method: 'get',
@@ -25,7 +25,7 @@ function  getSystemFolderList(data) {
   })
 }
 // 删除信息
-function  deleteFileTypeInfoById(data) {
+function deleteFileTypeInfoById(data) {
   return request({
     url: '/txFileTypeInfo/api/deleteFileTypeInfoById',
     method: 'post',
@@ -33,7 +33,7 @@ function  deleteFileTypeInfoById(data) {
   })
 }
 // 保存文件夹信息
-function  saveFileTypeInfo(data) {
+function saveFileTypeInfo(data) {
   return request({
     url: '/txFileTypeInfo/api/saveFileTypeInfo',
     method: 'post',
@@ -41,10 +41,18 @@ function  saveFileTypeInfo(data) {
   })
 }
 // 保存文件夹排序信息
-function  changeOrder(data) {
+function changeOrder(data) {
   return request({
     url: '/txFileTypeInfo/api/changeOrder',
     method: 'post',
     data
   })
+}
+export default {
+  getCurrentUserInfo,
+  getTenantCompanyInfo,
+  getSystemFolderList,
+  deleteFileTypeInfoById,
+  saveFileTypeInfo,
+  changeOrder
 }

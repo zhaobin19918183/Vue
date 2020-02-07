@@ -1,10 +1,10 @@
 // 质量反馈
-import request from "../../utils/request";
+import request from "../../request";
 
 // **********************油品************************
 
 // 近三个月内加装的航次号
-function  voyageNumber(data) {
+function voyageNumber(data) {
   return request({
     url: "/oilBunkeringReport/query/voyageNumber",
     method: "get",
@@ -13,7 +13,7 @@ function  voyageNumber(data) {
 }
 
 // 近三个月内加装的加装单号或者根据航次号显示该航次所有的加装单号
-function  billNo(data) {
+function billNo(data) {
   return request({
     url: "/oilBunkeringReport/query/billNo",
     method: "get",
@@ -22,7 +22,7 @@ function  billNo(data) {
 }
 
 // 质量反馈查询one
-function  one(data) {
+function one(data) {
   return request({
     url: "/oilFeedback/query/one",
     method: "get",
@@ -31,7 +31,7 @@ function  one(data) {
 }
 
 // 质量反馈一览列表page
-function  page(data) {
+function page(data) {
   return request({
     url: "/oilFeedback/query/page",
     method: "get",
@@ -40,7 +40,7 @@ function  page(data) {
 }
 
 // 质量反馈save
-function  save(data) {
+function save(data) {
   return request({
     url: "/oilFeedback/api/save",
     method: "post",
@@ -49,7 +49,7 @@ function  save(data) {
 }
 
 // 根据加装单号返回detail
-function  findDetail(data) {
+function findDetail(data) {
   return request({
     url: "/oilFeedback/query/findDetail",
     method: "get",
@@ -58,7 +58,7 @@ function  findDetail(data) {
 }
 
 // 质量反馈submit
-function  submit(data) {
+function submit(data) {
   return request({
     url: "/oilFeedback/api/submit",
     method: "post",
@@ -67,7 +67,7 @@ function  submit(data) {
 }
 
 // 质量反馈confirm
-function  confirm(data) {
+function confirm(data) {
   return request({
     url: "/oilFeedback/api/confirm",
     method: "post",
@@ -76,7 +76,7 @@ function  confirm(data) {
 }
 
 // 质量反馈commitLandbased
-function  commitLandbased(data) {
+function commitLandbased(data) {
   return request({
     url: "/oilFeedback/api/commitLandbased",
     method: "post",
@@ -85,7 +85,7 @@ function  commitLandbased(data) {
 }
 
 // 质量反馈approval
-function  approval(data) {
+function approval(data) {
   return request({
     url: "/oilFeedback/api/approval",
     method: "post",
@@ -94,7 +94,7 @@ function  approval(data) {
 }
 
 // 质量反馈return
-function  qualityReturn(data) {
+function qualityReturn(data) {
   return request({
     url: "/oilFeedback/api/return",
     method: "post",
@@ -103,7 +103,7 @@ function  qualityReturn(data) {
 }
 
 // 质量反馈deprecated
-function  deprecated(data) {
+function deprecated(data) {
   return request({
     url: "/oilFeedback/api/deprecated",
     method: "post",
@@ -112,7 +112,7 @@ function  deprecated(data) {
 }
 
 // 新增
-function  add(data) {
+function add(data) {
   return request({
     url: "/oilFeedbackTmpl/api/add",
     method: "post",
@@ -121,7 +121,7 @@ function  add(data) {
 }
 
 // 编辑
-function  edit(data) {
+function edit(data) {
   return request({
     url: "/oilFeedbackTmpl/api/edit",
     method: "post",
@@ -130,7 +130,7 @@ function  edit(data) {
 }
 
 // 删除
-function  del(data) {
+function del(data) {
   return request({
     url: "/oilFeedbackTmpl/api/del",
     method: "post",
@@ -139,7 +139,7 @@ function  del(data) {
 }
 
 // 一览
-function  list(data) {
+function list(data) {
   return request({
     url: "/oilFeedbackTmpl/query/list",
     method: "get",
@@ -148,7 +148,7 @@ function  list(data) {
 }
 
 // 拖拽排序
-function  changeOrder(data) {
+function changeOrder(data) {
   return request({
     url: "/oilFeedbackTmpl/api/changeOrder",
     method: "post",
@@ -157,10 +157,30 @@ function  changeOrder(data) {
 }
 
 // 质量反馈查询操作历史
-function  getBillOperateHis(data) {
+function getBillOperateHis(data) {
   return request({
     url: "/oilFeedback/query/getBillOperateHis",
     method: "get",
     params: data
   });
+}
+export default {
+  voyageNumber,
+  billNo,
+  one,
+  page,
+  save,
+  findDetail,
+  submit,
+  confirm,
+  commitLandbased,
+  approval,
+  qualityReturn,
+  deprecated,
+  add,
+  edit,
+  del,
+  list,
+  changeOrder,
+  getBillOperateHis
 }

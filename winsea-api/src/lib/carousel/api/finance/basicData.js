@@ -72,3 +72,15 @@ function  getVesselListByCompId(data) {
     params: data
   })
 }
+
+export default{
+  getCostListByCondition,
+  getCompanyListByCondition,
+  getPersonalListByCondition,
+  getPersonalReceiveById,
+  getCompanyReceiveById,
+  compAndChildrenInfo,
+  getDeptListByCondition,
+  getVesselListByCompId
+  
+}

@@ -1,7 +1,7 @@
-import request from '@/utils/request'
+import request from '../request'
 
 // 获取工作通知分页查询
-function  getQueryPage(data) {
+function getQueryPage(data) {
   return request({
     url: '/notificationStaffTodoTask/api/getQueryPage',
     method: 'get',
@@ -10,7 +10,7 @@ function  getQueryPage(data) {
 }
 
 // 获取工作类型 分类总数
-function  countAmount(data) {
+function countAmount(data) {
   return request({
     url: '/notificationStaffTodoTask/query/countAmount',
     method: 'get',
@@ -19,7 +19,7 @@ function  countAmount(data) {
 }
 
 // 消息已查看接口
-function  msgConfirmed(data) {
+function msgConfirmed(data) {
   return request({
     url: '/notificationStaffTodoTask/api/confirm',
     method: 'post',
@@ -28,16 +28,23 @@ function  msgConfirmed(data) {
 }
 
 // 通知长连接url
-function  noticeWsUrl() {
+function noticeWsUrl() {
   return `${
     process.env.VUE_APP_BASE_API
-  }/ws`
+    }/ws`
 }
 
-function  handleLater(data) {
+function handleLater(data) {
   return request({
     url: '/notificationStaffTodoTask/api/changeShowTime',
     method: 'post',
     data
   })
+}
+export default {
+  getQueryPage,
+  countAmount,
+  msgConfirmed,
+  noticeWsUrl,
+  handleLater
 }

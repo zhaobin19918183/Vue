@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from  '../../../request'
 
 // 新增报销申请
 function  addReimbursementApply(data) {
@@ -73,4 +73,15 @@ function  sendReimburseToPay(data) {
     method: 'post',
     data
   })
+}
+export default{
+  addReimbursementApply,
+  submitReimbursementApply,
+  deleteReimbursementApply,
+  getReimbursementApplyById,
+  getReimbursementOperateHistorys,
+  payReimbursementMoney,
+  uploadWaterBill,
+  sendReimburseToPay
+
 }
