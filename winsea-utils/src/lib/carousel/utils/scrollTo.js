@@ -23,7 +23,7 @@ function position() {
   return document.documentElement.scrollTop || document.body.parentNode.scrollTop || document.body.scrollTop
 }
 
-export function scrollTo(to, duration, callback) {
+function scrollTo(to, duration, callback) {
   const start = position()
   const change = to - start
   const increment = 20
@@ -47,4 +47,7 @@ export function scrollTo(to, duration, callback) {
     }
   }
   animateScroll()
+}
+export default{
+  scrollTo
 }

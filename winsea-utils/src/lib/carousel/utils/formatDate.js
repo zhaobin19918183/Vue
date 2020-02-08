@@ -1,5 +1,5 @@
 // 日期格式化处理
-export function formatDate(date, fmt) {
+ function formatDate(date, fmt) {
   if (/(y+)/.test(fmt)) {
     fmt = fmt.replace(
       RegExp.$1,
@@ -27,4 +27,8 @@ export function formatDate(date, fmt) {
 
 function padLeftZero(str) {
   return ('00' + str).substr(str.length)
+}
+export default{
+  formatDate
+
 }
