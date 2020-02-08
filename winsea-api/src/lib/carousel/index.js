@@ -129,33 +129,6 @@ import templateform from './api/templateform'
 import test from './api/test'
 import upload from './api/upload'
 import workNotification from './api/workNotification'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const carousel = {
     basicData,
     login,
@@ -286,7 +259,8 @@ const carousel = {
     shipInformation,
     templateform,
     test,
-    upload
+    upload,
+    workNotification
 
 
 }
