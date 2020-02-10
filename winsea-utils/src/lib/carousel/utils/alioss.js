@@ -1,4 +1,4 @@
-var OSS = require('ali-oss')
+
 
 /**
    * 地址1:http://47.103.84.220:20000/file/query/interimCredentials
@@ -14,6 +14,7 @@ var OSS = require('ali-oss')
         "endpoint": "oss-cn-shanghai.aliyuncs.com"
    * */
 function client(ossInter, ossAccessConfig) {
+  var OSS = require('ali-oss')
   try {
     var client = new OSS({
       region: 'oss-cn-hangzhou',

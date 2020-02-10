@@ -3,7 +3,7 @@
   "description": "A Vue.js project",
   "version": "1.0.1",
   "author": "赵斌 <bin.zhao@network.innocellence.com>",
-  "main": "dist/vue-carousel.js",
+  "main": "dist/vue-utils.js",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
   "dependencies": {
     "ali-oss": "^6.5.1",
     "axios": "^0.19.2",
+    "clipboard": "^2.0.4",
     "js-cookie": "^2.2.1",
     "vue": "^2.5.11"
   },

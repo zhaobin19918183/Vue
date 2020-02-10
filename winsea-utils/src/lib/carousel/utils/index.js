@@ -2,7 +2,7 @@
  * Created by jiachenpan on 16/11/18.
  */
 
- function parseTime(time, cFormat) {
+function parseTime(time, cFormat) {
   if (arguments.length === 0) {
     return null
   }
@@ -31,7 +31,7 @@
   const time_str = format.replace(/{(y|m|d|h|i|s|a)+}/g, (result, key) => {
     let value = formatObj[key]
     // Note: getDay() returns 0 on Sunday
-    if (key === 'a') { return ['日', '一', '二', '三', '四', '五', '六'][value ] }
+    if (key === 'a') { return ['日', '一', '二', '三', '四', '五', '六'][value] }
     if (result.length > 0 && value < 10) {
       value = '0' + value
     }
@@ -40,7 +40,7 @@
   return time_str
 }
 
- function formatTime(time, option) {
+function formatTime(time, option) {
   if (('' + time).length === 10) {
     time = parseInt(time) * 1000
   } else {
@@ -79,7 +79,7 @@
 }
 
 // 格式化时间
- function getQueryObject(url) {
+function getQueryObject(url) {
   url = url == null ? window.location.href : url
   const search = url.substring(url.lastIndexOf('?') + 1)
   const obj = {}
@@ -98,7 +98,7 @@
  * @param {Sting} input value
  * @returns {number} output value
  */
- function byteLength(str) {
+function byteLength(str) {
   // returns the byte length of an utf8 string
   let s = str.length
   for (var i = str.length - 1; i >= 0; i--) {
@@ -110,7 +110,7 @@
   return s
 }
 
- function cleanArray(actual) {
+function cleanArray(actual) {
   const newArray = []
   for (let i = 0; i < actual.length; i++) {
     if (actual[i]) {
@@ -120,7 +120,7 @@
   return newArray
 }
 
- function param(json) {
+function param(json) {
   if (!json) return ''
   return cleanArray(
     Object.keys(json).map(key => {
@@ -130,29 +130,29 @@
   ).join('&')
 }
 
- function param2Obj(url) {
+function param2Obj(url) {
   const search = url.split('?')[1]
   if (!search) {
     return {}
   }
   return JSON.parse(
     '{"' +
-      decodeURIComponent(search)
-        .replace(/"/g, '\\"')
-        .replace(/&/g, '","')
-        .replace(/=/g, '":"')
-        .replace(/\+/g, ' ') +
-      '"}'
+    decodeURIComponent(search)
+      .replace(/"/g, '\\"')
+      .replace(/&/g, '","')
+      .replace(/=/g, '":"')
+      .replace(/\+/g, ' ') +
+    '"}'
   )
 }
 
- function html2Text(val) {
+function html2Text(val) {
   const div = document.createElement('div')
   div.innerHTML = val
   return div.textContent || div.innerText
 }
 
- function objectMerge(target, source) {
+function objectMerge(target, source) {
   /* Merges two  objects,
      giving the last one precedence */
 
@@ -173,7 +173,7 @@
   return target
 }
 
- function toggleClass(element, className) {
+function toggleClass(element, className) {
   if (!element || !className) {
     return
   }
@@ -189,7 +189,7 @@
   element.className = classString
 }
 
- const pickerOptions = [
+const pickerOptions = [
   {
     text: '今天',
     onClick(picker) {
@@ -228,7 +228,7 @@
   }
 ]
 
- function getTime(type) {
+function getTime(type) {
   if (type === 'start') {
     return new Date().getTime() - 3600 * 1000 * 24 * 90
   } else {
@@ -236,10 +236,10 @@
   }
 }
 
- function debounce(func, wait, immediate) {
+function debounce(func, wait, immediate) {
   let timeout, args, context, timestamp, result
 
-  const later = function() {
+  const later = function () {
     // 据上一次触发时间间隔
     const last = +new Date() - timestamp
 
@@ -256,7 +256,7 @@
     }
   }
 
-  return function(...args) {
+  return function (...args) {
     context = this
     timestamp = +new Date()
     const callNow = immediate && !timeout
@@ -276,7 +276,7 @@
  * Has a lot of edge cases bug
  * If you want to use a perfect deep copy, use lodash's _.cloneDeep
  */
- function deepClone(source) {
+function deepClone(source) {
   if (!source && typeof source !== 'object') {
     throw new Error('error arguments', 'deepClone')
   }
@@ -291,29 +291,43 @@
   return targetObj
 }
 
- function uniqueArr(arr) {
+function uniqueArr(arr) {
   return Array.from(new Set(arr))
 }
 
- function createUniqueString() {
+function createUniqueString() {
   const timestamp = +new Date() + ''
   const randomNum = parseInt((1 + Math.random()) * 65536) + ''
   return (+(randomNum + timestamp)).toString(32)
 }
 
- function hasClass(ele, cls) {
+function hasClass(ele, cls) {
   return !!ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'))
 }
- function addClass(ele, cls) {
+function addClass(ele, cls) {
   if (!hasClass(ele, cls)) ele.className += ' ' + cls
 }
- function removeClass(ele, cls) {
+function removeClass(ele, cls) {
   if (hasClass(ele, cls)) {
     const reg = new RegExp('(\\s|^)' + cls + '(\\s|$)')
     ele.className = ele.className.replace(reg, ' ')
   }
 }
 
-export default{
-  
+export default {
+  formatTime,
+  getQueryObject,
+  byteLength,
+  param,
+  param2Obj,
+  html2Text,
+  objectMerge,
+  toggleClass,
+  getTime,
+  debounce,
+  deepClone,
+  uniqueArr,
+  createUniqueString,
+  addClass,
+  removeClass
 }

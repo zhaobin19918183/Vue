@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'vue-carousel.js',
+    filename: 'vue-utils.js',
     library:'VueCarousel',
 // libraryTarget 改为 umd 后，同时可用<script>标签引用组件
     libraryTarget: "umd",

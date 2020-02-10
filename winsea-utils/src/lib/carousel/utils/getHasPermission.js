@@ -1,5 +1,7 @@
-import store from '../store';
-// 判断是否有权限
-export function getHp(data) {
+function getHp(store,data) {
   return store.getters.roles.some(item => item.indexOf(data) === 0);
 }
+// 判断是否有权限
+export default{
+   getHp
+} 

@@ -18,7 +18,7 @@ const endLoading = () => {
   loading.close();
 };
 
-export const showLoading = () => {
+function showLoading () {
   if (loadingCount === 0) {
     begin = window.setInterval(function () {
       setTime += 100;
@@ -29,7 +29,7 @@ export const showLoading = () => {
 
 };
 
-export const hideLoading = () => {
+function hideLoading  () {
   clearInterval(begin);
   if (loadingCount <= 0) {
     return;
@@ -44,3 +44,7 @@ export const hideLoading = () => {
     }
   }
 };
+export default{
+  showLoading,
+  hideLoading
+}

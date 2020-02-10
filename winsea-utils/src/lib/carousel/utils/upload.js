@@ -1,11 +1,23 @@
-import {
-  interimCredentials,
-  accessConfig
-} from '@/api/upload';
 
 const OSS = require('ali-oss')
+// 获取OSS临时上传凭证
+function interimCredentials(data) {
+  return request({
+    url: '/file/query/interimCredentials',
+    method: 'get',
+    params: data
+  })
+}
 
-export function client(data) {
+// 获取OSS访问配置
+function accessConfig(data) {
+  return request({
+    url: '/file/query/accessConfig',
+    method: 'get',
+    params: data
+  })
+}
+function client(data) {
   //后端提供数据
   interimCredentials().then((response) => {
     console.log('获取OSS临时上传凭证', response)
@@ -31,4 +43,6 @@ export function client(data) {
     bucket: data.bucket
   })*/
 }
-
+export default{
+  client
+}
